@@ -1,3 +1,77 @@
 {
-  "$schema": "https://inlang.com/schema/inlang-message-format"
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "a11y": {
+    "externalLink": "{text} (new window)"
+  },
+  "actions": {
+    "closeModal": "Close the popup",
+    "selectLanguage": "Select a language"
+  },
+  "footer": {
+    "backHome": "Back to home - compar:IA",
+    "dpg": "The service is recognized as a digital public good by the Digital Public Goods Alliance",
+    "helpUs": "Help us improve the product!",
+    "license": {
+      "linkTitle": "Etalab license - new window",
+      "mention": "Unless otherwise explicitly stated as third-party intellectual property, the contents of this site are offered under the <a {linkProps}>Etalab 2.0 license</a>"
+    },
+    "links": {
+      "accessibility": "Accessibility: non-compliant",
+      "legal": "Legal notice",
+      "privacy": "Privacy policy",
+      "rgesn": "Eco-design",
+      "sources": "Source code",
+      "tos": "Terms of use"
+    },
+    "theme": {
+      "legend": "Choose a theme to customize the appearance of the site.",
+      "options": {
+        "dark": "Dark theme",
+        "light": "Light theme",
+        "system": "System",
+        "systemSub": "Use system settings"
+      },
+      "title": "Display settings"
+    },
+    "writeUs": "If you encounter a problem or have feedback on the chatbot arena, feel free to write to us <a {formLinkProps}>using this form</a> - we read every message.<br />Thank you!"
+  },
+  "header": {
+    "banner": "New models just joined the arena!",
+    "homeTitle": "Home - compar:IA",
+    "logoAlt": "French Republic",
+    "menu": "Menu",
+    "startDiscussion": "New chat",
+    "subtitle": "The chatbot arena",
+    "title": "compar:IA"
+  },
+  "seo": {
+    "desc": "compar:IA is a tool that enables the blind comparison of different conversational AI models, raising awareness of the issues surrounding generative AI (plurality, bias, environmental impact) and helping to build language preference datasets for less-resourced languages.",
+    "title": "compar:IA, the AI chatbot arena",
+    "titles": {
+      "accessibilite": "Accessibility statement",
+      "arene": "Chat",
+      "community": "Community",
+      "comparator": "The arena",
+      "datasets": "Datasets",
+      "donnees-personnelles": "Privacy policy",
+      "duel": "AI Duel Workshop",
+      "faq": "FAQ",
+      "history": "Key Dates",
+      "home": "Home",
+      "mentions-legales": "Legal notice",
+      "modalites": "Terms of use",
+      "modeles": "Model list",
+      "news": "News and resources",
+      "partners": "Partners",
+      "problem": "The initial challenge",
+      "product": "About us",
+      "ranking": "Leaderboard",
+      "rgesn": "Ecodesign statement",
+      "settings": "Settings",
+      "share": "My results"
+    }
+  },
+  "words": {
+    "close": "Close"
+  }
 }

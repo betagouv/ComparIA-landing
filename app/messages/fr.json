@@ -1,3 +1,77 @@
 {
-  "$schema": "https://inlang.com/schema/inlang-message-format"
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "a11y": {
+    "externalLink": "{text} (nouvelle fenêtre)"
+  },
+  "actions": {
+    "closeModal": "Fermer la fenêtre modale",
+    "selectLanguage": "Sélectionner une langue"
+  },
+  "footer": {
+    "backHome": "Retour à l'accueil du site - compar:IA",
+    "dpg": "Le service est reconnu comme un bien public numérique par l’Alliance Digital Public Goods",
+    "helpUs": "Aidez-nous à améliorer ce service !",
+    "license": {
+      "linkTitle": "Licence etalab - nouvelle fenêtre",
+      "mention": "Sauf mention explicite de propriété intellectuelle détenue par des tiers, les contenus de ce site sont proposés sous <a {linkProps}>licence etalab-2.0</a>"
+    },
+    "links": {
+      "accessibility": "Accessibilité : non conforme",
+      "legal": "Mentions légales",
+      "privacy": "Politique de confidentialité",
+      "rgesn": "Écoconception",
+      "sources": "Code source",
+      "tos": "Modalités d'utilisation"
+    },
+    "theme": {
+      "legend": "Choisissez un thème pour personnaliser l’apparence du site.",
+      "options": {
+        "dark": "Thème sombre",
+        "light": "Thème clair",
+        "system": "Système",
+        "systemSub": "Utilise les paramètres système"
+      },
+      "title": "Paramètres d'affichage"
+    },
+    "writeUs": "Si vous rencontrez un problème ou si vous avez un commentaire sur le comparateur, n'hésitez pas à nous écrire <a {formLinkProps}>via ce formulaire</a>, nous lisons tous vos messages.<br />Merci !"
+  },
+  "header": {
+    "banner": "🏆 Le classement des modèles est maintenant disponible ! Découvrir le classement.",
+    "homeTitle": "Accueil - compar:IA",
+    "logoAlt": "République Française",
+    "menu": "Menu",
+    "startDiscussion": "Commencer à discuter",
+    "subtitle": "Le comparateur d’IA conversationnelles",
+    "title": "compar:IA"
+  },
+  "seo": {
+    "desc": "compar:IA est un outil permettant de comparer à l’aveugle différents modèles d'IA conversationnelle pour sensibiliser aux enjeux de l'IA générative (biais, impact environmental) et constituer des jeux de données de préférence en français.",
+    "title": "compar:IA, le comparateur d'IA conversationnelles",
+    "titles": {
+      "accessibilite": "Déclaration d’accessibilité",
+      "arene": "Discussion",
+      "community": "Communauté",
+      "comparator": "Le comparateur",
+      "datasets": "Jeux de données",
+      "donnees-personnelles": "Politique de confidentialité",
+      "duel": "Atelier Duel de l’IA",
+      "faq": "FAQ",
+      "history": "Dates clés",
+      "home": "Accueil",
+      "mentions-legales": "Mentions légales",
+      "modalites": "Modalités d’utilisation",
+      "modeles": "Liste des modèles",
+      "news": "Actualités et ressources",
+      "partners": "Partenaires",
+      "problem": "Le problème initial",
+      "product": "À propos",
+      "ranking": "Classement",
+      "rgesn": "Déclaration d’écoconception",
+      "settings": "Paramètres",
+      "share": "Mon bilan"
+    }
+  },
+  "words": {
+    "close": "Fermer"
+  }
 }
