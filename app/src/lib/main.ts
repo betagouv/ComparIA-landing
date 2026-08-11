@@ -9,6 +9,7 @@ export const ALL_LOCALES = [
   { code: 'en', short: 'EN', long: 'EN - English' },
   { code: 'da' as Locale, short: 'DA', long: 'DA - Dansk', host: 'https://ai-arenaen.dk' }
 ] satisfies LocaleOption[]
+export const CONTACT_URL = 'contact@comparia.beta.gouv.fr'
 
 export function onLocaleChange(locale: AnyLocale) {
   const localeData = ALL_LOCALES.find((loc) => loc.code === locale)

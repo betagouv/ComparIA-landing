@@ -5,6 +5,7 @@
   import { Icon, Link } from '$components/dsfr'
   import { m } from '$lib/i18n/messages'
   import { getLocale } from '$lib/i18n/runtime'
+  import { ARENA_URL } from '$lib/main'
   import { onMount } from 'svelte'
   import 'uno.css'
   import '../css/app.css'
@@ -34,7 +35,7 @@
 <Header />
 
 {#if isHome}
-  <Link button href="/arene/ranking" text={m['header.banner']()} cornered class="w-auto!" />
+  <Link button href="{ARENA_URL}/ranking" text={m['header.banner']()} cornered class="w-auto!" />
 {/if}
 
 {@render children()}

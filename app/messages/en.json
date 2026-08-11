@@ -4,8 +4,113 @@
     "externalLink": "{text} (new window)"
   },
   "actions": {
+    "contactUs": "Contact us",
     "closeModal": "Close the popup",
     "selectLanguage": "Select a language"
+  },
+  "faq": {
+    "datasets": {
+      "questions": {
+        "1": {
+          "desc": "<p> Preference data is used to improve models during future training. </p> <p> By blindly comparing the responses of two models, compar:IA users express their preferences, indicating which responses are most relevant. This preference data can be used to improve model alignment—that is, to train them to generate responses that are more in line with user expectations and preferences. </p> <p> This is an iterative process, where the model gradually learns to generate better responses based on feedback from humans on the quality of the responses. By being exposed to preference data, models adjust their response style. </p>",
+          "title": "Does preference data have an immediate effect on model performance?"
+        },
+        "2": {
+          "desc": "<p> The uniqueness of the data collected on the compar:IA platform is that it is in lower ressourced languages and corresponds to real-life user tasks. This data reflects human preferences in specific linguistic and cultural contexts. This data allows us to adjust the models to make them more relevant, accurate, and adapted to user needs, while attempting to address any biases or gaps. </p>",
+          "title": "Why are the votes on compar:IA useful?"
+        },
+        "3": {
+          "desc": "<p> compar:IA positions itself as a low-ressourced language assessment and alignment tool for language models, focused on response quality and preference data collection, thus distinguishing itself from the global ranking approach of <a href='https://lmarena.ai/' target='_blank'> chatbot arena </a> developed by <a href='http://lmsys.org' target='_blank'> lmsys.org </a> and the ethical alignment of AI models of <a href='https://hannahkirk.github.io/prism-alignment/' target='_blank'> Prism Alignment Project </a> . </p>",
+          "title": "What makes compar:IA different from other similar initiatives?"
+        }
+      },
+      "title": "Dataset"
+    },
+    "ecology": {
+      "questions": {
+        "1": {
+          "desc": "<p> compar:AI uses the methodology developed by <a target='_blank' href='https://ecologits.ai/latest/'> <strong> Ecologits </strong> (GenAI Impact) </a> to provide an estimation for energy consumed that allows users to compare the environmental impact of different AI models for the same query. This transparency is essential to encourage the development and adoption of more eco-responsible AI models. </p> <p> Ecologits applies the principles of Life Cycle Assessment (LCA) in accordance with ISO 14044, focusing for the moment on the impact of <strong> inference </strong> (i.e., the use of models to answer queries) and the <strong> manufacturing of graphics cards </strong> (resource extraction, manufacturing, and transportation). </p> <p> The model's power consumption is estimated by taking into account various parameters such as the size of the AI model used, the location of the servers where the models are deployed, and the number of output tokens. The calculation of the global warming potential indicator expressed in CO2 equivalent is derived from the model's power consumption measurement. </p> <p> It is important to note that methodologies for assessing the environmental impact of AI are still under development. </p>",
+          "title": "How are environmental metrics calculated?"
+        },
+        "2": {
+          "desc": "<p> Data center locations play a very significant role in AI's carbon footprint. If a model is trained or used in a country heavily dependent on fossil fuels, its environmental impact will be greater than if it is hosted in a country that uses mostly renewable energy. </p> <p> The AI environmental impact analysis method developed by <a target='_blank' href='https://ecologits.ai/latest/'> Ecologits (from GenAI Impact) </a> incorporates data on the energy mix of the different countries where the servers are located. This allows for a more accurate and nuanced estimate of the actual carbon footprint of inference on different generative AI models. </p>",
+          "title": "Do environmental metrics take into account the energy mix of different countries?"
+        },
+        "3": {
+          "desc": "<p> Many environmental impact metrics focus primarily on the impact of <strong> inference </strong> , that is, the use of AI models to answer queries. This approach may give the illusion that inference is less energy-intensive than model training. However, <strong> the reality is more complex. </strong> Consider the car analogy: </p> <ul> <li> Building a car (training) is a one-time, resource-intensive process. </li> <li> Each car journey (inference) uses less energy, but these journeys are repeated daily, and their number is potentially immense. </li> </ul> <p> Similarly <strong> the cumulative impact of inference, across millions of users querying daily, is often signficantly greater than the impact of initial training <strong> This is why it is crucial that AI carbon footprint assessment tools consider the entire lifecycle </strong> models, from training to inference </strong>  </p>",
+          "title": "Do environmental impact estimations take into account the resources used to train the models?"
+        }
+      },
+      "title": "Environmental data"
+    },
+    "i18n": {
+      "questions": {
+        "1": {
+          "desc": "<p> Yes, the internationalization of compar:AI is underway. We are starting with an expansion to three pilot countries: Lithuania, Sweden, and Denmark. This first phase will allow us to test the approach and adapt the interface to different European linguistic and cultural contexts. Eventually, the circle may expand to more European languages based on feedback from these pilot countries. The objective is to gradually build a true European digital common for human evaluation of conversational AI, with collaborative governance that remains to be defined between the different participating countries. </p>",
+          "title": "compar:IA initially focused on French: are there plans for other European languages?"
+        },
+        "2": {
+          "desc": "<p> The development of a European platform for comparing conversational AI models offers several concrete advantages. It allows for the collection of preference data reflecting the real needs of European users, thus improving the relevance of model answers for this userbase. The publication of the datasets guarantees better representation of European languages and cultures, often underrepresented in global datasets and evaluations dominated by English. It also ensures compliance with European regulations (GDPR, AI Act) and integrates evaluation criteria aligned with European priorities such as environmental impact reduction and algorithmic transparency. Finally, it fosters the emergence of a competitive and autonomous European AI ecosystem. </p>",
+          "title": "What are the advantages of a specifically European preference collection platform?"
+        }
+      },
+      "title": "Internationalization"
+    },
+    "models": {
+      "questions": {
+        "1": {
+          "desc": "<p> We choose models based on their popularity, diversity, and relevance to users. We pay particular attention to making <em> open weights </em> and different size models available. </p>",
+          "title": "How do you choose the models present in the arena ?"
+        },
+        "2": {
+          "desc": "<p> Inference, meaning the ability to query the models, is payed for by the project. For most models, we use the Open Router and Hugging Face Inference Providers on a per-token usage basis. </p>",
+          "title": "How do you manage to keep this service free?"
+        },
+        "3": {
+          "desc": "<p> Quantized models are optimized to consume fewer resources by simplifying certain calculations while aiming for the best response quality. </p> <p> Quantization is an optimization technique that involves reducing the precision of the numbers used to represent the parameters of an AI model. This allows <strong> to reduce the size of the model </strong> and <strong> to speed up calculations </strong> , which is particularly advantageous for inference on resource-constrained machines. </p>",
+          "title": "What are “quantized models” ?"
+        },
+        "4": {
+          "desc": "<p> <strong> A model's ability to speak multiple languages is related to the linguistic diversity of its training data, not to the country it was developed in </strong> . <strong> LLMs use huge corpora of data with many languages </strong> , but the distribution of languages in the training data is not uniform. An overrepresentation of English can lead to limitations in other languages. These limitations are visible, for example, in <strong> anglicisms or the inability to generate content in certain languages classified as \"endangered\" by UNESCO </strong> . </p> <p> <strong> The accuracy and richness of a model's vocabulary depend on the data used for its training </strong> . </p>",
+          "title": "Is there a link between the nationality of the company or lab that created the model and its ability to speak several languages?"
+        },
+        "5": {
+          "desc": "<p> Few stakeholders are “transparent” about the data sources used in training corpora. This information is often confidential for legal and commercial reasons. </p>",
+          "title": "Can we see the training data of the models?"
+        }
+      },
+      "title": "Models"
+    },
+    "title": "Frequently Asked Questions",
+    "usage": {
+      "questions": {
+        "1": {
+          "desc": "<p> Current conversational language models are <strong> unable to cite their sources </strong> they used to generate an answer. They work by predicting the most likely next token based on the statistical distribution of the training data. While they can synthesize information from various sources, they do not keep track of where that information comes from. </p> <p> However, there are techniques like <strong> Retrieval Augmented Generation (RAG) </strong> that aim to overcome this limitation. RAG allows models to access external knowledge bases and <strong> provide contextualized information by citing the sources </strong> . This approach is useful for improving the transparency and reliability of model answers. </p>",
+          "title": "Can models cite their sources?"
+        },
+        "2": {
+          "desc": "<p> Have you asked the question: “Explain to me the latest trendy cheesecake recipe and cite your sources” and been disappointed with the answers? That's normal... </p> <p> <strong> “Raw” conversational AI models cannot answer questions about the most recent news. </strong> They are trained on static datasets and cannot interact with the web or open links. They do not have the ability to update themselves in real time with events unfolding in the world. The information the model has access to is limited to the date of its last training. </p> <p> Therefore, if you ask a question about a recent news event, the model will rely on outdated information, risking generating inaccurate answers. </p> <p> In the case of Perplexity, Copilot, or ChatGPT, the so-called “raw” conversational AI models are combined with other system blocks that allow them to connect to the internet to access information in real time. These are called “conversational agents.” </p>",
+          "title": "If I ask a question about the latest news, can the model answer?"
+        },
+        "3": {
+          "desc": "<p> If you include a URL in a query, the conversational model will not be able to access it directly. Language models process the query text but do not have the ability to interact with the web or open links. They are trained on a fixed text dataset, and their answers are based on this training data. When a question is asked, the models use this training to generate an answer but cannot access new information online if they are not enabled to do so by a surrounding system. </p> <p> As an analogy, imagine a student taking an exam without internet access. They can use their acquired knowledge to answer questions, but cannot visit websites for additional information. </p>",
+          "title": "If I include an URL in a query, can the model access it?"
+        },
+        "4": {
+          "desc": "<p> Models sometimes lose track of a conversation due to their <strong> limited context window and the \"needle in the haystack\" problem. </strong> This \"window\" represents the amount of previous information the model can retain, acting like a short-term memory. The smaller the window, the more likely the model is to forget key parts of the conversation, leading to inconsistent responses. Long or complex conversations can quickly saturate the context window, increasing the risk of inconsistency. </p> <p> As an analogy, imagine a person who only remembers the last five sentences of a conversation. If the conversation is short, the person can keep up. But if the conversation becomes long, the person will forget crucial information, making their responses inconsistent. Similarly, an AI model with a small context window can \"lose track\" of a conversation when too much information is exchanged, missing key elements and producing responses that no longer make sense. </p>",
+          "title": "Why do some models quickly lose the thread of the conversation?"
+        },
+        "5": {
+          "desc": "<p> The wording of \"prompts,\" influences the answers significantly. To get the best results from a language model, it is essential to master the art of <em> prompting </em> , that is, the wording of requests or instructions. <strong> Clarity is key </strong> : </p> <ul> <li> Use simple and direct language, avoiding questions that are too long or complex. Break requests down into several simpler questions for more precise answers. </li> <li> <strong> Specify specific format constraints if necessary </strong> : If you need a response in a certain format (list, table, summary, etc.), specify it in the prompt. You can also specify the steps to follow and the desired quality criteria. </li> <li> <strong> Specify the role of the model </strong> For example, start with “Act like an expert in…” or “Imagine you are a teacher…” to guide the tone and perspective of the answer. </li> <li> <strong> Contextualize your questions </strong> If necessary, provide relevant examples to guide the model. </li> <li> <strong> Encourage reasoning </strong> Use chain-of-thought prompting ( <em> Chain-of-Thought Prompting </em> ) to ask the model to explain its reasoning, which makes the answers more robust. </li> </ul> <p> Conversational models are sensitive to variations in wording: simple language, short questions, and rephrasing when necessary can help guide the model toward relevant answers. Test and refine your prompts to find the most effective wording! </p>",
+          "title": "What are the best practices for prompting?"
+        },
+        "6": {
+          "desc": "<p> Raw conversational AI models answer directly by predicting tokens (words) based on their probability, while a search engine offers links and resources for the user to explore on their own. </p>",
+          "title": "What's the difference between asking a question to a conversation AI model and searching on Google?"
+        }
+      },
+      "title": "Use"
+    }
   },
   "footer": {
     "backHome": "Back to home - compar:IA",
@@ -43,6 +148,112 @@
     "startDiscussion": "New chat",
     "subtitle": "The chatbot arena",
     "title": "compar:IA"
+  },
+  "home": {
+    "europe": {
+      "desc": "Lithuania, Sweden, and Denmark are joining France in adopting the comparator to refine future AI models in their national languages.",
+      "languages": {
+        "da": "in Danish",
+        "fr": "in French",
+        "lt": "in Lithuanian",
+        "sv": "in Swedish"
+      },
+      "question": "Would you like to have the chatbot arena in your language?",
+      "title": "The comparator <span {props}>becomes European!</span>"
+    },
+    "faq": {
+      "discover": "See other questions",
+      "title": "Your frequently asked questions"
+    },
+    "intro": {
+      "desc": "Have a blind discussion with two AIs and evaluate their answers",
+      "steps": {
+        "a11yDesc": "1. I chat with two hidden AIs: Chat for as long as you like. 2. I give my preference: By doing so, you'll help improve the AI models. 3. The model identities are revealed: Learn more about them and their characteristics.",
+        "one": {
+          "desc": "Chat as long as you like",
+          "title": "I chat with two hidden AIs"
+        },
+        "three": {
+          "desc": "Learn more about AI models and their characteristics",
+          "title": "The model identities are revealed!"
+        },
+        "title": "How it works",
+        "two": {
+          "desc": "By doing so, you'll help improve the AI models",
+          "title": "I give my preference"
+        }
+      },
+      "title": "Don't trust the answers <span {props}>of a single AI</span>",
+      "tos": {
+        "accept": "I accept the <a {linkProps}>terms of use</a>",
+        "error": "You must accept the terms of use to continue",
+        "help": "Data is shared for research purposes"
+      }
+    },
+    "origin": {
+      "project": {
+        "desc": "The chatbot arena was designed and developed as part of a government startup led by the French Ministry of Culture, integrated into the <a {linkProps}>Beta.gouv.fr</a> program by the Interministerial Digital Directorate (DINUM). This initiative supports French public administrations in building useful, simple, and user-friendly digital services.",
+        "title": "Who initiated the project?"
+      },
+      "team": {
+        "desc": "The chatbot arena is led within the French Ministry of Culture by a multidisciplinary team - AI experts, developers, deployment specialists, and designers - with a mission to make conversational AI more transparent and accessible to everyone.",
+        "title": "Who are we?"
+      }
+    },
+    "usage": {
+      "desc": "The tool is also aimed at AI experts and educators for more specific use cases",
+      "educate": {
+        "desc": "Use the chatbot arena as an educational tool to discuss AI with your audience",
+        "title": "Train and raise awareness"
+      },
+      "explore": {
+        "desc": "Find all model specifications and terms of use in one place",
+        "title": "Explore the models"
+      },
+      "title": "Specific use cases of compar:IA",
+      "use": {
+        "desc": "Developers, researchers, model publishers - access compar:IA’s datasets to enhance models for low-resource languages",
+        "title": "Reuse the data"
+      }
+    },
+    "use": {
+      "compare": {
+        "alt": "Compare",
+        "desc": "Discuss and develop your critical thinking by giving your preference",
+        "title": "Compare the responses of different AI models"
+      },
+      "desc": "compar:IA is a free tool that helps raise awareness among citizens about generative AI and its challenges.",
+      "measure": {
+        "alt": "Measure",
+        "desc": "Discover the environmental impact of your conversations with each model",
+        "title": "Measure the environmental footprint of questions asked to AI"
+      },
+      "test": {
+        "alt": "Test",
+        "desc": "Test different models: open, proprietary, small, large...",
+        "title": "Test the latest AI in the ecosystem in one place"
+      },
+      "title": "What is compar:AI for?"
+    },
+    "vote": {
+      "datasetAccess": "Access the datasets",
+      "desc": "The tool is also useful to AI experts, developers and for educational purposes.",
+      "steps": {
+        "datasets": {
+          "desc": "All questions and votes are compiled into datasets and published openly after anonymization.",
+          "title": "Datasets by language"
+        },
+        "finetune": {
+          "desc": "Companies and academia can use the datasets to train new models that are more respectful of linguistic and cultural diversity.",
+          "title": "Models fine-tuned for specific languages"
+        },
+        "prefs": {
+          "desc": "After discussing with the AIs, you are invited to indicate your preference for a model on given criteria, such as the relevance or usefulness of the answers.",
+          "title": "Your preferences"
+        }
+      },
+      "title": "Why is your vote important?"
+    }
   },
   "seo": {
     "desc": "compar:IA is a tool that enables the blind comparison of different conversational AI models, raising awareness of the issues surrounding generative AI (plurality, bias, environmental impact) and helping to build language preference datasets for less-resourced languages.",
