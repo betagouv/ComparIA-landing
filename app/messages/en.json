@@ -8,6 +8,36 @@
     "closeModal": "Close the popup",
     "selectLanguage": "Select a language"
   },
+  "datasets": {
+    "access": {
+      "catch": "Model publishers, researchers, companies, now it's your turn!",
+      "desc": "The platform’s questions and preferences are primarily in French, Danish, Swedish and Lithuanian, capturing organic, real-world usage - not artificial prompts. These datasets are publicly available on <a {linkProps}>data.gouv.fr</a> and Hugging Face.",
+      "repos": {
+        "arena": {
+          "desc": "Conversations, answers, reactions and preferences gathered in a single dataset",
+          "title": "/comparia-fr-arena"
+        }
+      },
+      "share": "Show us how you’re using the data",
+      "title": "Access compar:IA datasets"
+    },
+    "reuse": {
+      "bunka": {
+        "analyze": {
+          "desc": "Analysis of user conversations with detection of tasks (creation, information search, etc.), topics (arts and culture, education, etc.), complex emotions (curiosity, enthusiasm, etc.), language tones (formal, professional, etc.)",
+          "title": "Access the analysis"
+        },
+        "conversations": {
+          "desc": "Interactive visualization of conversations where each cluster represents a recurring theme discussed by users (such as education, health, the environment, or even philosophy).",
+          "title": "Explore the data visualization"
+        },
+        "desc": "The Bunka.ai team conducted a large-scale study of user-AI interactions on the chatbot arena, mapping out dominant themes, key tasks, and the balance between automation vs. human augmentation. Their analysis based on 25,000 real conversations offers rare empirical insight into how people actually use AI.",
+        "method": "Learn more about the methodology"
+      },
+      "desc": "Examples of compar:IA dataset reuses",
+      "title": "How is this data used?"
+    }
+  },
   "faq": {
     "datasets": {
       "questions": {
