@@ -1,0 +1,19 @@
+@import '@gouvfr/dsfr/dist/utility/icons/icons.css';
+
+.fr-icon-shuffle::before,
+.fr-icon-shuffle::after {
+  -webkit-mask-image: url('/icons/shuffle.svg');
+  mask-image: url('/icons/shuffle.svg');
+}
+
+.fr-icon-sort-asc::before,
+.fr-icon-sort-asc::after {
+  -webkit-mask-image: url('/icons/sort-asc.svg');
+  mask-image: url('/icons/sort-asc.svg');
+}
+
+.fr-icon-sort-desc::before,
+.fr-icon-sort-desc::after {
+  -webkit-mask-image: url('/icons/sort-desc.svg');
+  mask-image: url('/icons/sort-desc.svg');
+}

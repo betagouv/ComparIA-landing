@@ -1,0 +1,118 @@
+@import '@gouvfr/dsfr/dist/dsfr.min.css';
+@import '@gouvfr/dsfr/dist/utility/icons/icons.css';
+@import './icons.css';
+
+:root {
+  /* Accessibility override (WCAG AA): replace DSFR violet #6a6af4 with #6464f3
+     so primary text reaches 4.5:1 against a white surface. */
+  --brand-primary: #6464f3;
+  --brand-primary-hover: #5858d6;
+  --brand-primary-active: #4c4cb9;
+  --brand-primary-contrast: #ffffff;
+  --brand-primary-soft: #e6e6fd;
+  --brand-primary-soft-hover: #dadafc;
+  --brand-primary-soft-active: #cdcdfb;
+  --brand-primary-softest: #f4f4fe;
+  --brand-secondary: #ff9575;
+  --brand-secondary-text: #ab644e;
+
+  --blue-france-main-525: var(--brand-primary);
+  /* FIXME replace dsfr colors instead */
+  --text-inverted-blue-france: var(--brand-primary-contrast);
+  --text-active-blue-france: var(--brand-primary);
+  --text-action-high-blue-france: var(--brand-primary);
+  --background-open-blue-france: var(--brand-primary-soft);
+  --background-open-blue-france-hover: var(--brand-primary-soft-hover);
+  --background-open-blue-france-active: var(--brand-primary-soft-active);
+  --background-active-blue-france: var(--brand-primary);
+  --background-action-low-blue-france: var(--brand-primary-soft);
+
+  /* CUSTOM DSFR LIKE ADDITION */
+  --cg-blue-france-main-525-hover: var(--brand-primary-hover);
+  --cg-blue-france-main-525-active: var(--brand-primary-active);
+  --outline-color: #0a76f6;
+
+  /* CUSTOM */
+  --cg-very-light-grey: #fcfcfd;
+  --cg-light-grey: #f3f5f9;
+  --cg-very-light-blue: #f9fbff;
+  --cg-green: #58b77d;
+  --cg-purple: #a96afe;
+  --cg-orange: var(--brand-secondary);
+  --blue-ecume-925-125: var(--brand-primary-soft);
+  --blue-ecume-975-75: var(--brand-primary-softest);
+
+  /* xs breakpoint */
+  --text-xs: 0.675rem;
+  --text-xs--line-height: calc(1 / 0.75);
+  --text-sm: 0.75rem;
+  --text-sm--line-height: calc(1.25 / 0.875rem);
+}
+
+:root[data-fr-theme='dark'] {
+  --brand-primary: #9898f8;
+  --brand-primary-hover: #a4a4f9;
+  --brand-primary-active: #b1b1fa;
+  --brand-primary-contrast: #000000;
+  --brand-primary-soft: #181828;
+  --brand-primary-soft-hover: #24243c;
+  --brand-primary-soft-active: #31314f;
+  --brand-primary-softest: #0b0b11;
+  --brand-secondary: #ffcc00;
+  --brand-secondary-text: #ffcc00;
+
+  --blue-france-main-525: var(--brand-primary);
+  /* FIXME replace dsfr colors instead */
+  --text-inverted-blue-france: var(--brand-primary-contrast);
+  --text-active-blue-france: var(--brand-primary);
+  --text-action-high-blue-france: var(--brand-primary);
+  --background-open-blue-france: var(--brand-primary-soft);
+  --background-open-blue-france-hover: var(--brand-primary-soft-hover);
+  --background-open-blue-france-active: var(--brand-primary-soft-active);
+  --background-active-blue-france: var(--brand-primary);
+  --background-action-low-blue-france: var(--brand-primary-soft);
+
+  /* CUSTOM DSFR LIKE ADDITION */
+  --cg-blue-france-main-525-hover: var(--brand-primary-hover);
+  --cg-blue-france-main-525-active: var(--brand-primary-active);
+
+  /* CUSTOM */
+  --cg-very-light-grey: #0a0a0b;
+  --cg-light-grey: #1c1e22;
+  --cg-very-light-blue: #0a0a0b;
+  --blue-ecume-925-125: var(--brand-primary-soft);
+  --blue-ecume-975-75: var(--brand-primary-softest);
+}
+
+@media (min-width: 36em) {
+  /* sm */
+}
+
+@media (min-width: 48em) {
+  /* md */
+  :root {
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+  }
+}
+
+@media (min-width: 62em) {
+  /* lg */
+}
+
+@media (min-width: 78em) {
+  /* xl */
+}
+
+html,
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 !important;
+}
+#app {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
