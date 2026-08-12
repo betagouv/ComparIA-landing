@@ -145,7 +145,7 @@
 
 <main id="content">
   <div class="fr-container py-12">
-    <h2 class="mb-7!">{m['news.title']()}</h2>
+    <h1 class="fr-h2 mb-7!">{m['news.title']()}</h1>
 
     <div class="md:flex md:flex-row">
       <aside

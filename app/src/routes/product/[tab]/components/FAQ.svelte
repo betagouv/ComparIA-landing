@@ -47,6 +47,8 @@
   ]
 </script>
 
+<h2 class="fr-sr-only">{m['faq.title']()}</h2>
+
 <Tabs {tabs} noBorders kind="nav" label={m['faq.title']()}>
   {#snippet tab({ id })}
     {#each tabs as tab (tab.id)}

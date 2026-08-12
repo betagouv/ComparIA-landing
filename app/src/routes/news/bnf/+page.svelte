@@ -205,7 +205,7 @@
 
   <section class="bg-light-grey py-15">
     <div class="fr-container">
-      <h3 class="text-center">{m['news.bnf.talks.title']()}</h3>
+      <h2 class="fr-h3 text-center">{m['news.bnf.talks.title']()}</h2>
 
       <div class="gap-8 md:grid-cols-2 grid">
         {#each talks as talk, i (i)}
@@ -222,7 +222,7 @@
               class="aspect-video"
             ></iframe>
 
-            <h4 class="mt-4!">{talk.title}</h4>
+            <h3 class="fr-h4 mt-4!">{talk.title}</h3>
             <p class="text-grey">{talk.desc}</p>
           </div>
         {/each}
@@ -230,7 +230,7 @@
     </div>
 
     <div class="fr-container pt-15">
-      <h3 class="my-12! text-center">{m['news.bnf.workshops.title']()}</h3>
+      <h2 class="fr-h3 my-12! text-center">{m['news.bnf.workshops.title']()}</h2>
 
       <div class="gap-6 grid grid-cols-3">
         {#each workshops as workshop, i (i)}
@@ -248,7 +248,7 @@
               />
             </div>
 
-            <h6 class="mb-3!">{workshop.title}</h6>
+            <h3 class="fr-h6 mb-3!">{workshop.title}</h3>
             <p class="text-sm! text-grey">{workshop.desc}</p>
           </div>
         {/each}
@@ -257,12 +257,12 @@
   </section>
 
   <section class="py-15">
-    <h3 class="text-center">{m['news.bnf.speakers.title']()}</h3>
+    <h2 class="fr-h3 text-center">{m['news.bnf.speakers.title']()}</h2>
     <div class="fr-container gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid">
       {#each speakers as speaker (speaker.name)}
         <div class="cg-border bg-light-grey p-7 flex flex-col">
           <img loading="lazy" decoding="async" class="rounded-lg w-full" src={speaker.img} alt="" />
-          <h6 class="my-2!">{speaker.name}</h6>
+          <h3 class="fr-h6 my-2!">{speaker.name}</h3>
           <p class="text-sm! text-grey">{speaker.desc}</p>
 
           <div class="gap-2 mt-auto flex flex-wrap">
@@ -285,7 +285,7 @@
 
   <section class="bg-light-grey flex flex-col items-center">
     <div class="fr-container md:w-1/2!">
-      <h4 class="mt-12! text-center">{m['news.bnf.about.title']()}</h4>
+      <h2 class="fr-h4 mt-12! text-center">{m['news.bnf.about.title']()}</h2>
       <p class="text-center">{m['news.bnf.about.event']()}</p>
       <p class="text-center">{m['news.bnf.about.goal']()}</p>
       <p class="mb-8! text-center">{m['news.bnf.about.thanks']()}</p>

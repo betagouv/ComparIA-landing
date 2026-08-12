@@ -42,7 +42,7 @@
     <div class="fr-container">
       <div class="cg-border gap-8 bg-white px-5 py-8 md:px-8 md:py-10 lg:grid-cols-2 grid">
         <div>
-          <h2 class="fr-h6">{m['datasets.access.title']()}</h2>
+          <h1 class="fr-h6">{m['datasets.access.title']()}</h1>
           <p>
             {@html sanitize(
               m['datasets.access.desc']({
@@ -160,6 +160,7 @@
     }
 
     p,
+    h1,
     h2 {
       line-height: 1.5em;
     }

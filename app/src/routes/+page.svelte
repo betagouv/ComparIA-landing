@@ -91,7 +91,6 @@
     desc: m[`home.usage.${i18nKey}.desc`]()
   }))
 
-
   const reducedFAQ = (
     [
       { id: 'usage', index: '1' },
@@ -141,7 +140,7 @@
 
   <section class="fr-container--fluid md:py-15 py-10">
     <div class="fr-container">
-      <h3 class="mb-3! text-center">{m['home.use.title']()}</h3>
+      <h2 class="fr-h3 mb-3! text-center">{m['home.use.title']()}</h2>
       <p class="mb-8! text-grey text-center">{m['home.use.desc']()}</p>
 
       <div class="gap-7 md:grid-cols-3 grid">
@@ -162,7 +161,7 @@
               class="fr-responsive-img bg-light-grey sm:max-h-2/3 md:max-h-1/3 lg:max-h-1/2 xl:max-h-3/5 rounded-t-xl hidden h-full! max-h-3/5 object-contain dark:block"
             />
             <div class="px-5 pb-7 pt-4 md:px-8 md:pb-10 md:pt-5">
-              <h6 class="mb-1! md:mb-2!">{card.title}</h6>
+              <h3 class="fr-h6 mb-1! md:mb-2!">{card.title}</h3>
               <p class="mb-0! text-grey">{card.desc}</p>
             </div>
           </div>
@@ -231,7 +230,7 @@
   <section class="fr-container--fluid bg-very-light-grey py-10 lg:py-14">
     <div class="fr-container">
       <div class="cg-border xl:p-13! bg-white px-4 py-10">
-        <h4 class="mb-2! text-center">{m['home.vote.title']()}</h4>
+        <h2 class="fr-h4 mb-2! text-center">{m['home.vote.title']()}</h2>
         <p class="text-grey text-center">{m['home.vote.desc']()}</p>
 
         <div class="md:mt-13 mt-10 lg:flex-row flex flex-col text-center">
@@ -248,7 +247,7 @@
                   class="mb-4 m-auto"
                 />
                 <!-- Reserve two lines so the three columns line up whatever the language -->
-                <h6 class="mb-1! mx-auto! lg:min-h-[2lh] max-w-[230px]">{card.title}</h6>
+                <h3 class="fr-h6 mb-1! mx-auto! lg:min-h-[2lh] max-w-[230px]">{card.title}</h3>
               </div>
               <p class="text-sm! text-grey m-auto! max-w-[280px]">{card.desc}</p>
             </div>
@@ -273,14 +272,14 @@
 
   <section class="fr-container--fluid bg-light-grey py-10 lg:py-20">
     <div class="fr-container">
-      <h3 class="mb-2! text-center">{m['home.usage.title']()}</h3>
+      <h2 class="fr-h3 mb-2! text-center">{m['home.usage.title']()}</h2>
       <p class="fr-mb-4w text-grey text-center">{m['home.vote.desc']()}</p>
 
       <div class="gap-8 md:grid-cols-3 grid">
         {#each usageCards as card, i (i)}
           <div class="cg-border bg-white p-5 lg:px-8 lg:pb-11 lg:pt-6">
             <Icon icon={card.icon} size="lg" block class="text-primary mb-4" />
-            <h6 class="mb-2!">{card.title}</h6>
+            <h3 class="fr-h6 mb-2!">{card.title}</h3>
             <p class="mb-0! text-grey">{card.desc}</p>
           </div>
         {/each}
@@ -291,7 +290,7 @@
   <section class="fr-container--fluid bg-very-light-grey lg:pb-38 py-12 lg:pt-20">
     <div class={['fr-container gap-10 lg:gap-6 grid', locale === 'fr' && 'lg:grid-cols-2']}>
       <div class="cg-border bg-white px-5 py-10 md:px-8">
-        <h5>{m['home.origin.team.title']()}</h5>
+        <h2 class="fr-h5">{m['home.origin.team.title']()}</h2>
         <p>{m['home.origin.team.desc']()}</p>
         <p>
           {@html sanitize(
@@ -329,7 +328,7 @@
 
   <section class="fr-container--fluid pb-18 lg:pb-25 pt-10 lg:pt-20">
     <div class="fr-container">
-      <h3 class="mb-8! lg:mb-10! text-center">{m['home.faq.title']()}</h3>
+      <h2 class="fr-h3 mb-8! lg:mb-10! text-center">{m['home.faq.title']()}</h2>
 
       <AccordionGroup>
         {#each reducedFAQ as q (q.id)}
