@@ -1,7 +1,7 @@
 <script lang="ts">
   import { SEOHead } from '$components'
   import { Accordion, AccordionGroup, Button, Icon, Link } from '$components/dsfr'
-  import * as env from '$env/static/public'
+  import { PUBLIC_GIT_COMMIT } from '$env/static/public'
   import { m } from '$lib/i18n/messages'
   import { getLocale, locales } from '$lib/i18n/runtime'
   import { ARENA_URL, CONTACT_URL } from '$lib/main'
@@ -10,8 +10,6 @@
   import { HowItWorks, Newsletter } from './components'
 
   const locale = getLocale()
-
-  let PUBLIC_GIT_COMMIT = $state<string | null>((env as any).PUBLIC_GIT_COMMIT ?? null)
 
   if (PUBLIC_GIT_COMMIT) console.log(`Git commit: ${PUBLIC_GIT_COMMIT}`)
 
