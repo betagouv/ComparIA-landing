@@ -301,6 +301,247 @@
       "title": "Why is your vote important?"
     }
   },
+  "product": {
+    "community": {
+      "countries": {
+        "da": "Denmark",
+        "fr": "France"
+      },
+      "tabLabel": "Community",
+      "teams": {
+        "fr": {
+          "people": {
+            "aurelien": {
+              "date": "Since june 2024",
+              "job": "UX/UI product designer"
+            },
+            "elie": {
+              "date": "Since november 2025",
+              "job": "Full-stack developer"
+            },
+            "hadrien": {
+              "date": "June 2024 - November 2025",
+              "job": "Full-stack developer"
+            },
+            "lucie": {
+              "date": "January 2024 - December 2025",
+              "job": "Founder - Product Lead"
+            },
+            "mathilde": {
+              "date": "Since September 2024",
+              "job": "Head of \"Atelier numérique\" / Product Ops"
+            },
+            "nicolas": {
+              "date": "Since June 2025",
+              "job": "Full-stack developer"
+            },
+            "simonas": {
+              "date": "Since December 2024",
+              "job": "Product Manager - ex-deployment manager"
+            }
+          },
+          "title": "The compar:IA France team"
+        }
+      },
+      "title": "Partners"
+    },
+    "comparator": {
+      "challenges": {
+        "bias": {
+          "desc": "Highlight AI biases stemming from the underrepresentation of non-English data in models and raise awareness of their real-world impact.",
+          "title": "Cultural and linguistic bias"
+        },
+        "impacts": {
+          "desc": "Show the environmental impact of generative AI, still widely unknown to the general public.",
+          "title": "Environmental impact"
+        },
+        "pluralism": {
+          "desc": "Ensure citizens have access to a diverse range of AI models, empowering them to make informed choices and cultivate a critical understanding of these technologies.",
+          "title": "Model diversity"
+        },
+        "thinking": {
+          "desc": "Encourage critical thinking on the role of generative AI in personal and professional practices.",
+          "title": "Critical thinking and societal questions"
+        },
+        "title": "The platform addresses multiple challenges"
+      },
+      "cta": "Access the arena",
+      "europe": {
+        "adventure": "As of summer 2025, Lithuania, Sweden, and Denmark are joining the initiative!",
+        "catch": "Would you like to have the chatbot arena in your language?",
+        "desc": "The arena is now available to their citizens in national languages, with a core mission: build preference datasets to improve future AI model performance in low-resource languages.",
+        "title": "The arena <span {props}>goes European</span>!"
+      },
+      "screenshotAlt": "Screenshot of the arena, with the initial question, the two model responses, and the voting buttons.",
+      "tabLabel": "The arena",
+      "title": "The arena enables the creation of <span {props}>preference datasets</span> focused on <span {props}>real-world usage</span> in <span {props}>European languages</span>."
+    },
+    "faq": {
+      "tabLabel": "FAQ"
+    },
+    "history": {
+      "steps": {
+        "acceleration": {
+          "items": {
+            "1": {
+              "date": "March 2025",
+              "desc": "Creation and publishing of the first compar:IA dataset in French including the questions and preferences of the platform's users.",
+              "title": "50,000 votes on the arena!"
+            },
+            "2": {
+              "date": "May 2025",
+              "desc": "And first reuse of the dataset with Bunka.ai which conducted an in-depth study on the interactions between users of the platform.",
+              "title": "Goal of 100,000 votes reached!"
+            },
+            "3": {
+              "date": "June 2025",
+              "desc": "Three datasets, conversations, reactions, votes, are available on <a {hgLinkProps}>HuggingFace</a> and <a {dataLinkProps}>Data.gouv.fr</a>.",
+              "title": "Publication of the three datasets"
+            }
+          },
+          "tag": "Acceleration"
+        },
+        "construction": {
+          "items": {
+            "1": {
+              "date": "June-September 2024",
+              "desc": "Development of the first MVP of the arena and integration of feedback from beta testers.",
+              "title": "Minimum viable product design"
+            },
+            "2": {
+              "date": "October 2024",
+              "desc": "Official presentation and first deployment of the tool.",
+              "title": "Official launch during the Francophonie Summit in Villers Cotterêts!"
+            },
+            "3": {
+              "date": "January 2025",
+              "desc": "Launch of the feature allowing to choose models manually.",
+              "title": "v2 of the arena"
+            },
+            "4": {
+              "date": "February 2025",
+              "desc": "More than 300 people in conferences and workshops on ethical, cultural and environmental challenges of conversational AI systems.",
+              "title": "<a {linkProps}>ComparIA Day at the BnF</a> during the AI Action Summit"
+            }
+          },
+          "tag": "Building"
+        },
+        "i18n": {
+          "items": {
+            "1": {
+              "date": "Summer 2025",
+              "desc": "Partnership with Denmark, Sweden and Lithuania to open the platform in their language and region.",
+              "title": "Scaling at the European level"
+            },
+            "2": {
+              "date": "September 2025",
+              "desc": "Creation of a new workshop format open to all audiences, to discover the inner workings of generative AI and reflect on its environmental impact, and publication of the facilitation kit associated with the \"AI Duels\" extension.",
+              "title": "Launch of <a {linkProps}>“AI Duels”</a>"
+            },
+            "3": {
+              "desc": "Built in partnership with the Digital Regulation Expertise Center (PEReN), the arena ranking is based on all votes and reactions collected since the service was opened to the public in October 2024.",
+              "title": "Publication of the <a {linkProps}>French ranking</a>"
+            },
+            "4": {
+              "desc": "Denmark joins the adventure by offering the arena in its national language with a dedicated domain name.",
+              "title": "Opening the arena <a {linkProps}>in Danish</a>"
+            },
+            "5": {
+              "desc": "The service is recognized as a digital public good by the Digital Public Goods Alliance",
+              "title": "compar:AI recognized as a <a {linkProps}>Digital Public Good</a>"
+            },
+            "6": {
+              "date": "November 2025",
+              "desc": "With over 500,000 unique conversations since the launch of compar:IA.",
+              "title": "Goal of 200,000 votes reached!"
+            }
+          },
+          "tag": "Internationalization"
+        },
+        "investigation": {
+          "items": {
+            "1": {
+              "date": "January-March 2024",
+              "desc": "Interviews with stakeholders in the ecosystem and initial hypotheses for a solution to the problem: \"How to facilitate access to data in French for training language models?\".",
+              "title": "Investigation phase"
+            }
+          },
+          "tag": "Investigation"
+        }
+      },
+      "tabLabel": "Key Dates",
+      "title": "The arena's milestones"
+    },
+    "partners": {
+      "academy": {
+        "catch": "Working on a research project? Have suggestions or need clarification on our methodology or datasets?",
+        "desc": "We’re committed to ensuring the datasets we generate fuel multidisciplinary research, bridging humanities, social sciences, and data science.",
+        "title": "Academic partners"
+      },
+      "diffusion": {
+        "catch": "Would you like to use the chatbot arena in a professional context?",
+        "cta": "Let us know",
+        "desc": "We’re building a network of partners who integrate the chatbot arena into their services and training offerings.",
+        "title": "Communication partners"
+      },
+      "institution": {
+        "title": "Institutional partners"
+      },
+      "services": {
+        "desc": "Environmental impact calculations are based on the tools above.",
+        "title": "Services used"
+      },
+      "tabLabel": "Partners"
+    },
+    "problem": {
+      "alignment": {
+        "alignment": {
+          "a": "Alignment comes after a language model’s pre-training phase, acting as a final \"refinement\" or \"polishing\" step. During pre-training, the model learns to predict the next word, gaining the ability to generate coherent text - but alignment is what tailors it to human preferences.",
+          "b": "The alignment phase trains the model to better meet human needs by making it <strong>more relevant</strong> (answering questions more accurately), <strong>more honest</strong> (admitting when it lacks sufficient data), and <strong>safer</strong> (avoiding harmful or inappropriate content).",
+          "c": "<strong>Without alignment, an LLM might be technically capable yet impractical to use - failing to grasp what users truly expect in a conversation.</strong>",
+          "title": "Alignment: a critical post-training phase"
+        },
+        "datasets": {
+          "a": "Alignment relies on highly specialized datasets, meticulously designed to teach the model \"proper\" behavior.",
+          "b": "<strong>Preference data</strong> is a critical component of alignment, working alongside <strong>demonstration data</strong> (expert-crafted human-AI dialogues with precise tone/style guidelines), <strong>safety data</strong> (curated examples teaching models to reject harmful requests), and <strong>domain-specific datasets</strong> (tailored for fields like medicine, law, or education).",
+          "c": "Preference data presents multiple potential answers to the same question, ranked by human evaluators based on criteria like relevance, usefulness, or harm potential. Users indicate which response performs best, and these curated datasets are then used to fine-tune models - aligning them with expressed human preferences.",
+          "title": "Specific datasets"
+        },
+        "desc": "Alignment: A bias-mitigation technique based on crowdsourcing user preferences to refine model behavior",
+        "diversity": {
+          "a": "To reflect the diversity of cultures and languages in model outputs, <strong>alignment datasets must incorporate a broad range of languages</strong>, contexts, and real-world user tasks. Diversifying alignment data ultimately improves a model’s performance in two key ways:",
+          "b": "First, it <strong>reduces cultural bias</strong> by preventing a single - often Anglophone -perspective from dominating the AI’s responses. The model learns that valid answers vary by cultural context, recognizing multiple legitimate ways to address the same question.",
+          "c": "Second, exposure to linguistic and cultural diversity enables context-aware responses: a French user gets advice tailored to France’s systems, while a Danish user receives information aligned with their national context.",
+          "d": "The result? A more inclusive conversational AI - one that acknowledges and adapts to diverse cultural perspectives.",
+          "title": "Diversify data sources to reduce bias"
+        },
+        "english": {
+          "a": "Preference data is expensive to produce because <strong>each example requires skilled human evaluation</strong>. Platforms like chat.lmsys.org help crowdsource these datasets—but few users contribute in their native language, leaving low-resource languages underrepresented.",
+          "b": "Preference datasets for European languages are scarce - or nonexistent. In LMSYS’s dataset, for instance, French queries represent less than 1% of the total.",
+          "c": "compar:IA is a chatbot arena designed to gather multilingual conversations - capturing region-specific cultural references like daily tasks, local culinary traditions, education systems, or historical and literary touchstones.",
+          "title": "European languages suffer from a shortage of preference data"
+        },
+        "title": "How can we reduce cultural and linguistic biases in these models?"
+      },
+      "diversity": {
+        "diversity": {
+          "desc": "These biases can lead to incomplete or outright incorrect responses, sidelining the diversity of European languages and cultures.",
+          "title": "Overlooked cultural and linguistic diversity"
+        },
+        "english": {
+          "desc": "Conversational AI relies on large language models (LLMs) trained primarily on English data, creating linguistic and cultural biases in their outputs.",
+          "title": "Training data overwhelmingly in English"
+        },
+        "stereotypes": {
+          "desc": "Conversational AI systems seem fluent in every language - but their outputs can still be stereotypical or discriminatory.",
+          "title": "Bias-reinforcing answers"
+        }
+      },
+      "tabLabel": "The initial problem",
+      "title": "Do conversational AI models respect the <span {props}>diversity</span> of European languages?"
+    },
+    "title": "Everything you need to know about the chatbot arena"
+  },
   "seo": {
     "desc": "compar:IA is a tool that enables the blind comparison of different conversational AI models, raising awareness of the issues surrounding generative AI (plurality, bias, environmental impact) and helping to build language preference datasets for less-resourced languages.",
     "title": "compar:IA, the AI chatbot arena",
