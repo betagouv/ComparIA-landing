@@ -51,6 +51,7 @@
     data-tally-auto-close="5000"
     class="bottom-6 right-6 gap-2 px-4 py-3 text-white! shadow-lg fixed z-50 flex cursor-pointer items-center rounded-full bg-[#6A6AF4]! hover:bg-[#9898f8]!"
     aria-label="Donner votre avis"
+    lang="fr"
   >
     <Icon icon="i-ri-feedback-line" class="text-white" />
     <span class="text-sm font-medium">Votre avis</span>

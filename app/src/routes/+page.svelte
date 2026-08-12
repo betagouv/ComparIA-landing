@@ -241,7 +241,7 @@
                   loading="lazy"
                   decoding="async"
                   src={card.src}
-                  alt={card.title}
+                  alt=""
                   width="72"
                   height="72"
                   class="mb-4 m-auto"

@@ -48,7 +48,7 @@
               loading="lazy"
               decoding="async"
               src="/orgs/dpg.webp"
-              alt="DPG"
+              alt="Digital Public Goods Alliance"
               class="max-h-[47px]"
             />
           </a>

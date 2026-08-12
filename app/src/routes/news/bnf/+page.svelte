@@ -214,7 +214,7 @@
               loading="lazy"
               width="100%"
               src={talk.youtubeSrc}
-              title="YouTube video player"
+              title={talk.title}
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
@@ -232,7 +232,7 @@
     <div class="fr-container pt-15">
       <h2 class="fr-h3 my-12! text-center">{m['news.bnf.workshops.title']()}</h2>
 
-      <div class="gap-6 grid grid-cols-3">
+      <div class="gap-6 md:grid-cols-3 grid">
         {#each workshops as workshop, i (i)}
           <div class="cg-border bg-white p-6">
             <div class="mb-4 flex items-center">
@@ -328,8 +328,8 @@
         decoding="async"
         src="/orgs/bnf.svg"
         class="max-w-[100px] dark:invert"
-        alt="BNF"
-        title="BNF"
+        alt="Bibliothèque nationale de France"
+        title="Bibliothèque nationale de France"
       />
     </div>
   </section>

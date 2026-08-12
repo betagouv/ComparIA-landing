@@ -151,7 +151,7 @@
       <aside
         class="fr-sidemenu mb-5 md:mb-0 md:basis-1/3"
         role="navigation"
-        aria-labelledby="sidemenu-title"
+        aria-label={m['news.filters.show']()}
       >
         <div class="fr-sidemenu__inner h-full">
           <button
@@ -213,7 +213,7 @@
       </aside>
 
       <div class="basis-full">
-        <p class="fr-h6 mb-4! md:hidden">
+        <p class="fr-h6 mb-4!" role="status">
           {m['news.count']({ count: filteredNews.length })}
         </p>
 
@@ -232,20 +232,19 @@
         </div>
 
         <div class="gap-6 md:grid-cols-2 xl:grid-cols-3 grid">
-          {#each filteredNews as news (news.title)}
+          {#each filteredNews as news, i (news.title)}
             <div class="fr-card fr-enlarge-link fr-card--no-border cg-border rounded-xl bg-none!">
               <div class="fr-card__body">
                 <div class="fr-card__content px-5! pb-18! md:px-4! md:pt-4!">
-                  <h6 class="fr-card__title mb-0! text-lg!">
-                    <Link
-                      href={news.href}
-                      text={news.title}
-                      class="after:content-none!"
-                      onclick={(e) => (news.href === '#' ? e.preventDefault() : undefined)}
-                    >
+                  <h2 class="fr-card__title mb-0! text-lg!">
+                    {#if news.href === '#'}
                       <span class="text-[--grey-50-1000]!">{news.title}</span>
-                    </Link>
-                  </h6>
+                    {:else}
+                      <Link href={news.href} text={news.title} class="after:content-none!">
+                        <span class="text-[--grey-50-1000]!">{news.title}</span>
+                      </Link>
+                    {/if}
+                  </h2>
 
                   <div class="fr-card__desc text-grey text-[14px]">
                     {news.desc}
@@ -255,14 +254,14 @@
                     <ul class="fr-badges-group">
                       {#if news.pinned}
                         <li class="m-0!">
-                          <Badge id="card-badge-kind" variant="red" size="xs" noTooltip>
+                          <Badge id="card-badge-pin-{i}" variant="red" size="xs" noTooltip>
                             <Icon icon="i-ri-pushpin-fill" size="xxs" />
                           </Badge>
                         </li>
                       {/if}
                       <li>
                         <Badge
-                          id="card-badge-kind"
+                          id="card-badge-kind-{i}"
                           variant={SUBKINDS[news.kind].variant}
                           size="xs"
                           text={SUBKINDS[news.kind].title}
@@ -271,7 +270,7 @@
                       </li>
                       <li>
                         <Badge
-                          id="card-badge-kind"
+                          id="card-badge-date-{i}"
                           size="xs"
                           text={!news.date ? m['news.allYear']() : news.date.toLocaleDateString()}
                           noTooltip
@@ -281,23 +280,18 @@
                     </ul>
                   </div>
 
-                  <div class="fr-card__end pe-1!" aria-hidden="true">
-                    <p class="fr-card__detail flex justify-end">
-                      <Link
-                        href={news.href}
-                        text=""
-                        class={[
-                          'text-[14px]!',
-                          news.href !== '#' ? 'text-primary! border-b-1' : 'text-grey!'
-                        ]}
-                        tabindex={-1}
-                        onclick={(e) => (news.href === '#' ? e.preventDefault() : undefined)}
-                      >
-                        {news.linkLabel}
-                        {#if news.href.startsWith('/')}
-                          <Icon icon="i-ri-arrow-right-line" size="xs" />
-                        {/if}
-                      </Link>
+                  <div class="fr-card__end pe-1!">
+                    <!-- The card title already links to the article, so this is a visual repeat -->
+                    <p
+                      class={[
+                        'fr-card__detail flex justify-end text-[14px]!',
+                        news.href !== '#' ? 'text-primary! border-b-1' : 'text-grey!'
+                      ]}
+                    >
+                      {news.linkLabel}
+                      {#if news.href.startsWith('/')}
+                        <Icon icon="i-ri-arrow-right-line" size="xs" />
+                      {/if}
                     </p>
                   </div>
                 </div>

@@ -261,6 +261,11 @@
         "help": "Data is shared for research purposes"
       }
     },
+    "newsletter": {
+      "desc": "Get the latest project news: partnerships, new models added, dataset releases and new features!",
+      "iframeTitle": "compar:IA newsletter",
+      "title": "Subscribe to our newsletter"
+    },
     "origin": {
       "team": {
         "desc": "The chatbot arena is led within the French Ministry of Culture by a multidisciplinary team - AI experts, developers, deployment specialists, and designers - with a mission to make conversational AI more transparent and accessible to everyone.",
