@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { SEOHead } from '$components'
   import { Accordion, AccordionGroup, Button, Icon, Link } from '$components/dsfr'
   import * as env from '$env/static/public'
   import { m } from '$lib/i18n/messages'
@@ -122,6 +123,8 @@
     desc: m[`faq.${id}.questions.${index}.desc`]()
   }))
 </script>
+
+<SEOHead />
 
 <main id="content" class="">
   <section class="fr-container--fluid bg-light-grey pb-13 lg:pt-18 pt-10 lg:pb-28">

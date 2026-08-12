@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/state'
+  import { SEOHead } from '$components'
   import { Link } from '$components/dsfr'
   import { m } from '$lib/i18n/messages'
   import { sanitize } from '$lib/utils'
@@ -8,6 +9,8 @@
 
   const key = $derived(page.status === 404 ? '404' : 'unexpected')
 </script>
+
+<SEOHead title={m[`errors.${key}.title`]()} />
 
 <main>
   <div class="fr-container">
