@@ -37,7 +37,7 @@
 
 <SeoHead title={m['seo.titles.datasets']()} />
 
-<main>
+<main id="content">
   <section class="fr-container--fluid bg-light-info py-6!">
     <div class="fr-container">
       <div class="cg-border gap-8 bg-white px-5 py-8 md:px-8 md:py-10 lg:grid-cols-2 grid">

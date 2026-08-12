@@ -103,6 +103,11 @@
   /* xl */
 }
 
+/* The brand violet only reaches 3.88:1 on the skiplinks background, so keep the DSFR blue there */
+.fr-skiplinks .fr-link {
+  color: var(--text-title-blue-france);
+}
+
 html,
 body {
   min-height: 100vh;

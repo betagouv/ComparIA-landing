@@ -1,7 +1,12 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "a11y": {
-    "externalLink": "{text} (nouvelle fenêtre)"
+    "externalLink": "{text} (nouvelle fenêtre)",
+    "skiplinks": {
+      "content": "Aller au contenu",
+      "footer": "Aller au pied de page",
+      "label": "Accès rapide"
+    }
   },
   "actions": {
     "closeModal": "Fermer la fenêtre modale",

@@ -143,7 +143,7 @@
 
 <SeoHead title={m['seo.titles.news']()} />
 
-<main>
+<main id="content">
   <div class="fr-container py-12">
     <h2 class="mb-7!">{m['news.title']()}</h2>
 

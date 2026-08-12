@@ -2,6 +2,7 @@
   import { browser } from '$app/environment'
   import { Footer, Header } from '$components'
   import { Icon } from '$components/dsfr'
+  import { m } from '$lib/i18n/messages'
   import { getLocale } from '$lib/i18n/runtime'
   import { onMount } from 'svelte'
   import 'uno.css'
@@ -27,6 +28,15 @@
     }
   })
 </script>
+
+<div class="fr-skiplinks">
+  <nav class="fr-container" aria-label={m['a11y.skiplinks.label']()}>
+    <ul class="fr-skiplinks__list">
+      <li><a class="fr-link" href="#content">{m['a11y.skiplinks.content']()}</a></li>
+      <li><a class="fr-link" href="#main-footer">{m['a11y.skiplinks.footer']()}</a></li>
+    </ul>
+  </nav>
+</div>
 
 <Header />
 

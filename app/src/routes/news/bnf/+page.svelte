@@ -170,7 +170,7 @@
 
 <SeoHead title={m['seo.titles.bnf']()} />
 
-<main>
+<main id="content">
   <section class="fr-container--fluid bg-very-light-grey pb-16 pt-8 md:pt-16">
     <div class="fr-container gap-16 md:grid-cols-2 grid items-center">
       <div class="mx-auto max-w-[470px]">

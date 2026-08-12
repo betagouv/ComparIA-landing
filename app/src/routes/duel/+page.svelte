@@ -38,7 +38,7 @@
 
 <SEOHead title={m['seo.titles.duel']()} />
 
-<main>
+<main id="content">
   <section class="fr-container--fluid bg-very-light-grey py-15">
     <div class="fr-container">
       <div class="gap-10 md:grid-cols-2 lg:px-20 grid">

@@ -1,7 +1,12 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "a11y": {
-    "externalLink": "{text} (new window)"
+    "externalLink": "{text} (new window)",
+    "skiplinks": {
+      "content": "Skip to content",
+      "footer": "Skip to footer",
+      "label": "Quick access"
+    }
   },
   "actions": {
     "contactUs": "Contact us",
