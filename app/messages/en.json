@@ -7,7 +7,8 @@
     "contactUs": "Contact us",
     "closeModal": "Close the popup",
     "home": "Homepage",
-    "selectLanguage": "Select a language"
+    "selectLanguage": "Select a language",
+    "backToTop": "Back to top"
   },
   "datasets": {
     "access": {
@@ -153,6 +154,10 @@
         "6": {
           "desc": "<p> Raw conversational AI models answer directly by predicting tokens (words) based on their probability, while a search engine offers links and resources for the user to explore on their own. </p>",
           "title": "What's the difference between asking a question to a conversation AI model and searching on Google?"
+        },
+        "7": {
+          "title": "Who initiated the project?",
+          "desc": "<p>The chatbot arena was designed and developed as part of a government startup led by the French Ministry of Culture, integrated into the <a href=\"https://beta.gouv.fr\" target=\"_blank\" rel=\"noopener external\">Beta.gouv.fr</a> program by the Interministerial Digital Directorate (DINUM). This initiative supports French public administrations in building useful, simple, and user-friendly digital services.</p><p>It is now funded by the Ministry of Culture, DINUM and the <a href=\"https://www.alt-edic.eu\" target=\"_blank\" rel=\"noopener external\">Alliance for Language Technologies</a> (ALT-EDIC).</p>"
         }
       },
       "title": "Use"
@@ -237,13 +242,10 @@
       }
     },
     "origin": {
-      "project": {
-        "desc": "The chatbot arena was designed and developed as part of a government startup led by the French Ministry of Culture, integrated into the <a {linkProps}>Beta.gouv.fr</a> program by the Interministerial Digital Directorate (DINUM). This initiative supports French public administrations in building useful, simple, and user-friendly digital services.",
-        "title": "Who initiated the project?"
-      },
       "team": {
         "desc": "The chatbot arena is led within the French Ministry of Culture by a multidisciplinary team - AI experts, developers, deployment specialists, and designers - with a mission to make conversational AI more transparent and accessible to everyone.",
-        "title": "Who are we?"
+        "title": "Who are we?",
+        "funding": "The project is funded by the French Ministry of Culture, the <a {betaProps}>Interministerial Digital Directorate</a> (DINUM) and the <a {altEdicProps}>Alliance for Language Technologies</a> (ALT-EDIC), the European alliance supporting language technologies for every language of the Union."
       }
     },
     "usage": {

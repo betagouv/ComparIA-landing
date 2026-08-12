@@ -104,6 +104,19 @@
       src: '/orgs/ateliernumerique.webp',
       alt: 'Atelier numérique',
       title: 'Atelier numérique'
+    },
+    {
+      class: 'max-w-[190px] self-center dark:invert',
+      src: '/orgs/dinum.webp',
+      alt: 'DINUM',
+      title: 'Direction interministérielle du numérique (DINUM)'
+    },
+    {
+      // The logo is blue on solid white, so it needs a light backing in dark mode
+      class: 'max-w-[190px] self-center dark:bg-white dark:p-1',
+      src: '/orgs/alt-edic.webp',
+      alt: 'ALT-EDIC',
+      title: 'Alliance for Language Technologies (ALT-EDIC)'
     }
   ] satisfies HTMLImgAttributes[]
 
@@ -304,10 +317,18 @@
   </section>
 
   <section class="fr-container--fluid bg-very-light-grey lg:pb-38 py-12 lg:pt-20">
-    <div class="fr-container gap-10 lg:grid-cols-2 lg:gap-6 grid">
+    <div class={['fr-container gap-10 lg:gap-6 grid', locale === 'fr' && 'lg:grid-cols-2']}>
       <div class="cg-border bg-white px-5 py-10 md:px-8">
         <h5>{m['home.origin.team.title']()}</h5>
         <p>{m['home.origin.team.desc']()}</p>
+        <p>
+          {@html sanitize(
+            m['home.origin.team.funding']({
+              betaProps: externalLinkProps('https://beta.gouv.fr'),
+              altEdicProps: externalLinkProps('https://www.alt-edic.eu')
+            })
+          )}
+        </p>
 
         <div class="mt-12 gap-8 flex flex-wrap">
           {#each logos as logoProps, i (i)}
@@ -316,37 +337,9 @@
         </div>
       </div>
 
-      <div class="cg-border bg-white px-5 py-10 md:px-8">
-        <h5>{m['home.origin.project.title']()}</h5>
-        <p>
-          {@html sanitize(
-            m['home.origin.project.desc']({ linkProps: externalLinkProps('https://beta.gouv.fr') })
-          )}
-        </p>
-
-        <div class="mt-12 gap-8 flex flex-wrap">
-          <img
-            loading="lazy"
-            decoding="async"
-            src="/orgs/betagouv.svg"
-            alt="beta.gouv.fr"
-            title="beta.gouv.fr"
-            class="max-w-[178px] dark:invert"
-            width="191px"
-            height="65px"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="/orgs/dinum.webp"
-            class="max-w-[254px] dark:invert"
-            alt="DINUM"
-            title="DINUM"
-            width="278px"
-            height="59px"
-          />
-        </div>
-      </div>
+      {#if locale === 'fr'}
+        <Newsletter />
+      {/if}
     </div>
   </section>
 
@@ -368,9 +361,9 @@
     </div>
   </section>
 
-  {#if locale === 'fr'}
-    <Newsletter />
-  {/if}
+  <div class="mb-8 text-center">
+    <Link href="#" text={m['actions.backToTop']()} icon="arrow-up-line" class="pb-1!" />
+  </div>
 </main>
 
 <style lang="postcss">

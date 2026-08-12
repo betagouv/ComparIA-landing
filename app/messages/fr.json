@@ -7,7 +7,8 @@
     "closeModal": "Fermer la fenêtre modale",
     "contactUs": "Nous contacter",
     "home": "Page d'accueil",
-    "selectLanguage": "Sélectionner une langue"
+    "selectLanguage": "Sélectionner une langue",
+    "backToTop": "Haut de page"
   },
   "datasets": {
     "access": {
@@ -246,6 +247,10 @@
         "6": {
           "desc": "<p>L'IA conversationnelle répond directement en formulant des phrases à partir d’un grand ensemble de données sur lesquelles le modèle a été entraîné, tandis qu’un moteur de recherche propose des liens et des ressources pour que l’internaute les explore lui-même.</p>",
           "title": "Quelle est la différence entre poser une question à un modèle d’IA conversationnelle et faire une recherche sur Google ?"
+        },
+        "7": {
+          "title": "Qui est à l’origine du projet ?",
+          "desc": "<p>Le comparateur a été conçu et développé dans le cadre d’une start-up d’État portée par le ministère de la Culture et intégrée au programme <a href=\"https://beta.gouv.fr\" target=\"_blank\" rel=\"noopener external\">Beta.gouv.fr</a> de la Direction interministérielle du numérique (DINUM), qui aide les administrations publiques françaises à construire des services numériques utiles, simples et faciles à utiliser.</p><p>Il est aujourd’hui financé par le ministère de la Culture, la DINUM et l’<a href=\"https://www.alt-edic.eu\" target=\"_blank\" rel=\"noopener external\">Alliance for Language Technologies</a> (ALT-EDIC).</p>"
         }
       },
       "title": "Usage"
@@ -330,13 +335,10 @@
       }
     },
     "origin": {
-      "project": {
-        "desc": "Le comparateur a été conçu et développé dans le cadre d’une start-up d’Etat portée par le ministère de la Culture et intégrée au programme <a {linkProps}>Beta.gouv.fr</a> de la Direction interministérielle du numérique (DINUM) qui aide les administrations publiques françaises à construire des services numériques utiles, simples et faciles à utiliser.",
-        "title": "Qui est à l’origine du projet ?"
-      },
       "team": {
         "desc": "Le comparateur est porté au sein du Ministère de la Culture par une équipe pluridisciplinaire réunissant expert en Intelligence artificielle, développeurs, chargé de déploiement, designer, avec pour mission de rendre les IA conversationnelles plus transparentes et accessibles à toutes et tous.",
-        "title": "Qui sommes-nous ?"
+        "title": "Qui sommes-nous ?",
+        "funding": "Le projet est financé par le ministère de la Culture, la <a {betaProps}>Direction interministérielle du numérique</a> (DINUM) et l’<a {altEdicProps}>Alliance for Language Technologies</a> (ALT-EDIC), l’alliance européenne qui soutient les technologies du langage pour toutes les langues de l’Union."
       }
     },
     "usage": {

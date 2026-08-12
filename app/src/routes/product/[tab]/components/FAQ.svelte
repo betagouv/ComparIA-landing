@@ -7,7 +7,7 @@
     {
       id: 'usage',
       label: m['faq.usage.title'](),
-      qs: (['1', '2', '3', '4', '5', '6'] as const).map((q) => ({
+      qs: (['1', '2', '3', '4', '5', '6', '7'] as const).map((q) => ({
         title: m[`faq.usage.questions.${q}.title`](),
         desc: m[`faq.usage.questions.${q}.desc`]()
       }))
