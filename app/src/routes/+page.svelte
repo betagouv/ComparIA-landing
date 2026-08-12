@@ -252,7 +252,7 @@
         <div class="md:mt-13 mt-10 lg:flex-row flex flex-col text-center">
           {#each whyVoteCards as card, index (index)}
             <div class="basis-1/3">
-              <div class="xl:h-4/7 lg:h-1/2">
+              <div>
                 <img
                   loading="lazy"
                   decoding="async"
@@ -262,7 +262,8 @@
                   height="72"
                   class="mb-4 m-auto"
                 />
-                <h6 class="mb-1! mx-auto! max-w-[230px]">{card.title}</h6>
+                <!-- Reserve two lines so the three columns line up whatever the language -->
+                <h6 class="mb-1! mx-auto! lg:min-h-[2lh] max-w-[230px]">{card.title}</h6>
               </div>
               <p class="text-sm! text-grey m-auto! max-w-[280px]">{card.desc}</p>
             </div>
