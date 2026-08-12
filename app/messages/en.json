@@ -6,6 +6,7 @@
   "actions": {
     "contactUs": "Contact us",
     "closeModal": "Close the popup",
+    "home": "Homepage",
     "selectLanguage": "Select a language"
   },
   "datasets": {
@@ -37,6 +38,21 @@
       "desc": "Examples of compar:IA dataset reuses",
       "title": "How is this data used?"
     }
+  },
+  "errors": {
+    "404": {
+      "desc": "If you typed the URL into your browser, check if it's correct. The page may no longer be available. <br />You can continue by visiting our homepage. <br /> If you struggle to find a page you are looking for, contact us so we can redirect you to the correct URL.",
+      "error": "Error 404",
+      "sorry": "The page you are looking for cannot be found. We apologize for the inconvenience.",
+      "title": "Page not found"
+    },
+    "unexpected": {
+      "desc": "Please try refreshing the page or try again later.",
+      "error": "Error {code}",
+      "sorry": "Our apologies, there is an issue with the service, we are working to resolve it as quickly as possible.",
+      "title": "Unexpected error"
+    },
+    "unknown": "An error has occurred"
   },
   "faq": {
     "datasets": {
