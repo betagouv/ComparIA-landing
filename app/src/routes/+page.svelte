@@ -94,7 +94,7 @@
 
   const reducedFAQ = (
     [
-      { id: 'usage', index: '2' },
+      { id: 'usage', index: '1' },
       { id: 'models', index: '1' },
       { id: 'datasets', index: '2' },
       { id: 'ecology', index: '1' },
