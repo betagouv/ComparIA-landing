@@ -40,6 +40,8 @@
 
 {@render children()}
 
+<div id="tooltips"></div>
+
 {#if isFr}
   <button
     data-tally-open="1AVpXL"

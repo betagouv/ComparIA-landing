@@ -329,6 +329,7 @@
     }
   },
   "words": {
-    "close": "Fermer"
+    "close": "Fermer",
+    "tooltip": "Infobulle"
   }
 }

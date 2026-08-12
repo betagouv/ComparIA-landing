@@ -329,6 +329,7 @@
     }
   },
   "words": {
-    "close": "Close"
+    "close": "Close",
+    "tooltip": "Tooltip"
   }
 }
