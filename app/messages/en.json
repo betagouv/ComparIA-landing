@@ -59,14 +59,18 @@
     "datasets": {
       "questions": {
         "1": {
+          "desc": "<p>The questions you ask, the answers from both models and the vote you cast are recorded, then published in compar:IA's open datasets. That is the whole point of the service: to produce freely available preference data.</p><p>The service does not process personal data as defined by the CNIL, and dialogue data is anonymised before any public release. That said, <strong>compar:IA cannot guess what you type into the prompt</strong>. By accepting the terms of use, you undertake not to enter anything that could identify you or a third party. Do not paste names, contact details or confidential documents.</p><p>Conversations are kept from the moment the vote is recorded. The detail is in the <a {linkProps}>privacy policy</a>.</p>",
+          "title": "What happens to my conversations?"
+        },
+        "2": {
           "desc": "<p> Preference data is used to improve models during future training. </p> <p> By blindly comparing the responses of two models, compar:IA users express their preferences, indicating which responses are most relevant. This preference data can be used to improve model alignment—that is, to train them to generate responses that are more in line with user expectations and preferences. </p> <p> This is an iterative process, where the model gradually learns to generate better responses based on feedback from humans on the quality of the responses. By being exposed to preference data, models adjust their response style. </p>",
           "title": "Does preference data have an immediate effect on model performance?"
         },
-        "2": {
+        "3": {
           "desc": "<p> The uniqueness of the data collected on the compar:IA platform is that it is in lower ressourced languages and corresponds to real-life user tasks. This data reflects human preferences in specific linguistic and cultural contexts. This data allows us to adjust the models to make them more relevant, accurate, and adapted to user needs, while attempting to address any biases or gaps. </p>",
           "title": "Why are the votes on compar:IA useful?"
         },
-        "3": {
+        "4": {
           "desc": "<p> compar:IA positions itself as a low-ressourced language assessment and alignment tool for language models, focused on response quality and preference data collection, thus distinguishing itself from the global ranking approach of <a href='https://lmarena.ai/' target='_blank'> chatbot arena </a> developed by <a href='http://lmsys.org' target='_blank'> lmsys.org </a> and the ethical alignment of AI models of <a href='https://hannahkirk.github.io/prism-alignment/' target='_blank'> Prism Alignment Project </a> . </p>",
           "title": "What makes compar:IA different from other similar initiatives?"
         }
@@ -114,22 +118,26 @@
     "models": {
       "questions": {
         "1": {
+          "desc": "<p>The ranking rests on user votes and on nothing else. In each duel, two models answer blind and you pick the one you prefer.</p><p>Those duels feed a <strong>Bradley-Terry</strong> statistical model, which gives each model the level that best explains all the duels observed, expressed as an Elo score as in chess. Every score comes with a <strong>confidence interval</strong>: a model that has fought few duels holds a far less certain rank than one judged thousands of times.</p><p>By default the ranking is shown with <strong>style control</strong>, which cancels out the effect of presentation habits, answer length or formatting, so that only substance is compared. You can turn that control off and see the raw ranking.</p><p>It measures human preference on real uses, in European languages. It is not a knowledge test: a model leading here may be beaten on a technical exam. <a {linkProps}>See the ranking</a>.</p>",
+          "title": "How is the compar:IA ranking calculated?"
+        },
+        "2": {
           "desc": "<p> We choose models based on their popularity, diversity, and relevance to users. We pay particular attention to making <em> open weights </em> and different size models available. </p>",
           "title": "How do you choose the models present in the arena ?"
         },
-        "2": {
+        "3": {
           "desc": "<p> Inference, meaning the ability to query the models, is payed for by the project. For most models, we use the Open Router and Hugging Face Inference Providers on a per-token usage basis. </p>",
           "title": "How do you manage to keep this service free?"
         },
-        "3": {
+        "4": {
           "desc": "<p> Quantized models are optimized to consume fewer resources by simplifying certain calculations while aiming for the best response quality. </p> <p> Quantization is an optimization technique that involves reducing the precision of the numbers used to represent the parameters of an AI model. This allows <strong> to reduce the size of the model </strong> and <strong> to speed up calculations </strong> , which is particularly advantageous for inference on resource-constrained machines. </p>",
           "title": "What are “quantized models” ?"
         },
-        "4": {
+        "5": {
           "desc": "<p> <strong> A model's ability to speak multiple languages is related to the linguistic diversity of its training data, not to the country it was developed in </strong> . <strong> LLMs use huge corpora of data with many languages </strong> , but the distribution of languages in the training data is not uniform. An overrepresentation of English can lead to limitations in other languages. These limitations are visible, for example, in <strong> anglicisms or the inability to generate content in certain languages classified as \"endangered\" by UNESCO </strong> . </p> <p> <strong> The accuracy and richness of a model's vocabulary depend on the data used for its training </strong> . </p>",
           "title": "Is there a link between the nationality of the company or lab that created the model and its ability to speak several languages?"
         },
-        "5": {
+        "6": {
           "desc": "<p> Few stakeholders are “transparent” about the data sources used in training corpora. This information is often confidential for legal and commercial reasons. </p>",
           "title": "Can we see the training data of the models?"
         }
@@ -140,28 +148,32 @@
     "usage": {
       "questions": {
         "1": {
-          "title": "Can models search the web?",
-          "desc": "<p>Yes, if you turn on <strong>web search</strong> before sending your question in the arena. Both models then receive the same extracts from pages found online, along with their addresses, and answer from them. The sources used appear under your message.</p><p>Without web search, models answer only from what they learned during training: they check nothing online, so recent or very specific facts may be missing.</p><p>Web search adds text to the request sent to the models. It therefore raises the number of tokens processed, and with it the energy shown in the summary.</p>"
+          "desc": "<p>Yes, if you turn on <strong>web search</strong> before sending your question in the arena. Both models then receive the same extracts from pages found online, along with their addresses, and answer from them. The sources used appear under your message.</p><p>Without web search, models answer only from what they learned during training: they check nothing online, so recent or very specific facts may be missing.</p><p>Web search adds text to the request sent to the models. It therefore raises the number of tokens processed, and with it the energy shown in the summary.</p>",
+          "title": "Can models search the web?"
         },
         "2": {
-          "title": "Can models cite their sources?",
-          "desc": "<p><strong>With web search turned on, yes.</strong> The models then receive extracts from pages along with their addresses, and can point back to them. The sources used also appear under your message, so you can check them yourself.</p><p><strong>Without web search, no.</strong> A language model on its own <strong>cannot cite the sources</strong> behind its answer. It predicts the most likely next word from the statistical distribution of its training data. It can pull together information from thousands of texts, but it keeps no record of where any of it came from. If it does hand you a reference, that reference may be invented.</p><p>This is the principle behind <strong>Retrieval Augmented Generation (RAG)</strong>, of which compar:IA's web search is one form: give the model outside documents at answer time, so it can lean on them and cite them.</p>"
+          "desc": "<p>Not blindly. A language model produces the most <em>plausible</em> text, not the most <em>accurate</em>. It can state something false with the same confidence as something true, and invent a date, a quotation or a reference. This is called a <strong>hallucination</strong>, and no model is free of it.</p><p>Web search cuts the risk without removing it. The model then works from real pages, but it can misread them, draw a conclusion they do not support, or land on a source that is itself wrong. The sources are shown precisely so that you can check.</p><p>This is also what the comparator makes visible: when two models answer the same question and contradict each other, at least one of them is wrong. That disagreement is a useful reminder that a confident answer is not a checked answer.</p>",
+          "title": "Can I trust the answers?"
         },
         "3": {
-          "title": "If I ask a question about the latest news, can the model answer?",
-          "desc": "<p> Have you asked the question: “Explain to me the latest trendy cheesecake recipe and cite your sources” and been disappointed with the answers? That's normal... </p> <p> <strong> “Raw” conversational AI models cannot answer questions about the most recent news. </strong> They are trained on static datasets and cannot interact with the web or open links. They do not have the ability to update themselves in real time with events unfolding in the world. The information the model has access to is limited to the date of its last training. </p> <p> Therefore, if you ask a question about a recent news event, the model will rely on outdated information, risking generating inaccurate answers. </p> <p> In the case of Perplexity, Copilot, or ChatGPT, the so-called “raw” conversational AI models are combined with other system blocks that allow them to connect to the internet to access information in real time. These are called “conversational agents.” </p><p>On compar:IA, turn on web search before sending your question: the models then receive extracts from recent pages and can answer about current events. Without it, they stay limited to their training data.</p>"
+          "desc": "<p><strong>With web search turned on, yes.</strong> The models then receive extracts from pages along with their addresses, and can point back to them. The sources used also appear under your message, so you can check them yourself.</p><p><strong>Without web search, no.</strong> A language model on its own <strong>cannot cite the sources</strong> behind its answer. It predicts the most likely next word from the statistical distribution of its training data. It can pull together information from thousands of texts, but it keeps no record of where any of it came from. If it does hand you a reference, that reference may be invented.</p><p>This is the principle behind <strong>Retrieval Augmented Generation (RAG)</strong>, of which compar:IA's web search is one form: give the model outside documents at answer time, so it can lean on them and cite them.</p>",
+          "title": "Can models cite their sources?"
         },
         "4": {
-          "title": "If I include an URL in a query, can the model access it?",
-          "desc": "<p> If you include a URL in a query, the conversational model will not be able to access it directly. Language models process the query text but do not have the ability to interact with the web or open links. They are trained on a fixed text dataset, and their answers are based on this training data. When a question is asked, the models use this training to generate an answer but cannot access new information online if they are not enabled to do so by a surrounding system. </p> <p> As an analogy, imagine a student taking an exam without internet access. They can use their acquired knowledge to answer questions, but cannot visit websites for additional information. </p><p>Web search changes this in part: once turned on, it feeds the models the content of pages found online. It still does not open the exact address you paste, it runs a search from your message.</p>"
+          "desc": "<p> Have you asked the question: “Explain to me the latest trendy cheesecake recipe and cite your sources” and been disappointed with the answers? That's normal... </p> <p> <strong> “Raw” conversational AI models cannot answer questions about the most recent news. </strong> They are trained on static datasets and cannot interact with the web or open links. They do not have the ability to update themselves in real time with events unfolding in the world. The information the model has access to is limited to the date of its last training. </p> <p> Therefore, if you ask a question about a recent news event, the model will rely on outdated information, risking generating inaccurate answers. </p> <p> In the case of Perplexity, Copilot, or ChatGPT, the so-called “raw” conversational AI models are combined with other system blocks that allow them to connect to the internet to access information in real time. These are called “conversational agents.” </p><p>On compar:IA, turn on web search before sending your question: the models then receive extracts from recent pages and can answer about current events. Without it, they stay limited to their training data.</p>",
+          "title": "If I ask a question about the latest news, can the model answer?"
         },
         "5": {
-          "title": "What's the difference between asking a question to a conversation AI model and searching on Google?",
-          "desc": "<p> Raw conversational AI models answer directly by predicting tokens (words) based on their probability, while a search engine offers links and resources for the user to explore on their own. </p>"
+          "desc": "<p> If you include a URL in a query, the conversational model will not be able to access it directly. Language models process the query text but do not have the ability to interact with the web or open links. They are trained on a fixed text dataset, and their answers are based on this training data. When a question is asked, the models use this training to generate an answer but cannot access new information online if they are not enabled to do so by a surrounding system. </p> <p> As an analogy, imagine a student taking an exam without internet access. They can use their acquired knowledge to answer questions, but cannot visit websites for additional information. </p><p>Web search changes this in part: once turned on, it feeds the models the content of pages found online. It still does not open the exact address you paste, it runs a search from your message.</p>",
+          "title": "If I include an URL in a query, can the model access it?"
         },
         "6": {
-          "title": "Who initiated the project?",
-          "desc": "<p>The chatbot arena was designed and developed as part of a government startup led by the French Ministry of Culture, integrated into the <a href=\"https://beta.gouv.fr\" target=\"_blank\" rel=\"noopener external\">Beta.gouv.fr</a> program by the Interministerial Digital Directorate (DINUM). This initiative supports French public administrations in building useful, simple, and user-friendly digital services.</p><p>It is now funded by the Ministry of Culture, DINUM and the <a href=\"https://www.alt-edic.eu\" target=\"_blank\" rel=\"noopener external\">Alliance for Language Technologies</a> (ALT-EDIC).</p>"
+          "desc": "<p> Raw conversational AI models answer directly by predicting tokens (words) based on their probability, while a search engine offers links and resources for the user to explore on their own. </p>",
+          "title": "What's the difference between asking a question to a conversation AI model and searching on Google?"
+        },
+        "7": {
+          "desc": "<p>The chatbot arena was designed and developed as part of a government startup led by the French Ministry of Culture, integrated into the <a href=\"https://beta.gouv.fr\" target=\"_blank\" rel=\"noopener external\">Beta.gouv.fr</a> program by the Interministerial Digital Directorate (DINUM). This initiative supports French public administrations in building useful, simple, and user-friendly digital services.</p><p>It is now funded by the Ministry of Culture, DINUM and the <a href=\"https://www.alt-edic.eu\" target=\"_blank\" rel=\"noopener external\">Alliance for Language Technologies</a> (ALT-EDIC).</p>",
+          "title": "Who initiated the project?"
         }
       },
       "title": "Use"

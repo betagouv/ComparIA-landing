@@ -103,7 +103,7 @@
   ).map(({ id, index }) => ({
     id,
     title: m[`faq.${id}.questions.${index}.title`](),
-    desc: m[`faq.${id}.questions.${index}.desc`]()
+    desc: (m[`faq.${id}.questions.${index}.desc`] as () => string)()
   }))
 </script>
 
