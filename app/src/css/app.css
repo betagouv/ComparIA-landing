@@ -115,3 +115,18 @@ body {
   flex-direction: column;
   flex-grow: 1;
 }
+
+@media print {
+  /* Only the content is worth ink: drop navigation, footer and the feedback tab. */
+  header,
+  footer,
+  .fr-follow,
+  [data-fr-opened] {
+    display: none !important;
+  }
+
+  a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.9em;
+  }
+}
