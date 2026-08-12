@@ -17,6 +17,18 @@
     href?: string
     pinned?: boolean
   }
+  type SubKindId =
+    | 'comparia'
+    | 'blog'
+    | 'kit'
+    | 'podcast'
+    | 'webinar'
+    | 'event'
+    | 'workshop'
+    | 'panel'
+    | 'analyze'
+    | 'press'
+    | 'video'
   type Sub = {
     title: string
     variant: BadgeProps['variant']
@@ -25,37 +37,38 @@
   }
 
   const NEWS_KINDS = ['resource', 'talk', 'media'] as const
+  const subKind = (id: SubKindId, linkLabel?: string) => ({
+    id,
+    label: m[`news.subKinds.${id}`](),
+    linkLabel
+  })
   const SUBKINDS: Record<NewsKind, Sub> = {
     resource: {
-      title: 'Ressources',
+      title: m['news.kinds.resource'](),
       variant: 'light-info',
       icon: 'i-ri-book-ai-fill',
-      subKinds: [
-        { id: 'comparia', label: 'Organisé par compar:IA' },
-        { id: 'blog', label: 'Billet de blog' },
-        { id: 'kit', label: 'Kit de communication' }
-      ]
+      subKinds: [subKind('comparia'), subKind('blog'), subKind('kit')]
     },
     talk: {
-      title: 'Prises de parole',
+      title: m['news.kinds.talk'](),
       variant: 'purple',
       icon: 'i-ri-speak-ai-fill',
       subKinds: [
-        { id: 'podcast', label: 'Podcast', linkLabel: 'Écouter le podcast' },
-        { id: 'webinar', label: 'Webinaire', linkLabel: 'Revoir le webinaire' },
-        { id: 'event', label: 'Participation évènement' },
-        { id: 'workshop', label: 'Atelier' },
-        { id: 'panel', label: 'Table ronde' }
+        subKind('podcast', m['news.links.podcast']()),
+        subKind('webinar', m['news.links.webinar']()),
+        subKind('event'),
+        subKind('workshop'),
+        subKind('panel')
       ]
     },
     media: {
-      title: 'Médias',
+      title: m['news.kinds.media'](),
       variant: 'green-tilleul',
       icon: 'i-ri-megaphone-fill',
       subKinds: [
-        { id: 'analyze', label: 'Analyse' },
-        { id: 'press', label: 'Presse écrite', linkLabel: "Lire l'article" },
-        { id: 'video', label: 'Vidéo', linkLabel: 'Voir la vidéo' }
+        subKind('analyze'),
+        subKind('press', m['news.links.press']()),
+        subKind('video', m['news.links.video']())
       ]
     }
   }
@@ -66,7 +79,7 @@
     linkLabel:
       n.linkLabel ??
       SUBKINDS[n.kind].subKinds.find((sk) => sk.id === n.subKind)?.linkLabel ??
-      'Découvrir',
+      m['news.discover'](),
     date: n.date ? new Date(n.date * 1000) : null
   }))
 
@@ -84,8 +97,8 @@
   }))
 
   const sortingOptions = [
-    { value: 'date-desc', label: 'Date (du plus au moins récent)' },
-    { value: 'kind-asc', label: 'Type (A à Z)' }
+    { value: 'date-desc', label: m['news.sort.dateDesc']() },
+    { value: 'kind-asc', label: m['news.sort.kindAsc']() }
   ] as const
 
   let kinds = $state<Record<NewsKind, string[]>>({
@@ -132,7 +145,7 @@
 
 <main>
   <div class="fr-container py-12">
-    <h2 class="mb-7!">Actualités - France</h2>
+    <h2 class="mb-7!">{m['news.title']()}</h2>
 
     <div class="md:flex md:flex-row">
       <aside
@@ -148,7 +161,7 @@
             type="button"
             class="fr-sidemenu__btn"
           >
-            Afficher les filtres
+            {m['news.filters.show']()}
             {#if filterCount}
               <span class="fr-badge fr-badge--sm bg-primary! text-white! ms-2 rounded-full!">
                 {filterCount}
@@ -187,7 +200,7 @@
 
               <div class="mb-8">
                 <Button
-                  text="Effacer tous les filtres"
+                  text={m['news.filters.clear']()}
                   icon="delete-line"
                   variant="tertiary-no-outline"
                   disabled={filterCount === 0}
@@ -201,11 +214,11 @@
 
       <div class="basis-full">
         <p class="fr-h6 mb-4! md:hidden">
-          {filteredNews.length} actualités
+          {m['news.count']({ count: filteredNews.length })}
         </p>
 
         <div class="fr-select-group">
-          <label class="fr-label" for="news-order">Trier par</label>
+          <label class="fr-label" for="news-order">{m['news.sort.label']()}</label>
           <select
             id="news-order"
             bind:value={sortingMethod}
@@ -260,7 +273,7 @@
                         <Badge
                           id="card-badge-kind"
                           size="xs"
-                          text={!news.date ? "Toute l'année" : news.date.toLocaleDateString()}
+                          text={!news.date ? m['news.allYear']() : news.date.toLocaleDateString()}
                           noTooltip
                           class="me-0!"
                         />
@@ -300,7 +313,7 @@
 
         {#if filteredNews.length === 0}
           <p class="fr-text--lead fr-mt-4w">
-            Aucune actualité ne correspond à vos critères de recherche.
+            {m['news.empty']()}
           </p>
         {/if}
       </div>

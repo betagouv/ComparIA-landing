@@ -1,7 +1,5 @@
 import sanitizeHtml from 'sanitize-html'
 
-export const noop = () => {}
-
 export function sanitize(html: string, allowLinks = true): string {
   const options: sanitizeHtml.IOptions = {
     allowedAttributes: {

@@ -23,7 +23,8 @@ export default defineConfig({
     paraglideVitePlugin({
       project: './project.inlang',
       outdir: './src/lib/i18n',
-      strategy: ['cookie', 'baseLocale'],
+      // `url` first so each language has its own address and can be indexed on its own.
+      strategy: ['url', 'cookie', 'preferredLanguage', 'baseLocale'],
       emitTsDeclarations: true
     })
   ],

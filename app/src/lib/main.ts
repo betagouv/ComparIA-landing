@@ -1,9 +1,11 @@
+import { env } from '$env/dynamic/public'
 import { setLocale, type Locale } from './i18n/runtime'
 
 export type LocaleOption = { code: Locale; short: string; long: string; host?: string }
 type AnyLocale = (typeof ALL_LOCALES)[number]['code']
 
-export const ARENA_URL = '/arena' as const
+// Same origin behind a reverse proxy by default, or a full URL when the arena is deployed apart.
+export const ARENA_URL = env.PUBLIC_ARENA_URL || '/arena'
 export const ALL_LOCALES = [
   { code: 'fr', short: 'FR', long: 'FR - Français' },
   { code: 'en', short: 'EN', long: 'EN - English' },
@@ -14,7 +16,7 @@ export const CONTACT_URL = 'contact@comparia.beta.gouv.fr'
 export function onLocaleChange(locale: AnyLocale) {
   const localeData = ALL_LOCALES.find((loc) => loc.code === locale)
   if (localeData?.host) {
-    window.open(localeData?.host, '_blank')!.focus()
+    window.open(localeData.host, '_blank')?.focus()
   } else {
     setLocale(locale as Locale)
   }

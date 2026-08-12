@@ -187,7 +187,7 @@
     "writeUs": "If you encounter a problem or have feedback on the chatbot arena, feel free to write to us <a {formLinkProps}>using this form</a> - we read every message.<br />Thank you!"
   },
   "header": {
-    "banner": "New models just joined the arena!",
+    "banner": "🏆 The model ranking is now available! See the ranking.",
     "homeTitle": "Home - compar:IA",
     "logoAlt": "French Republic",
     "menu": "Menu",
@@ -566,11 +566,193 @@
       "ranking": "Leaderboard",
       "rgesn": "Ecodesign statement",
       "settings": "Settings",
-      "share": "My results"
+      "share": "My results",
+      "bnf": "compar:IA day at the BnF"
     }
   },
   "words": {
     "close": "Close",
     "tooltip": "Tooltip"
+  },
+  "duel": {
+    "hero": {
+      "title": "Want to <span {props}>open your audience’s eyes</span> to the environmental impact of generative AI?",
+      "desc": "Run an <strong>AI Duel</strong> in your school, association or company by becoming a facilitator",
+      "cta": "Get the facilitator kit",
+      "alt": "A compar:IA talk in front of a packed room"
+    },
+    "format": {
+      "title": "<span {props}>AI Duels</span> are a <span {props}>workshop</span> format, open to everyone, to see how generative AI works behind the scenes and think about its <span {props}>environmental impact</span>.",
+      "duration": "Runs 45min to 1h30",
+      "place": "On site or online",
+      "access": "Access to compar:IA and ready-made material",
+      "turnkey": "Turnkey workshop, easy to run and interactive"
+    },
+    "publics": {
+      "title": "Who is it for?",
+      "desc": "The workshop is open to all, whatever your starting level.",
+      "schools": {
+        "title": "Secondary schools",
+        "desc": "To see for yourself how AI works behind the scenes."
+      },
+      "universities": {
+        "title": "Universities",
+        "desc": "To enrich the debate on innovation and sustainable development."
+      },
+      "associations": {
+        "title": "Associations, digital inclusion",
+        "desc": "To debate a public issue from a hands-on example."
+      },
+      "companies": {
+        "title": "Companies",
+        "desc": "To think about a more responsible use of digital tools."
+      }
+    },
+    "steps": {
+      "title": "How a workshop runs",
+      "desc": "Roughly 60 minutes",
+      "intro": {
+        "title": "Introduction",
+        "duration": "(10min)",
+        "desc": "A short introduction to generative AI and to compar:IA, so everyone starts from the same place, even with no prior knowledge."
+      },
+      "duel": {
+        "title": "The duel",
+        "duration": "(10-15min)",
+        "desc": "Participants ask the same question to two hidden AI models: a “large” one and a “small” one."
+      },
+      "vote": {
+        "title": "Compare and vote",
+        "duration": "(10min)",
+        "desc": "A moment to discuss how well each answer meets what people actually need."
+      },
+      "reveal": {
+        "title": "Models revealed",
+        "duration": "(10min)",
+        "desc": "The teaching moment: the models and their specs are revealed, and the “best answer” turns out not to be the frugal one."
+      },
+      "debate": {
+        "title": "Closing debate",
+        "duration": "(10-15min)",
+        "desc": "A group discussion on the trade-off between using AI and its environmental cost."
+      },
+      "conclusion": {
+        "title": "Wrap-up",
+        "duration": "(5min)",
+        "desc": "A few simple habits to cut the footprint of your own AI use."
+      }
+    },
+    "guide": {
+      "title": "The facilitator guide",
+      "walkthrough": "A detailed guide walking through the whole session",
+      "slides": "Slides ready to project",
+      "faq": "FAQ and glossary to answer questions easily",
+      "extension": "A Chrome extension keeping all of it within reach",
+      "alt": "Screenshot of the Chrome extension for the AI duels"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "contact": "Contact us to find out more",
+      "size": {
+        "title": "How many people can join an AI Duel session?",
+        "desc": "We have run sessions with only 5 participants, and others in front of 300 people. The bigger the group, of course, the less each person gets to speak. That said, the workshop is very flexible: it comes down to how well the facilitator handles the room. A small group makes for a more personal experience; a large one brings real energy."
+      },
+      "expertise": {
+        "title": "Do I need to be an expert to facilitate an AI Duel?",
+        "desc": "Not at all. The facilitator guide is built so that anyone interested can run a duel. It covers the subject, what is at stake, and the tools you need to run the session. Having played with language models helps, but it is in no way required."
+      },
+      "duration": {
+        "title": "How long does a Duel session last?",
+        "desc": "The shortest sessions we have run lasted 20 to 30 minutes, which does cut into the discussion. Ideally a good duel takes about 45 minutes. With 1h30 it is better still: you can run several duels and go deeper."
+      }
+    }
+  },
+  "news": {
+    "title": "News - France",
+    "count": "{count} news items",
+    "empty": "No news matches your filters.",
+    "allYear": "All year round",
+    "discover": "Find out more",
+    "filters": {
+      "show": "Show filters",
+      "clear": "Clear all filters"
+    },
+    "sort": {
+      "label": "Sort by",
+      "dateDesc": "Date (newest first)",
+      "kindAsc": "Type (A to Z)"
+    },
+    "kinds": {
+      "resource": "Resources",
+      "talk": "Talks",
+      "media": "Media"
+    },
+    "subKinds": {
+      "comparia": "Run by compar:IA",
+      "blog": "Blog post",
+      "kit": "Communication kit",
+      "podcast": "Podcast",
+      "webinar": "Webinar",
+      "event": "Event",
+      "workshop": "Workshop",
+      "panel": "Panel",
+      "analyze": "Analysis",
+      "press": "Press",
+      "video": "Video"
+    },
+    "links": {
+      "podcast": "Listen to the podcast",
+      "webinar": "Watch the webinar",
+      "press": "Read the article",
+      "video": "Watch the video"
+    },
+    "bnf": {
+      "title": "compar:<span {props}>IA</span> day",
+      "desc": "Watch the talks from our day on the ethical, cultural and environmental stakes of conversational AI.",
+      "cta": "Watch the talks",
+      "logoAlt": "AI Action Summit",
+      "coverAlt": "Anastasia Stasenko speaking in a BnF lecture hall, showing a slide analysing the compar:IA dataset",
+      "talks": {
+        "title": "Talks",
+        "opening": "Opening of the day",
+        "alignment": "Aligning models with French-speaking uses",
+        "democracy": "How do we make AI compatible with democracy?",
+        "footprint": "Measuring the environmental impact of generative AI",
+        "education": "Teaching and training in the age of generative AI",
+        "future": "Towards a sustainable future for French-speaking AI"
+      },
+      "workshops": {
+        "title": "Workshops",
+        "badge": "Workshop",
+        "battle": "The AI battle",
+        "blackbox": "The AI black box",
+        "modulix": "The Modulix learning modules",
+        "cafeia": "Café IA workshop: a constructive dialogue on AI",
+        "consultation": "Findings of the citizen consultation “What are your ideas for putting AI to work for the common good?”"
+      },
+      "speakers": {
+        "title": "Speakers",
+        "bancal": "Deputy director of Pix",
+        "bras": "Co-head of the Atelier numérique",
+        "levisalles": "Co-founder of Latitudes",
+        "cattan": "Secretary general of the Conseil national du numérique",
+        "cellard": "Researcher at Datactivist",
+        "delassus": "Head of digital at the Ministry of Culture",
+        "laymand": "Head of research at make.org",
+        "luccioni": "AI & Climate Lead at Hugging Face",
+        "mas": "Chief AI Officer at Make.org",
+        "piwowarski": "Research director at CNRS",
+        "rince": "President and co-founder of GenAI Impact",
+        "stasenko": "Co-founder of Pleias",
+        "termignon": "Product lead of compar:IA",
+        "tort": "Designer of teaching challenges at Pix"
+      },
+      "about": {
+        "title": "About the compar:IA day",
+        "event": "The compar:IA day took place on 7 February 2025 at the BnF François-Mitterrand. Over 300 people attended in person and around a hundred more followed the live stream.",
+        "goal": "The aim was to discuss the ethical, cultural and environmental stakes of conversational AI.",
+        "thanks": "Many thanks to everyone who took part and to the partners of the event!"
+      }
+    }
   }
 }

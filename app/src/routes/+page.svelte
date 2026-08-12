@@ -1,7 +1,7 @@
 <script lang="ts">
   import { SEOHead } from '$components'
   import { Accordion, AccordionGroup, Button, Icon, Link } from '$components/dsfr'
-  import { PUBLIC_GIT_COMMIT } from '$env/static/public'
+  import { env } from '$env/dynamic/public'
   import { m } from '$lib/i18n/messages'
   import { getLocale, locales } from '$lib/i18n/runtime'
   import { ARENA_URL, CONTACT_URL } from '$lib/main'
@@ -11,7 +11,7 @@
 
   const locale = getLocale()
 
-  if (PUBLIC_GIT_COMMIT) console.log(`Git commit: ${PUBLIC_GIT_COMMIT}`)
+  if (env.PUBLIC_GIT_COMMIT) console.log(`Git commit: ${env.PUBLIC_GIT_COMMIT}`)
 
   function handleRedirect() {
     window.location.href = ARENA_URL

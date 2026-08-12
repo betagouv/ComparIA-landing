@@ -12,9 +12,18 @@
 
 ```sh
 cd app
-# install
+cp .env.example .env
 yarn
 yarn dev
+```
+
+`PUBLIC_ARENA_URL` points at the arena app, `MATOMO_URL` and `MATOMO_ID` turn on analytics.
+Leave the Matomo pair empty and the tracker is left out of the page.
+
+```sh
+yarn lint
+yarn run check   # `yarn check` runs yarn's own command, not this script
+yarn build
 ```
 
 ## Utilities

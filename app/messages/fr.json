@@ -39,6 +39,99 @@
       "title": "Comment ces données sont-elles utilisées ?"
     }
   },
+  "duel": {
+    "faq": {
+      "contact": "Nous contacter pour en savoir plus",
+      "duration": {
+        "desc": "Les sessions les plus courtes que nous avons menées ont duré 20 à 30 minutes, mais cela limite un peu l’interactivité. Idéalement, un bon duel prend environ 45 minutes. Et si l’on dispose d’1h30, c’est encore mieux : cela permet d’enchaîner plusieurs duels et d’entrer plus en profondeur dans les discussions.",
+        "title": "Combien de temps dure une session des Duels ?"
+      },
+      "expertise": {
+        "desc": "Pas du tout ! Le guide facilitateur est conçu pour permettre à toute personne intéressée d’animer un duel. Il fournit les éléments clés pour comprendre le sujet, les enjeux et les outils nécessaires au bon déroulement de l’exercice. Bien sûr, avoir déjà expérimenté un peu avec des modèles de langage peut aider, mais ce n’est en aucun cas indispensable.",
+        "title": "Faut-il être expert du sujet pour faciliter un Duel de l’IA ?"
+      },
+      "size": {
+        "desc": "Nous avons déjà animé des sessions avec seulement 5 participants, mais aussi devant 300 personnes. Bien sûr, plus le groupe est grand, moins chacun a l’occasion de s’exprimer individuellement. Cela dit, l’atelier reste très flexible : tout dépend de la capacité du facilitateur à gérer le public. Avec un petit groupe, l’expérience est plus personnalisée ; avec un grand nombre de participants, l’énergie et la dynamique sont particulièrement intéressantes.",
+        "title": "Combien de personnes peuvent participer à une session des Duels de l’IA ?"
+      },
+      "title": "Foire aux questions"
+    },
+    "format": {
+      "access": "Accès à compar:IA et des supports fournis",
+      "duration": "Durée : 45min à 1h30",
+      "place": "Format présentiel ou en ligne",
+      "title": "Les <span {props}>Duels de l’IA</span> : un format d’<span {props}>atelier</span> ouvert à tout public, pour découvrir les coulisses des IA génératives et réfléchir à leur <span {props}>impact environnemental</span>.",
+      "turnkey": "Atelier clé en main, accessible et interactif"
+    },
+    "guide": {
+      "alt": "Capture d’écran de l’extension Chrome présentant les duels de l’IA",
+      "extension": "Extension Chrome pour avoir toutes ces informations à portée de main",
+      "faq": "FAQ et glossaire pour répondre facilement aux questions",
+      "slides": "Diapositives prêtes à projeter",
+      "title": "Le guide facilitateur",
+      "walkthrough": "Guide détaillé avec tout le déroulé expliqué"
+    },
+    "hero": {
+      "alt": "Présentation publique de compar:ia dans une salle bondée",
+      "cta": "Recevoir le kit facilitateur",
+      "desc": "Organisez un <strong>Duel de l’IA</strong> dans votre établissement, association ou entreprise en devenant facilitateur",
+      "title": "Vous souhaitez <span {props}>sensibiliser votre public</span> à l’impact environnemental de l’IA générative ?"
+    },
+    "publics": {
+      "associations": {
+        "desc": "Pour débattre d’un sujet de société en s’appuyant sur un exemple vécu.",
+        "title": "Associations, Médiation numérique"
+      },
+      "companies": {
+        "desc": "Pour réfléchir à un usage plus responsable des outils numériques.",
+        "title": "Entreprises"
+      },
+      "desc": "Cet atelier est ouvert à tous, quel que soit le niveau de connaissance initial.",
+      "schools": {
+        "desc": "Pour découvrir concrètement les coulisses de l’IA.",
+        "title": "Collèges et Lycées"
+      },
+      "title": "Pour quels publics ?",
+      "universities": {
+        "desc": "Pour enrichir les discussions sur l’innovation et le développement durable.",
+        "title": "Universités"
+      }
+    },
+    "steps": {
+      "conclusion": {
+        "desc": "Partage de quelques gestes simples pour réduire l’impact lié à l’usage de l’IA.",
+        "duration": "(5min)",
+        "title": "Conclusion et ouverture"
+      },
+      "debate": {
+        "desc": "Temps collectif pour réfléchir aux arbitrages entre usage et impact environnemental.",
+        "duration": "(10-15min)",
+        "title": "Débat final"
+      },
+      "desc": "Durée approximative : 60 minutes",
+      "duel": {
+        "desc": "Les participants posent la même question à deux modèles d’IA anonymes : un « grand » et un « petit » modèle.",
+        "duration": "(10-15min)",
+        "title": "Le duel"
+      },
+      "intro": {
+        "desc": "Présentation rapide de l’IA générative et de la plateforme compar:IA pour que tout le monde parte du même point, même sans connaissance préalable.",
+        "duration": "(10min)",
+        "title": "Introduction"
+      },
+      "reveal": {
+        "desc": "Choc pédagogique et découverte des caractéristiques techniques des modèles : « meilleure réponse » ne rime pas toujours avec « sobriété environnementale » !",
+        "duration": "(10min)",
+        "title": "Révélation des modèles"
+      },
+      "title": "Déroulé type d’un atelier",
+      "vote": {
+        "desc": "Moment d’échange pour réfléchir à la pertinence des réponses au regard des besoins des utilisateurs.",
+        "duration": "(10min)",
+        "title": "Comparaison et vote"
+      }
+    }
+  },
   "errors": {
     "404": {
       "desc": "Si vous avez tapé l'adresse web dans le navigateur, vérifiez qu'elle est correcte. La page n’est peut-être plus disponible.<br />Dans ce cas, pour continuer votre visite vous pouvez consulter notre page d’accueil.<br />Sinon contactez-nous pour que l’on puisse vous rediriger vers la bonne information.",
@@ -187,7 +280,7 @@
     "writeUs": "Si vous rencontrez un problème ou si vous avez un commentaire sur le comparateur, n'hésitez pas à nous écrire <a {formLinkProps}>via ce formulaire</a>, nous lisons tous vos messages.<br />Merci !"
   },
   "header": {
-    "banner": "🏆 Le classement des modèles est maintenant disponible ! Découvrir le classement.",
+    "banner": "🏆 Le classement des modèles est maintenant disponible ! Découvrir le classement.",
     "homeTitle": "Accueil - compar:IA",
     "logoAlt": "République Française",
     "menu": "Menu",
@@ -300,6 +393,94 @@
       },
       "title": "Pourquoi votre vote est important ?"
     }
+  },
+  "news": {
+    "allYear": "Toute l’année",
+    "bnf": {
+      "about": {
+        "event": "La journée compar:IA s’est tenue le 7 février 2025 à la Bnf François-Mitterrand. L’évènement a réuni plus de 300 participant·es en présentiel et une centaine de personnes ont suivi la journée en direct.",
+        "goal": "L’objectif était d’échanger sur les enjeux éthiques, culturels et environnementaux liés à l’IA conversationnelle.",
+        "thanks": "Un grand merci à tou·tes les participant·es et aux partenaires de l’évènement !",
+        "title": "À propos de la journée compar:IA"
+      },
+      "coverAlt": "Conférence d’Anastasia Stasenko dans un amphithéâtre de la BNF, présentant une diapositive qui analyse le jeu de données compar:IA",
+      "cta": "Visionner les interventions de la journée",
+      "desc": "Revivez les interventions de notre journée dédiée aux enjeux éthiques, culturels et environnementaux des systèmes d’IA conversationnelle.",
+      "logoAlt": "Sommet pour l’action sur l’IA",
+      "speakers": {
+        "bancal": "Directrice adjointe de Pix",
+        "bras": "Co-Responsable de l’Atelier numérique",
+        "cattan": "Secrétaire général du Conseil national du numérique",
+        "cellard": "Chercheur chez Datactivist",
+        "delassus": "Chef du service du numérique du Ministère de la Culture",
+        "laymand": "Directeur des études chez make.org",
+        "levisalles": "Co-fondatrice de Latitudes",
+        "luccioni": "AI & Climate Lead chez Hugging Face",
+        "mas": "Chief AI Officer chez Make.org",
+        "piwowarski": "Directeur de recherche au CNRS",
+        "rince": "Président et cofondateur de GenAI Impact",
+        "stasenko": "Cofondatrice de Pleias",
+        "termignon": "Cheffe de produit de compar:IA",
+        "title": "Les intervenant·es",
+        "tort": "Conceptrice de défis pédagogiques chez Pix"
+      },
+      "talks": {
+        "alignment": "Alignement des modèles sur les usages francophones",
+        "democracy": "Comment rendre l’IA compatible avec la démocratie ?",
+        "education": "Enjeux d’éducation et de formation à l’IA générative",
+        "footprint": "L’évaluation de l’impact environnemental des IA génératives",
+        "future": "Vers un futur durable pour l’IA francophone",
+        "opening": "Ouverture de la journée",
+        "title": "Les conférences"
+      },
+      "title": "Journée compar:<span {props}>IA</span>",
+      "workshops": {
+        "badge": "Atelier",
+        "battle": "La bataille de l’IA",
+        "blackbox": "La boîte noire de l’IA",
+        "cafeia": "Atelier Café IA : dialogue constructif sur l’IA",
+        "consultation": "Retour sur la consultation citoyenne « Quelles sont vos idées pour mettre l’IA au service de l’intérêt général ? »",
+        "modulix": "Les modules apprenants Modulix",
+        "title": "Les ateliers"
+      }
+    },
+    "count": "{count} actualités",
+    "discover": "Découvrir",
+    "empty": "Aucune actualité ne correspond à vos critères de recherche.",
+    "filters": {
+      "clear": "Effacer tous les filtres",
+      "show": "Afficher les filtres"
+    },
+    "kinds": {
+      "media": "Médias",
+      "resource": "Ressources",
+      "talk": "Prises de parole"
+    },
+    "links": {
+      "podcast": "Écouter le podcast",
+      "press": "Lire l’article",
+      "video": "Voir la vidéo",
+      "webinar": "Revoir le webinaire"
+    },
+    "sort": {
+      "dateDesc": "Date (du plus au moins récent)",
+      "kindAsc": "Type (A à Z)",
+      "label": "Trier par"
+    },
+    "subKinds": {
+      "analyze": "Analyse",
+      "blog": "Billet de blog",
+      "comparia": "Organisé par compar:IA",
+      "event": "Participation évènement",
+      "kit": "Kit de communication",
+      "panel": "Table ronde",
+      "podcast": "Podcast",
+      "press": "Presse écrite",
+      "video": "Vidéo",
+      "webinar": "Webinaire",
+      "workshop": "Atelier"
+    },
+    "title": "Actualités - France"
   },
   "product": {
     "community": {
@@ -548,6 +729,7 @@
     "titles": {
       "accessibilite": "Déclaration d’accessibilité",
       "arene": "Discussion",
+      "bnf": "Journée compar:IA à la BnF",
       "community": "Communauté",
       "comparator": "Le comparateur",
       "datasets": "Jeux de données",
