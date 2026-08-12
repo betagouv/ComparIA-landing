@@ -1,6 +1,5 @@
 @import '@gouvfr/dsfr/dist/dsfr.min.css';
 @import '@gouvfr/dsfr/dist/utility/icons/icons.css';
-@import './icons.css';
 
 :root {
   /* Accessibility override (WCAG AA): replace DSFR violet #6a6af4 with #6464f3
@@ -104,6 +103,11 @@
   /* xl */
 }
 
+/* The brand violet only reaches 3.88:1 on the skiplinks background, so keep the DSFR blue there */
+.fr-skiplinks .fr-link {
+  color: var(--text-title-blue-france);
+}
+
 html,
 body {
   min-height: 100vh;
@@ -115,4 +119,19 @@ body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+}
+
+@media print {
+  /* Only the content is worth ink: drop navigation, footer and the feedback tab. */
+  header,
+  footer,
+  .fr-follow,
+  [data-fr-opened] {
+    display: none !important;
+  }
+
+  a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.9em;
+  }
 }

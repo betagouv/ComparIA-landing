@@ -7,6 +7,7 @@
 
   const links = (
     [
+      { href: resolve('/plan-du-site'), labelKey: 'sitemap' },
       { href: `${ARENA_URL}/legal`, labelKey: 'legal' },
       { href: `${ARENA_URL}/terms`, labelKey: 'tos' },
       { href: `${ARENA_URL}/privacy`, labelKey: 'privacy' },
@@ -44,7 +45,13 @@
             target="_blank"
             class="after:content-none!"
           >
-            <img src="/orgs/dpg.png" alt="DPG" class="max-h-[47px]" />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="/orgs/dpg.webp"
+              alt="Digital Public Goods Alliance"
+              class="max-h-[47px]"
+            />
           </a>
           <p class="mb-0! leading-normal! text-[11px]!">{m['footer.dpg']()}</p>
         </div>

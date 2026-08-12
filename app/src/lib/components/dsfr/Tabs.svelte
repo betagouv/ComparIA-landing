@@ -108,7 +108,10 @@
         panelClass
       ]}
     >
-      {#if item.content}{item.content}{:else}{@render tab?.(item)}{/if}
+      <!-- Tabs with an href are separate pages, so only the open one is worth rendering -->
+      {#if item.content}{item.content}{:else if !item.href || item.id === currentTabId}{@render tab?.(
+          item
+        )}{/if}
     </div>
   {/each}
 </div>

@@ -9,7 +9,7 @@
   const locale = getLocale()
 
   const datasetCard = {
-    src: `/datasets/conversations-${locale === 'fr' ? 'fr' : 'en'}.png`,
+    src: `/datasets/conversations-${locale === 'fr' ? 'fr' : 'en'}.webp`,
     link: 'https://huggingface.co/datasets/comparIA/comparia-fr-arena',
     title: m['datasets.access.repos.arena.title'](),
     desc: m['datasets.access.repos.arena.desc']()
@@ -19,12 +19,12 @@
     [
       {
         i18nKey: 'conversations',
-        src: '/datasets/bunka-visualisation.png',
+        src: '/datasets/bunka-visualisation.webp',
         link: 'https://app.bunka.ai/datasets/569'
       },
       {
         i18nKey: 'analyze',
-        src: '/datasets/bunka-analyse.png',
+        src: '/datasets/bunka-analyse.webp',
         link: 'https://monitor.bunka.ai/compar-ia-dashboard'
       }
     ] as const
@@ -37,12 +37,12 @@
 
 <SeoHead title={m['seo.titles.datasets']()} />
 
-<main>
+<main id="content">
   <section class="fr-container--fluid bg-light-info py-6!">
     <div class="fr-container">
       <div class="cg-border gap-8 bg-white px-5 py-8 md:px-8 md:py-10 lg:grid-cols-2 grid">
         <div>
-          <h2 class="fr-h6">{m['datasets.access.title']()}</h2>
+          <h1 class="fr-h6">{m['datasets.access.title']()}</h1>
           <p>
             {@html sanitize(
               m['datasets.access.desc']({
@@ -66,6 +66,8 @@
         <div class="md:content-center grid">
           <div class="cg-border bg-very-light-grey max-w-xs mx-auto w-full">
             <img
+              loading="lazy"
+              decoding="async"
               src={datasetCard.src}
               class="fr-responsive-img rounded-t-xl"
               data-fr-js-ratio="true"
@@ -96,7 +98,9 @@
     <div class="fr-container cg-border rounded-2xl bg-light-grey p-5! md:p-10!">
       <div class="pb-8 md:flex">
         <img
-          src="/datasets/bunka-ai-logo.jpg"
+          loading="lazy"
+          decoding="async"
+          src="/datasets/bunka-ai-logo.webp"
           class="mb-2 rounded-2xl md:mr-8 md:mb-0 block h-[100px] w-[100px]"
           alt="Bunka.ai"
         />
@@ -110,7 +114,14 @@
               class="fr-container rounded-xl bg-very-light-grey px-3! py-5! md:px-10! md:py-8! flex flex-col"
             >
               <div class="px-2 md:p-0">
-                <img src={card.src} class="fr-responsive-img" alt="" aria-hidden="true" />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src={card.src}
+                  class="fr-responsive-img"
+                  alt=""
+                  aria-hidden="true"
+                />
                 <p class="m-0! py-5! text-sm! text-grey">{card.desc}</p>
               </div>
               <Link
@@ -149,6 +160,7 @@
     }
 
     p,
+    h1,
     h2 {
       line-height: 1.5em;
     }

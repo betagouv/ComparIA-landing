@@ -14,7 +14,7 @@ export default defineConfig({
         runes: ({ filename }) =>
           filename.split(/[/\\]/).includes('node_modules') ? undefined : true
       },
-      adapter: adapter(),
+      adapter: adapter({ precompress: true }),
       alias: {
         $css: './src/css',
         $components: './src/lib/components'
@@ -23,7 +23,8 @@ export default defineConfig({
     paraglideVitePlugin({
       project: './project.inlang',
       outdir: './src/lib/i18n',
-      strategy: ['cookie', 'baseLocale'],
+      // `url` first so each language has its own address and can be indexed on its own.
+      strategy: ['url', 'cookie', 'preferredLanguage', 'baseLocale'],
       emitTsDeclarations: true
     })
   ],

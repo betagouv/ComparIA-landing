@@ -1,13 +1,19 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "a11y": {
-    "externalLink": "{text} (nouvelle fenêtre)"
+    "externalLink": "{text} (nouvelle fenêtre)",
+    "skiplinks": {
+      "content": "Aller au contenu",
+      "footer": "Aller au pied de page",
+      "label": "Accès rapide"
+    }
   },
   "actions": {
     "closeModal": "Fermer la fenêtre modale",
     "contactUs": "Nous contacter",
     "home": "Page d'accueil",
-    "selectLanguage": "Sélectionner une langue"
+    "selectLanguage": "Sélectionner une langue",
+    "backToTop": "Haut de page"
   },
   "datasets": {
     "access": {
@@ -39,6 +45,99 @@
       "title": "Comment ces données sont-elles utilisées ?"
     }
   },
+  "duel": {
+    "faq": {
+      "contact": "Nous contacter pour en savoir plus",
+      "duration": {
+        "desc": "Les sessions les plus courtes que nous avons menées ont duré 20 à 30 minutes, mais cela limite un peu l’interactivité. Idéalement, un bon duel prend environ 45 minutes. Et si l’on dispose d’1h30, c’est encore mieux : cela permet d’enchaîner plusieurs duels et d’entrer plus en profondeur dans les discussions.",
+        "title": "Combien de temps dure une session des Duels ?"
+      },
+      "expertise": {
+        "desc": "Pas du tout ! Le guide facilitateur est conçu pour permettre à toute personne intéressée d’animer un duel. Il fournit les éléments clés pour comprendre le sujet, les enjeux et les outils nécessaires au bon déroulement de l’exercice. Bien sûr, avoir déjà expérimenté un peu avec des modèles de langage peut aider, mais ce n’est en aucun cas indispensable.",
+        "title": "Faut-il être expert du sujet pour faciliter un Duel de l’IA ?"
+      },
+      "size": {
+        "desc": "Nous avons déjà animé des sessions avec seulement 5 participants, mais aussi devant 300 personnes. Bien sûr, plus le groupe est grand, moins chacun a l’occasion de s’exprimer individuellement. Cela dit, l’atelier reste très flexible : tout dépend de la capacité du facilitateur à gérer le public. Avec un petit groupe, l’expérience est plus personnalisée ; avec un grand nombre de participants, l’énergie et la dynamique sont particulièrement intéressantes.",
+        "title": "Combien de personnes peuvent participer à une session des Duels de l’IA ?"
+      },
+      "title": "Foire aux questions"
+    },
+    "format": {
+      "access": "Accès à compar:IA et des supports fournis",
+      "duration": "Durée : 45min à 1h30",
+      "place": "Format présentiel ou en ligne",
+      "title": "Les <span {props}>Duels de l’IA</span> : un format d’<span {props}>atelier</span> ouvert à tout public, pour découvrir les coulisses des IA génératives et réfléchir à leur <span {props}>impact environnemental</span>.",
+      "turnkey": "Atelier clé en main, accessible et interactif"
+    },
+    "guide": {
+      "alt": "Capture d’écran de l’extension Chrome présentant les duels de l’IA",
+      "extension": "Extension Chrome pour avoir toutes ces informations à portée de main",
+      "faq": "FAQ et glossaire pour répondre facilement aux questions",
+      "slides": "Diapositives prêtes à projeter",
+      "title": "Le guide facilitateur",
+      "walkthrough": "Guide détaillé avec tout le déroulé expliqué"
+    },
+    "hero": {
+      "alt": "Présentation publique de compar:ia dans une salle bondée",
+      "cta": "Recevoir le kit facilitateur",
+      "desc": "Organisez un <strong>Duel de l’IA</strong> dans votre établissement, association ou entreprise en devenant facilitateur",
+      "title": "Vous souhaitez <span {props}>sensibiliser votre public</span> à l’impact environnemental de l’IA générative ?"
+    },
+    "publics": {
+      "associations": {
+        "desc": "Pour débattre d’un sujet de société en s’appuyant sur un exemple vécu.",
+        "title": "Associations, Médiation numérique"
+      },
+      "companies": {
+        "desc": "Pour réfléchir à un usage plus responsable des outils numériques.",
+        "title": "Entreprises"
+      },
+      "desc": "Cet atelier est ouvert à tous, quel que soit le niveau de connaissance initial.",
+      "schools": {
+        "desc": "Pour découvrir concrètement les coulisses de l’IA.",
+        "title": "Collèges et Lycées"
+      },
+      "title": "Pour quels publics ?",
+      "universities": {
+        "desc": "Pour enrichir les discussions sur l’innovation et le développement durable.",
+        "title": "Universités"
+      }
+    },
+    "steps": {
+      "conclusion": {
+        "desc": "Partage de quelques gestes simples pour réduire l’impact lié à l’usage de l’IA.",
+        "duration": "(5min)",
+        "title": "Conclusion et ouverture"
+      },
+      "debate": {
+        "desc": "Temps collectif pour réfléchir aux arbitrages entre usage et impact environnemental.",
+        "duration": "(10-15min)",
+        "title": "Débat final"
+      },
+      "desc": "Durée approximative : 60 minutes",
+      "duel": {
+        "desc": "Les participants posent la même question à deux modèles d’IA anonymes : un « grand » et un « petit » modèle.",
+        "duration": "(10-15min)",
+        "title": "Le duel"
+      },
+      "intro": {
+        "desc": "Présentation rapide de l’IA générative et de la plateforme compar:IA pour que tout le monde parte du même point, même sans connaissance préalable.",
+        "duration": "(10min)",
+        "title": "Introduction"
+      },
+      "reveal": {
+        "desc": "Choc pédagogique et découverte des caractéristiques techniques des modèles : « meilleure réponse » ne rime pas toujours avec « sobriété environnementale » !",
+        "duration": "(10min)",
+        "title": "Révélation des modèles"
+      },
+      "title": "Déroulé type d’un atelier",
+      "vote": {
+        "desc": "Moment d’échange pour réfléchir à la pertinence des réponses au regard des besoins des utilisateurs.",
+        "duration": "(10min)",
+        "title": "Comparaison et vote"
+      }
+    }
+  },
   "errors": {
     "404": {
       "desc": "Si vous avez tapé l'adresse web dans le navigateur, vérifiez qu'elle est correcte. La page n’est peut-être plus disponible.<br />Dans ce cas, pour continuer votre visite vous pouvez consulter notre page d’accueil.<br />Sinon contactez-nous pour que l’on puisse vous rediriger vers la bonne information.",
@@ -58,14 +157,18 @@
     "datasets": {
       "questions": {
         "1": {
+          "desc": "<p>Les questions que vous posez, les réponses des deux modèles et le vote que vous exprimez sont enregistrés. C’est la raison d’être du service : produire des données de préférence en libre accès.</p><p>Avant publication, un modèle passe les conversations en revue pour repérer celles qui contiennent des données personnelles ou sensibles. <strong>Ces conversations sont écartées du jeu de données public</strong>, mais elles sont conservées dans un jeu de données réservé à la recherche. Il n’y a donc pas d’anonymisation du texte : une conversation est publiée telle quelle, ou pas publiée.</p><p>Ce filtre est une sécurité, pas une garantie. <strong>compar:IA ne peut pas deviner ce que vous écrivez dans l’invite</strong> : n’y saisissez aucune information permettant de vous identifier ou d’identifier un tiers, et n’y collez ni coordonnées, ni document confidentiel.</p>",
+          "title": "Que deviennent mes conversations ?"
+        },
+        "2": {
           "desc": "<p>Les données de préférence servent à améliorer les modèles lors d'entraînements futurs.</p><p>En comparant à l'aveugle les réponses de deux modèles, les utilisateurs de compar:IA expriment leurs préférences, indiquant ainsi quelles réponses sont les plus pertinentes. Ces données de préférence peuvent être utilisées pour affiner l'alignement des modèles, c'est-à-dire pour les entraîner à générer des réponses plus conformes aux attentes et aux préférences des utilisateurs.</p><p>Il s'agit d'un processus itératif, où le modèle apprend progressivement à générer de meilleures réponses en fonction des retours formulés par les humains sur la qualité des réponses. En étant exposés à des données de préférence, les modèles apprennent à les intégrer dans leur processus de génération de réponses.</p>",
           "title": "Les données de préférence ont-elles un effet immédiat pour améliorer les modèles?"
         },
-        "2": {
+        "3": {
           "desc": "<p>La spécificité des données collectées sur la plateforme compar:IA est qu’elles sont en français et qu’elles correspondent à des tâches réelles des utilisateurs. Ces données reflètent des préférences humaines dans un contexte linguistique et culturel précis. Elles permettent dans un second temps d'ajuster les modèles pour qu’ils soient plus pertinents, précis et adaptés aux usages des utilisateurs, tout en comblant les éventuels biais ou lacunes des modèles actuels.</p>",
           "title": "Pourquoi les données de préférence collectées sur compar:IA ont-elles de la valeur ?"
         },
-        "3": {
+        "4": {
           "desc": "<p>compar:IA se positionne comme un outil d'évaluation et d'alignement spécifique au français, axé sur la qualité des réponses et la collecte de données de préférence, se distinguant ainsi de l'approche de classement global de <a href='https://lmarena.ai/' target='_blank'>chatbot arena</a> développé par <a href='http://lmsys.org' target='_blank'>lmsys.org</a> et de l'alignement éthique des modèles d’IA de <a href='https://hannahkirk.github.io/prism-alignment/' target='_blank'>Prism Alignment Project</a>.</p>",
           "title": "Quelle est la spécificité de compar:IA par rapport à d’autres initiatives similaires ?"
         }
@@ -75,16 +178,24 @@
     "ecology": {
       "questions": {
         "1": {
-          "desc": "<p>compar:IA utilise la méthodologie développée par <a target='_blank' href='https://ecologits.ai/latest/'><strong>Ecologits</strong> (GenAI Impact)</a> pour fournir un bilan énergétique qui permet aux utilisateurs de comparer l'impact environnemental de différents modèles d'IA pour une même requête. Cette transparence est essentielle pour encourager le développement et l'adoption de modèles d'IA plus éco-responsables.</p><p>Ecologits applique les principes de l'analyse du cycle de vie (ACV) conformément à la norme ISO 14044 en se concentrant pour le moment sur l'impact de <strong>l'inférence</strong> (c'est-à-dire l'utilisation des modèles pour répondre aux requêtes) et de la <strong>fabrication des cartes graphiques</strong> (extraction des ressources, fabrication et transport).</p><p>La consommation électrique du modèle est estimée en tenant compte de divers paramètres tels que la taille du modèle d'IA utilisé, la localisation des serveurs où sont déployés les modèles et le nombre de tokens de sortie. Le calcul de l’indicateur de potentiel de réchauffement climatique exprimé en équivalent CO2 est dérivé de la mesure de consommation électrique du modèle.</p><p>Il est important de noter que les méthodologies d'évaluation de l'impact environnemental de l'IA sont encore en développement.</p>",
-          "title": "Comment les indicateurs écologiques sont-ils calculés ?"
+          "title": "Comment les indicateurs écologiques sont-ils calculés ?",
+          "desc": "<p>compar:IA utilise la méthodologie <a target='_blank' href='https://ecologits.ai/latest/'><strong>EcoLogits</strong> (GenAI Impact)</a>, qui applique les principes de l’analyse du cycle de vie (ACV) conformément à la norme ISO 14044. Elle couvre pour l’instant deux postes : <strong>l’inférence</strong>, c’est-à-dire l’usage du modèle pour répondre, et <strong>la fabrication des cartes graphiques</strong> (extraction des matières, production, transport).</p><p>Le calcul de l’énergie part du nombre de <strong>paramètres actifs</strong> du modèle et du nombre de <strong>jetons produits</strong>. Une régression, calée sur les mesures publiques du <em>ML.ENERGY Leaderboard</em>, donne l’énergie que la carte graphique dépense par jeton. S’y ajoute la part du serveur qui héberge le modèle, puis le tout est multiplié par le <strong>PUE</strong> du centre de données, qui tient compte du refroidissement et des pertes.</p><p>Le matériel de référence est celui des centres de données : une carte NVIDIA H100 de 80 Go, un serveur de 8 cartes tirant 1,2 kW, une durée de vie de trois ans et un traitement par lots de 64 requêtes en parallèle. Le nombre de cartes retenu dépend de la mémoire qu’exige le modèle.</p><p>L’équivalent CO₂ se déduit ensuite de cette consommation électrique, en la multipliant par le facteur d’émission du mix électrique du pays où tourne le modèle.</p><p>Pour les modèles propriétaires, dont la taille n’est pas publiée, EcoLogits raisonne sur une fourchette : les chiffres affichés sont alors des estimations, signalées comme telles.</p><p>Il est important de noter que les méthodes d’évaluation de l’impact environnemental de l’IA sont encore en construction.</p>"
         },
         "2": {
-          "desc": "<p>La localisation des centres de données joue un rôle dans l'empreinte carbone de l'IA. Si un modèle est entraîné ou utilisé dans un pays fortement dépendant des énergies fossiles, son impact environnemental sera plus important que s'il est hébergé dans un pays utilisant majoritairement des énergies renouvelables.</p><p>La méthode d'analyse de l'impact environnemental de l'IA développée par <a target='_blank' href='https://ecologits.ai/latest/'>Ecologits (de GenAI Impact)</a>, intègre des données sur le mix énergétique des différents pays où se situent les serveurs. Cela permet d'obtenir une estimation plus précise et nuancée de l'empreinte carbone réelle de l’inférence sur les différents modèles d’IA générative.</p>",
-          "title": "Les indicateurs écologiques tiennent-ils compte du mix énergétique des différents pays ?"
+          "title": "Que veut dire la classe énergétique d’un modèle ?",
+          "desc": "<p>Chaque modèle reçoit une classe de <strong>A</strong> à <strong>F</strong>, sur le principe des étiquettes énergie de l’électroménager. Elle repose sur un seul chiffre : l’énergie qu’il faut pour produire un million de jetons.</p><ul><li><strong>A</strong> : moins de 100 Wh</li><li><strong>B</strong> : de 100 à 300 Wh</li><li><strong>C</strong> : de 300 à 1 000 Wh</li><li><strong>D</strong> : de 1 000 à 3 000 Wh</li><li><strong>E</strong> : de 3 000 à 10 000 Wh</li><li><strong>F</strong> : plus de 10 000 Wh</li></ul><p>La classe dépend surtout de la taille du modèle et de son architecture. Un modèle <em>dense</em> mobilise tous ses paramètres à chaque réponse. Un modèle à <em>mélange d’experts</em> n’en active qu’une partie : à taille totale égale, il consomme donc moins.</p><p>Cette classe est là pour aider à choisir. Pour beaucoup de tâches courantes, un modèle classé A ou B répond aussi bien qu’un modèle classé E, pour une fraction de l’énergie.</p>"
         },
         "3": {
-          "desc": "<p>Les indicateurs d'impact écologique actuels se focalisent principalement sur l'impact de <strong>l'inférence</strong>, c'est-à-dire l'utilisation des modèles d'IA pour répondre aux requêtes. Cette approche peut donner l'illusion que l'inférence est moins énergivore que l'entraînement des modèles. Cependant, <strong>la réalité est plus complexe.</strong> Prenons l'analogie de la voiture :</p><ul><li>Construire une voiture (l'entraînement) est un processus ponctuel et gourmand en ressources.</li><li>Chaque trajet en voiture (l'inférence) consomme moins d'énergie, mais ces trajets sont répétés quotidiennement, et leur nombre est potentiellement immense.</li></ul><p>De la même manière, <strong>l'impact cumulé de l'inférence, à l'échelle de millions d'utilisateurs effectuant des requêtes quotidiennement, peut s'avérer supérieur à l'impact de l'entraînement initial.</strong> C'est pourquoi il est crucial que les outils d'évaluation de l'empreinte carbone de l'IA prennent en compte <strong>l'ensemble du cycle de vie</strong> des modèles, de l'entraînement à l'utilisation en production</p>",
-          "title": "Les indicateurs d’impact écologique tiennent-ils compte des ressources utilisées pour entraîner les modèles ?"
+          "title": "Combien de cartes graphiques faut-il pour faire tourner un modèle ?",
+          "desc": "<p>compar:IA affiche, pour chaque modèle, le matériel qu’il faudrait pour le faire tourner : un smartphone, un ordinateur portable, une station de travail avec une carte graphique, ou un serveur avec plusieurs cartes.</p><p>L’estimation part de la mémoire dont le modèle a besoin pour charger ses paramètres, puis la divise par 80 Go, la mémoire d’une carte NVIDIA H100, la référence des centres de données. Un modèle qui demande 320 Go tient ainsi sur quatre cartes.</p><p>C’est un ordre de grandeur, pas une configuration de production : le calcul ne compte ni la mémoire prise par le contexte, ni les copies du modèle déployées pour absorber le trafic. Il donne surtout une idée concrète de ce que « grand modèle » veut dire, et de ce qui reste utilisable sur une machine ordinaire.</p>"
+        },
+        "4": {
+          "title": "Les indicateurs écologiques tiennent-ils compte du mix énergétique des différents pays ?",
+          "desc": "<p>La localisation des centres de données joue un rôle dans l'empreinte carbone de l'IA. Si un modèle est entraîné ou utilisé dans un pays fortement dépendant des énergies fossiles, son impact environnemental sera plus important que s'il est hébergé dans un pays utilisant majoritairement des énergies renouvelables.</p><p>La méthode d'analyse de l'impact environnemental de l'IA développée par <a target='_blank' href='https://ecologits.ai/latest/'>Ecologits (de GenAI Impact)</a>, intègre des données sur le mix énergétique des différents pays où se situent les serveurs. Cela permet d'obtenir une estimation plus précise et nuancée de l'empreinte carbone réelle de l’inférence sur les différents modèles d’IA générative.</p>"
+        },
+        "5": {
+          "title": "Les indicateurs d’impact écologique tiennent-ils compte des ressources utilisées pour entraîner les modèles ?",
+          "desc": "<p>Les indicateurs d'impact écologique actuels se focalisent principalement sur l'impact de <strong>l'inférence</strong>, c'est-à-dire l'utilisation des modèles d'IA pour répondre aux requêtes. Cette approche peut donner l'illusion que l'inférence est moins énergivore que l'entraînement des modèles. Cependant, <strong>la réalité est plus complexe.</strong> Prenons l'analogie de la voiture :</p><ul><li>Construire une voiture (l'entraînement) est un processus ponctuel et gourmand en ressources.</li><li>Chaque trajet en voiture (l'inférence) consomme moins d'énergie, mais ces trajets sont répétés quotidiennement, et leur nombre est potentiellement immense.</li></ul><p>De la même manière, <strong>l'impact cumulé de l'inférence, à l'échelle de millions d'utilisateurs effectuant des requêtes quotidiennement, peut s'avérer supérieur à l'impact de l'entraînement initial.</strong> C'est pourquoi il est crucial que les outils d'évaluation de l'empreinte carbone de l'IA prennent en compte <strong>l'ensemble du cycle de vie</strong> des modèles, de l'entraînement à l'utilisation en production</p>"
         }
       },
       "title": "Indicateurs écologiques"
@@ -105,22 +216,26 @@
     "models": {
       "questions": {
         "1": {
+          "desc": "<p>Le classement repose sur les votes des utilisateurs, et sur rien d’autre. À chaque duel, deux modèles répondent à l’aveugle et vous désignez celui que vous préférez.</p><p>Ces duels alimentent un modèle statistique de <strong>Bradley-Terry</strong>, qui attribue à chaque modèle le niveau expliquant au mieux l’ensemble des duels observés, exprimé sous forme de score Elo comme aux échecs. Chaque score est assorti d’un <strong>intervalle de confiance</strong> : un modèle peu affronté a un rang bien plus incertain qu’un modèle jugé des milliers de fois.</p><p>Le classement s’affiche par défaut avec le <strong>contrôle de style</strong>, qui neutralise l’effet des habitudes de présentation, longueur de la réponse ou mise en forme, pour ne comparer que le fond. Vous pouvez désactiver ce contrôle et voir le classement brut.</p><p>Il mesure une préférence humaine sur des usages réels, en langue européenne. Ce n’est pas un test de connaissances : un modèle en tête ici peut être devancé sur un examen technique.</p>",
+          "title": "Comment le classement compar:IA est-il calculé ?"
+        },
+        "2": {
           "desc": "<p>Nous choisissons les modèles en fonction de leur popularité, de leur diversité et de la pertinence pour les utilisateurs. Nous veillons particulièrement à rendre accessibles des modèles dits <em>open weights</em> (semi-ouverts) et de taille différentes.</p>",
           "title": "Comment choisissez-vous les modèles présents dans le comparateur ?"
         },
-        "2": {
+        "3": {
           "desc": "<p>L’inférence, c’est-à-dire le fait de pouvoir interroger les modèles, est prise en charge par le projet. Pour la plupart des modèles, nous passons par les API d’Open Router et de Hugging Face et nous réglons les coûts à l’usage, au jeton.</p>",
           "title": "Comment parvenez-vous à rendre ce service gratuit ?"
         },
-        "3": {
+        "4": {
           "desc": "<p>Les modèles quantisés sont optimisés pour consommer moins de ressources en simplifiant certains calculs tout en visant la meilleure qualité de réponse.</p><p>La quantisation est une technique d'optimisation qui consiste à réduire la précision des nombres utilisés pour représenter les paramètres d'un modèle d'IA. Cela permet de <strong>diminuer la taille du modèle</strong> et <strong>d'accélérer les calculs</strong>, ce qui est particulièrement avantageux pour l'inférence sur des machines limitées en ressources.</p>",
           "title": "« modèle quantisé », quésaco ?"
         },
-        "4": {
+        "5": {
           "desc": "<p><strong>La capacité d'un modèle à parler plusieurs langues est liée à la diversité linguistique de ses données d'entraînement et non au pays</strong>. Les <strong>LLM utilisent d'énormes corpus dans de nombreuses langues</strong>, mais la répartition des langues dans les données d'entraînement n'est pas uniforme. Une surreprésentation de l'anglais peut entraîner des limitations dans d'autres langues. Ces limitations se traduisent par exemple par des <strong>anglicismes ou une incapacité à générer des contenus dans certaines langues classées « en danger » par l'UNESCO</strong>.</p><p><strong>L'exactitude et la richesse du vocabulaire d'un modèle dépendent des données utilisées pour son apprentissage</strong>.</p>",
           "title": "Y a-t-il un lien entre la nationalité de l’entreprise ou du laboratoire à l’origine du modèle et sa capacité à parler plusieurs langues ?"
         },
-        "5": {
+        "6": {
           "desc": "<p>Rares sont les acteurs à être “transparents” sur les sources de données utilisées dans les corpus d’entraînement. Ces informations sont souvent confidentielles pour des raisons légales et commerciales.</p>",
           "title": "Peut-on connaître les données d’entraînement des modèles ?"
         }
@@ -131,28 +246,32 @@
     "usage": {
       "questions": {
         "1": {
-          "desc": "<p>Les modèles de langage conversationnels actuels sont <strong>incapables de citer les sources</strong> qu'ils ont utilisées pour générer une réponse. Ils fonctionnent en prédisant le mot suivant le plus probable en fonction de la distribution statistique des données d'entraînement. Bien qu'ils puissent synthétiser des informations provenant de diverses sources, ils ne conservent pas la trace de l'origine de ces informations.</p><p>Cependant, il existe des techniques comme la <strong>Génération Augmentée par Récupération (RAG)</strong> qui visent à pallier cette limitation. Le RAG permet aux modèles d'accéder à des bases de connaissances externes et de <strong>fournir des informations contextualisées en citant les sources</strong>. Cette approche est essentielle pour améliorer la transparence et la fiabilité des réponses générées par les modèles.</p>",
-          "title": "Les modèles peuvent-ils citer leurs sources ?"
+          "desc": "<p>Oui, si vous activez la <strong>recherche web</strong> avant d’envoyer votre question dans l’arène. Les deux modèles reçoivent alors les mêmes extraits de pages trouvées en ligne, avec leurs adresses, et s’appuient dessus pour répondre. Les sources consultées s’affichent sous votre message.</p><p>Sans la recherche web, les modèles répondent uniquement à partir de ce qu’ils ont appris pendant leur entraînement : ils ne vérifient rien en ligne, et les faits récents ou très précis peuvent manquer.</p><p>La recherche web ajoute du texte à la requête envoyée aux modèles. Elle augmente donc le nombre de jetons traités, et avec lui l’énergie affichée dans le bilan.</p>",
+          "title": "Les modèles peuvent-ils chercher sur le web ?"
         },
         "2": {
-          "desc": "<p>Vous avez posé la question suivante “explique-moi la motion de censure à l'œuvre actuellement en France à l'Assemblée nationale et cite-moi tes sources” et avez été déçu·e des réponses ? C’est normal…</p><p><strong>Les modèles d'IA conversationnels “bruts” ne peuvent pas répondre aux questions sur l'actualité la plus récente.</strong> Ils sont entraînés sur des ensembles de données statiques et ne peuvent pas interagir avec le web ou ouvrir des liens. Ils n'ont pas la capacité de se mettre à jour en temps réel avec les événements qui se déroulent dans le monde. Les informations auxquelles le modèle a accès sont limitées à la date de son dernier entraînement.</p><p>Par conséquent, si vous posez une question sur un fait d’actualité récent, le modèle s'appuiera sur des informations potentiellement obsolètes, risquant de générer des réponses inexactes.</p><p>Dans le cas de Perplexity, Copilot ou ChatGPT, les modèles d’IA conversationnelle dits “bruts” sont associés à d’autres briques technologiques qui permettent de se connecter à internet pour accéder à des informations en temps réel. On parle alors “d’agents conversationnels”.</p>",
-          "title": "Si je pose une question sur l’actualité la plus récente, le modèle peut-il répondre ?"
+          "desc": "<p>Pas les yeux fermés. Un modèle de langage produit le texte le plus <em>vraisemblable</em>, pas le plus <em>exact</em>. Il peut affirmer une chose fausse avec le même aplomb qu’une chose vraie, inventer une date, une citation ou une référence. C’est ce qu’on appelle une <strong>hallucination</strong>, et aucun modèle n’en est exempt.</p><p>La recherche web réduit le risque sans le supprimer. Le modèle s’appuie alors sur des pages réelles, mais il peut les lire de travers, en tirer une conclusion qu’elles ne portent pas, ou tomber sur une source elle-même fausse. Les sources s’affichent précisément pour que vous puissiez vérifier.</p><p>C’est aussi ce que le comparateur rend visible : quand deux modèles répondent à la même question et se contredisent, au moins l’un des deux a tort. Cette divergence rappelle utilement qu’une réponse assurée n’est pas une réponse vérifiée.</p>",
+          "title": "Puis-je faire confiance aux réponses ?"
         },
         "3": {
-          "desc": "<p>Si vous intégrez une URL dans une requête, le modèle conversationnel ne peut pas y accéder directement. Les modèles de langage traitent le texte de la requête mais n'ont pas la capacité d'interagir avec le web ou d'ouvrir des liens. Ils sont entraînés sur un ensemble de données textuelles fixes et leurs réponses reposent sur ces données d’entraînement. Lorsqu'une question est posées, les modèles utilisent cet entraînement pour générer une réponse mais ne peuvent pas accéder à de nouvelles informations en ligne.</p><p>Par analogie, imaginez un étudiant passant un examen sans accès à internet. Il peut utiliser ses connaissances acquises pour répondre aux questions, mais ne peut pas consulter de sites web pour obtenir des informations supplémentaires.</p>",
-          "title": "Si j’intègre un lien d’URL dans une requête, le modèle peut-il y accéder ?"
+          "desc": "<p><strong>Avec la recherche web activée, oui.</strong> Les modèles reçoivent alors des extraits de pages avec leurs adresses, et peuvent renvoyer vers elles. Les sources consultées s’affichent aussi sous votre message, pour que vous puissiez les vérifier vous-même.</p><p><strong>Sans la recherche web, non.</strong> Un modèle de langage seul est <strong>incapable de citer les sources</strong> qui ont servi à produire sa réponse. Il prédit le mot suivant le plus probable à partir de la distribution statistique de ses données d’entraînement. Il peut synthétiser des informations venues de milliers de textes, mais il ne garde aucune trace de leur origine. S’il vous donne malgré tout une référence, elle peut être inventée.</p><p>C’est le principe de la <strong>Génération Augmentée par Récupération (RAG)</strong>, dont la recherche web de compar:IA est une forme : donner au modèle des documents extérieurs au moment de répondre, pour qu’il s’appuie dessus et puisse les citer.</p>",
+          "title": "Les modèles peuvent-ils citer leurs sources ?"
         },
         "4": {
-          "desc": "<p>Il arrive que les modèles perdent le fil d'une conversation en raison de leur <strong>fenêtre de contexte limitée.</strong> Cette « fenêtre » représente la quantité d'informations précédentes que le modèle peut retenir, agissant comme une mémoire à court terme. Plus la fenêtre est petite, plus le modèle est susceptible d'oublier des éléments clés de la conversation, conduisant à des réponses incohérentes. Les conversations longues ou complexes peuvent rapidement saturer la fenêtre de contexte, augmentant le risque d'incohérence.</p><p>Par analogie, imaginez une personne qui ne se souvient que des cinq dernières phrases d'une conversation. Si la conversation est courte, la personne peut suivre. Mais si la conversation devient longue, la personne oubliera des informations cruciales, ce qui rendra ses réponses incohérentes. De même, un modèle d'IA avec une petite fenêtre de contexte peut « perdre le fil » d'une conversation lorsque trop d'informations sont échangées, oubliant des éléments clés et produisant des réponses qui n'ont plus de sens.</p>",
-          "title": "Pourquoi certains modèles perdent-ils rapidement le fil de la conversation ?"
+          "desc": "<p>Vous avez posé la question suivante “explique-moi la motion de censure à l'œuvre actuellement en France à l'Assemblée nationale et cite-moi tes sources” et avez été déçu·e des réponses ? C’est normal…</p><p><strong>Les modèles d'IA conversationnels “bruts” ne peuvent pas répondre aux questions sur l'actualité la plus récente.</strong> Ils sont entraînés sur des ensembles de données statiques et ne peuvent pas interagir avec le web ou ouvrir des liens. Ils n'ont pas la capacité de se mettre à jour en temps réel avec les événements qui se déroulent dans le monde. Les informations auxquelles le modèle a accès sont limitées à la date de son dernier entraînement.</p><p>Par conséquent, si vous posez une question sur un fait d’actualité récent, le modèle s'appuiera sur des informations potentiellement obsolètes, risquant de générer des réponses inexactes.</p><p>Dans le cas de Perplexity, Copilot ou ChatGPT, les modèles d’IA conversationnelle dits “bruts” sont associés à d’autres briques technologiques qui permettent de se connecter à internet pour accéder à des informations en temps réel. On parle alors “d’agents conversationnels”.</p><p>Sur compar:IA, activez la recherche web avant d’envoyer votre question : les modèles reçoivent alors des extraits de pages récentes et peuvent répondre sur l’actualité. Sans cette option, ils restent limités à leurs données d’entraînement.</p>",
+          "title": "Si je pose une question sur l’actualité la plus récente, le modèle peut-il répondre ?"
         },
         "5": {
-          "desc": "<p>La formulation des questions, ou « prompts », influence la cohérence de la conversation. Pour obtenir les meilleurs résultats d'un modèle de langage, il est essentiel de maîtriser l'art du <em>prompting</em>, c'est-à-dire la formulation des requêtes ou instructions. <strong>La clarté est primordiale</strong>:</p><ul><li>Utilisez un langage simple et direct, en évitant les questions trop longues ou complexes. Décomposez les requêtes en plusieurs questions plus simples pour des réponses plus précises.</li><li><strong>Précisez si besoin des contraintes de formats spécifiques</strong> : Si vous avez besoin d’une réponse dans un certain format (liste, tableau, résumé, etc.), précisez-le dans le prompt. Vous pouvez également préciser les étapes à suivre et les critères de qualité souhaités.</li><li><strong>Spécifiez le rôle du modèle</strong> : Par exemple, commencez par “Agis comme un expert en…” ou “Imagine que tu es un enseignant…” pour orienter le ton et la perspective de la réponse.</li><li><strong>Contextualisez vos questions</strong> : si nécessaire, fournissez des exemples pertinents pour guider le modèle.</li><li><strong>Encouragez le raisonnement</strong>: utilisez l’incitation au raisonnement pas à pas (<em>Chain-of-Thought Prompting</em>) pour demander au modèle d'expliciter son raisonnement, ce qui rend les réponses plus robustes.</li></ul><p>Les modèles conversationnels sont sensibles aux variations de formulation: un langage simple, des questions courtes et une reformulation si nécessaire peuvent aider à guider le modèle vers des réponses pertinentes. Testez et affinez vos prompts pour trouver la formulation la plus efficace !</p>",
-          "title": "Quelles sont les bonnes pratiques pour prompter ?"
+          "desc": "<p>Si vous intégrez une URL dans une requête, le modèle conversationnel ne peut pas y accéder directement. Les modèles de langage traitent le texte de la requête mais n'ont pas la capacité d'interagir avec le web ou d'ouvrir des liens. Ils sont entraînés sur un ensemble de données textuelles fixes et leurs réponses reposent sur ces données d’entraînement. Lorsqu'une question est posées, les modèles utilisent cet entraînement pour générer une réponse mais ne peuvent pas accéder à de nouvelles informations en ligne.</p><p>Par analogie, imaginez un étudiant passant un examen sans accès à internet. Il peut utiliser ses connaissances acquises pour répondre aux questions, mais ne peut pas consulter de sites web pour obtenir des informations supplémentaires.</p><p>La recherche web change en partie la donne : activée, elle fournit aux modèles le contenu de pages trouvées en ligne. Elle n’ouvre pas pour autant l’adresse précise que vous collez, elle lance une recherche à partir de votre message.</p>",
+          "title": "Si j’intègre un lien d’URL dans une requête, le modèle peut-il y accéder ?"
         },
         "6": {
           "desc": "<p>L'IA conversationnelle répond directement en formulant des phrases à partir d’un grand ensemble de données sur lesquelles le modèle a été entraîné, tandis qu’un moteur de recherche propose des liens et des ressources pour que l’internaute les explore lui-même.</p>",
           "title": "Quelle est la différence entre poser une question à un modèle d’IA conversationnelle et faire une recherche sur Google ?"
+        },
+        "7": {
+          "desc": "<p>Le comparateur a été conçu et développé dans le cadre d’une start-up d’État portée par le ministère de la Culture et intégrée au programme <a href=\"https://beta.gouv.fr\" target=\"_blank\" rel=\"noopener external\">Beta.gouv.fr</a> de la Direction interministérielle du numérique (DINUM), qui aide les administrations publiques françaises à construire des services numériques utiles, simples et faciles à utiliser.</p><p>Il est aujourd’hui financé par le ministère de la Culture, la DINUM et l’<a href=\"https://www.alt-edic.eu\" target=\"_blank\" rel=\"noopener external\">Alliance for Language Technologies</a> (ALT-EDIC).</p>",
+          "title": "Qui est à l’origine du projet ?"
         }
       },
       "title": "Usage"
@@ -171,6 +290,7 @@
       "legal": "Mentions légales",
       "privacy": "Politique de confidentialité",
       "rgesn": "Écoconception",
+      "sitemap": "Plan du site",
       "sources": "Code source",
       "tos": "Modalités d'utilisation"
     },
@@ -187,7 +307,6 @@
     "writeUs": "Si vous rencontrez un problème ou si vous avez un commentaire sur le comparateur, n'hésitez pas à nous écrire <a {formLinkProps}>via ce formulaire</a>, nous lisons tous vos messages.<br />Merci !"
   },
   "header": {
-    "banner": "🏆 Le classement des modèles est maintenant disponible ! Découvrir le classement.",
     "homeTitle": "Accueil - compar:IA",
     "logoAlt": "République Française",
     "menu": "Menu",
@@ -236,14 +355,16 @@
         "help": "Vos données sont partagées à des fins de recherche"
       }
     },
+    "newsletter": {
+      "desc": "Retrouvez les dernières actualités du projet : partenariats, intégration de nouveaux modèles, publications de jeux de données et nouvelles fonctionnalités !",
+      "iframeTitle": "Infolettre compar:IA",
+      "title": "Abonnez-vous à notre lettre d'information"
+    },
     "origin": {
-      "project": {
-        "desc": "Le comparateur a été conçu et développé dans le cadre d’une start-up d’Etat portée par le ministère de la Culture et intégrée au programme <a {linkProps}>Beta.gouv.fr</a> de la Direction interministérielle du numérique (DINUM) qui aide les administrations publiques françaises à construire des services numériques utiles, simples et faciles à utiliser.",
-        "title": "Qui est à l’origine du projet ?"
-      },
       "team": {
         "desc": "Le comparateur est porté au sein du Ministère de la Culture par une équipe pluridisciplinaire réunissant expert en Intelligence artificielle, développeurs, chargé de déploiement, designer, avec pour mission de rendre les IA conversationnelles plus transparentes et accessibles à toutes et tous.",
-        "title": "Qui sommes-nous ?"
+        "title": "Qui sommes-nous ?",
+        "funding": "Le projet est financé par le ministère de la Culture, la <a {betaProps}>Direction interministérielle du numérique</a> (DINUM) et l’<a {altEdicProps}>Alliance for Language Technologies</a> (ALT-EDIC), l’alliance européenne qui soutient les technologies du langage pour toutes les langues de l’Union."
       }
     },
     "usage": {
@@ -300,6 +421,94 @@
       },
       "title": "Pourquoi votre vote est important ?"
     }
+  },
+  "news": {
+    "allYear": "Toute l’année",
+    "bnf": {
+      "about": {
+        "event": "La journée compar:IA s’est tenue le 7 février 2025 à la Bnf François-Mitterrand. L’évènement a réuni plus de 300 participant·es en présentiel et une centaine de personnes ont suivi la journée en direct.",
+        "goal": "L’objectif était d’échanger sur les enjeux éthiques, culturels et environnementaux liés à l’IA conversationnelle.",
+        "thanks": "Un grand merci à tou·tes les participant·es et aux partenaires de l’évènement !",
+        "title": "À propos de la journée compar:IA"
+      },
+      "coverAlt": "Conférence d’Anastasia Stasenko dans un amphithéâtre de la BNF, présentant une diapositive qui analyse le jeu de données compar:IA",
+      "cta": "Visionner les interventions de la journée",
+      "desc": "Revivez les interventions de notre journée dédiée aux enjeux éthiques, culturels et environnementaux des systèmes d’IA conversationnelle.",
+      "logoAlt": "Sommet pour l’action sur l’IA",
+      "speakers": {
+        "bancal": "Directrice adjointe de Pix",
+        "bras": "Co-Responsable de l’Atelier numérique",
+        "cattan": "Secrétaire général du Conseil national du numérique",
+        "cellard": "Chercheur chez Datactivist",
+        "delassus": "Chef du service du numérique du Ministère de la Culture",
+        "laymand": "Directeur des études chez make.org",
+        "levisalles": "Co-fondatrice de Latitudes",
+        "luccioni": "AI & Climate Lead chez Hugging Face",
+        "mas": "Chief AI Officer chez Make.org",
+        "piwowarski": "Directeur de recherche au CNRS",
+        "rince": "Président et cofondateur de GenAI Impact",
+        "stasenko": "Cofondatrice de Pleias",
+        "termignon": "Cheffe de produit de compar:IA",
+        "title": "Les intervenant·es",
+        "tort": "Conceptrice de défis pédagogiques chez Pix"
+      },
+      "talks": {
+        "alignment": "Alignement des modèles sur les usages francophones",
+        "democracy": "Comment rendre l’IA compatible avec la démocratie ?",
+        "education": "Enjeux d’éducation et de formation à l’IA générative",
+        "footprint": "L’évaluation de l’impact environnemental des IA génératives",
+        "future": "Vers un futur durable pour l’IA francophone",
+        "opening": "Ouverture de la journée",
+        "title": "Les conférences"
+      },
+      "title": "Journée compar:<span {props}>IA</span>",
+      "workshops": {
+        "badge": "Atelier",
+        "battle": "La bataille de l’IA",
+        "blackbox": "La boîte noire de l’IA",
+        "cafeia": "Atelier Café IA : dialogue constructif sur l’IA",
+        "consultation": "Retour sur la consultation citoyenne « Quelles sont vos idées pour mettre l’IA au service de l’intérêt général ? »",
+        "modulix": "Les modules apprenants Modulix",
+        "title": "Les ateliers"
+      }
+    },
+    "count": "{count} actualités",
+    "discover": "Découvrir",
+    "empty": "Aucune actualité ne correspond à vos critères de recherche.",
+    "filters": {
+      "clear": "Effacer tous les filtres",
+      "show": "Afficher les filtres"
+    },
+    "kinds": {
+      "media": "Médias",
+      "resource": "Ressources",
+      "talk": "Prises de parole"
+    },
+    "links": {
+      "podcast": "Écouter le podcast",
+      "press": "Lire l’article",
+      "video": "Voir la vidéo",
+      "webinar": "Revoir le webinaire"
+    },
+    "sort": {
+      "dateDesc": "Date (du plus au moins récent)",
+      "kindAsc": "Type (A à Z)",
+      "label": "Trier par"
+    },
+    "subKinds": {
+      "analyze": "Analyse",
+      "blog": "Billet de blog",
+      "comparia": "Organisé par compar:IA",
+      "event": "Participation évènement",
+      "kit": "Kit de communication",
+      "panel": "Table ronde",
+      "podcast": "Podcast",
+      "press": "Presse écrite",
+      "video": "Vidéo",
+      "webinar": "Webinaire",
+      "workshop": "Atelier"
+    },
+    "title": "Actualités - France"
   },
   "product": {
     "community": {
@@ -467,6 +676,31 @@
             }
           },
           "tag": "Investigation"
+        },
+        "scale": {
+          "items": {
+            "1": {
+              "date": "Février 2026",
+              "desc": "Le comparateur entre dans le parcours de Pix, qui prévoit de sensibiliser 1,5 million d’élèves à l’IA.",
+              "title": "Partenariat avec <a {linkProps}>Pix</a>"
+            },
+            "2": {
+              "date": "Février 2026",
+              "desc": "Un article décrivant la plateforme, la méthode de collecte et les jeux de données produits.",
+              "title": "Publication du <a {linkProps}>preprint compar:IA</a>"
+            },
+            "3": {
+              "date": "Septembre 2026",
+              "desc": "L’historique des messages arrive, et les nouvelles fiches modèles affichent désormais un score d’énergie et un score d’ouverture.",
+              "title": "Lancement de compar:IA 2.0"
+            },
+            "4": {
+              "date": "Octobre 2026",
+              "desc": "Des arènes dédiées à un métier ou à un domaine, pour comparer les modèles sur des usages précis. Date prévisionnelle.",
+              "title": "Lancement des premières arènes sectorielles"
+            }
+          },
+          "tag": "Passage à l’échelle"
         }
       },
       "tabLabel": "Dates clés",
@@ -548,6 +782,7 @@
     "titles": {
       "accessibilite": "Déclaration d’accessibilité",
       "arene": "Discussion",
+      "bnf": "Journée compar:IA à la BnF",
       "community": "Communauté",
       "comparator": "Le comparateur",
       "datasets": "Jeux de données",
@@ -566,8 +801,13 @@
       "ranking": "Classement",
       "rgesn": "Déclaration d’écoconception",
       "settings": "Paramètres",
-      "share": "Mon bilan"
+      "share": "Mon bilan",
+      "sitemap": "Plan du site"
     }
+  },
+  "sitemap": {
+    "desc": "Toutes les pages du site compar:IA.",
+    "title": "Plan du site"
   },
   "words": {
     "close": "Fermer",

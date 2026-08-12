@@ -1,18 +1,15 @@
 <script lang="ts">
   import { browser } from '$app/environment'
-  import { page } from '$app/state'
   import { Footer, Header } from '$components'
-  import { Icon, Link } from '$components/dsfr'
+  import { Icon } from '$components/dsfr'
   import { m } from '$lib/i18n/messages'
   import { getLocale } from '$lib/i18n/runtime'
-  import { ARENA_URL } from '$lib/main'
   import { onMount } from 'svelte'
   import 'uno.css'
   import '../css/app.css'
 
   let { children } = $props()
 
-  const isHome = $derived(page.url.pathname === '/')
   const isFr = $derived(getLocale() === 'fr')
 
   if (browser) {
@@ -32,11 +29,16 @@
   })
 </script>
 
-<Header />
+<div class="fr-skiplinks">
+  <nav class="fr-container" aria-label={m['a11y.skiplinks.label']()}>
+    <ul class="fr-skiplinks__list">
+      <li><a class="fr-link" href="#content">{m['a11y.skiplinks.content']()}</a></li>
+      <li><a class="fr-link" href="#main-footer">{m['a11y.skiplinks.footer']()}</a></li>
+    </ul>
+  </nav>
+</div>
 
-{#if isHome}
-  <Link button href="{ARENA_URL}/ranking" text={m['header.banner']()} cornered class="w-auto!" />
-{/if}
+<Header />
 
 {@render children()}
 
@@ -49,6 +51,7 @@
     data-tally-auto-close="5000"
     class="bottom-6 right-6 gap-2 px-4 py-3 text-white! shadow-lg fixed z-50 flex cursor-pointer items-center rounded-full bg-[#6A6AF4]! hover:bg-[#9898f8]!"
     aria-label="Donner votre avis"
+    lang="fr"
   >
     <Icon icon="i-ri-feedback-line" class="text-white" />
     <span class="text-sm font-medium">Votre avis</span>

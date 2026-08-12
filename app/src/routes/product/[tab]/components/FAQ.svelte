@@ -7,7 +7,7 @@
     {
       id: 'usage',
       label: m['faq.usage.title'](),
-      qs: (['1', '2', '3', '4', '5', '6'] as const).map((q) => ({
+      qs: (['1', '2', '3', '4', '5', '6', '7'] as const).map((q) => ({
         title: m[`faq.usage.questions.${q}.title`](),
         desc: m[`faq.usage.questions.${q}.desc`]()
       }))
@@ -15,7 +15,7 @@
     {
       id: 'models',
       label: m['faq.models.title'](),
-      qs: (['1', '2', '3', '4', '5'] as const).map((q) => ({
+      qs: (['1', '2', '3', '4', '5', '6'] as const).map((q) => ({
         title: m[`faq.models.questions.${q}.title`](),
         desc: m[`faq.models.questions.${q}.desc`]()
       }))
@@ -23,7 +23,7 @@
     {
       id: 'datasets',
       label: m['faq.datasets.title'](),
-      qs: (['1', '2', '3'] as const).map((q) => ({
+      qs: (['1', '2', '3', '4'] as const).map((q) => ({
         title: m[`faq.datasets.questions.${q}.title`](),
         desc: m[`faq.datasets.questions.${q}.desc`]()
       }))
@@ -31,7 +31,7 @@
     {
       id: 'ecology',
       label: m['faq.ecology.title'](),
-      qs: (['1', '2', '3'] as const).map((q) => ({
+      qs: (['1', '2', '3', '4', '5'] as const).map((q) => ({
         title: m[`faq.ecology.questions.${q}.title`](),
         desc: m[`faq.ecology.questions.${q}.desc`]()
       }))
@@ -46,6 +46,8 @@
     }
   ]
 </script>
+
+<h2 class="fr-sr-only">{m['faq.title']()}</h2>
 
 <Tabs {tabs} noBorders kind="nav" label={m['faq.title']()}>
   {#snippet tab({ id })}

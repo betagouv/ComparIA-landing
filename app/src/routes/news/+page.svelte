@@ -17,6 +17,18 @@
     href?: string
     pinned?: boolean
   }
+  type SubKindId =
+    | 'comparia'
+    | 'blog'
+    | 'kit'
+    | 'podcast'
+    | 'webinar'
+    | 'event'
+    | 'workshop'
+    | 'panel'
+    | 'analyze'
+    | 'press'
+    | 'video'
   type Sub = {
     title: string
     variant: BadgeProps['variant']
@@ -25,37 +37,38 @@
   }
 
   const NEWS_KINDS = ['resource', 'talk', 'media'] as const
+  const subKind = (id: SubKindId, linkLabel?: string) => ({
+    id,
+    label: m[`news.subKinds.${id}`](),
+    linkLabel
+  })
   const SUBKINDS: Record<NewsKind, Sub> = {
     resource: {
-      title: 'Ressources',
+      title: m['news.kinds.resource'](),
       variant: 'light-info',
       icon: 'i-ri-book-ai-fill',
-      subKinds: [
-        { id: 'comparia', label: 'Organisé par compar:IA' },
-        { id: 'blog', label: 'Billet de blog' },
-        { id: 'kit', label: 'Kit de communication' }
-      ]
+      subKinds: [subKind('comparia'), subKind('blog'), subKind('kit')]
     },
     talk: {
-      title: 'Prises de parole',
+      title: m['news.kinds.talk'](),
       variant: 'purple',
       icon: 'i-ri-speak-ai-fill',
       subKinds: [
-        { id: 'podcast', label: 'Podcast', linkLabel: 'Écouter le podcast' },
-        { id: 'webinar', label: 'Webinaire', linkLabel: 'Revoir le webinaire' },
-        { id: 'event', label: 'Participation évènement' },
-        { id: 'workshop', label: 'Atelier' },
-        { id: 'panel', label: 'Table ronde' }
+        subKind('podcast', m['news.links.podcast']()),
+        subKind('webinar', m['news.links.webinar']()),
+        subKind('event'),
+        subKind('workshop'),
+        subKind('panel')
       ]
     },
     media: {
-      title: 'Médias',
+      title: m['news.kinds.media'](),
       variant: 'green-tilleul',
       icon: 'i-ri-megaphone-fill',
       subKinds: [
-        { id: 'analyze', label: 'Analyse' },
-        { id: 'press', label: 'Presse écrite', linkLabel: "Lire l'article" },
-        { id: 'video', label: 'Vidéo', linkLabel: 'Voir la vidéo' }
+        subKind('analyze'),
+        subKind('press', m['news.links.press']()),
+        subKind('video', m['news.links.video']())
       ]
     }
   }
@@ -66,7 +79,7 @@
     linkLabel:
       n.linkLabel ??
       SUBKINDS[n.kind].subKinds.find((sk) => sk.id === n.subKind)?.linkLabel ??
-      'Découvrir',
+      m['news.discover'](),
     date: n.date ? new Date(n.date * 1000) : null
   }))
 
@@ -84,8 +97,8 @@
   }))
 
   const sortingOptions = [
-    { value: 'date-desc', label: 'Date (du plus au moins récent)' },
-    { value: 'kind-asc', label: 'Type (A à Z)' }
+    { value: 'date-desc', label: m['news.sort.dateDesc']() },
+    { value: 'kind-asc', label: m['news.sort.kindAsc']() }
   ] as const
 
   let kinds = $state<Record<NewsKind, string[]>>({
@@ -130,15 +143,15 @@
 
 <SeoHead title={m['seo.titles.news']()} />
 
-<main>
+<main id="content">
   <div class="fr-container py-12">
-    <h2 class="mb-7!">Actualités - France</h2>
+    <h1 class="fr-h2 mb-7!">{m['news.title']()}</h1>
 
     <div class="md:flex md:flex-row">
       <aside
         class="fr-sidemenu mb-5 md:mb-0 md:basis-1/3"
         role="navigation"
-        aria-labelledby="sidemenu-title"
+        aria-label={m['news.filters.show']()}
       >
         <div class="fr-sidemenu__inner h-full">
           <button
@@ -148,7 +161,7 @@
             type="button"
             class="fr-sidemenu__btn"
           >
-            Afficher les filtres
+            {m['news.filters.show']()}
             {#if filterCount}
               <span class="fr-badge fr-badge--sm bg-primary! text-white! ms-2 rounded-full!">
                 {filterCount}
@@ -187,7 +200,7 @@
 
               <div class="mb-8">
                 <Button
-                  text="Effacer tous les filtres"
+                  text={m['news.filters.clear']()}
                   icon="delete-line"
                   variant="tertiary-no-outline"
                   disabled={filterCount === 0}
@@ -200,12 +213,12 @@
       </aside>
 
       <div class="basis-full">
-        <p class="fr-h6 mb-4! md:hidden">
-          {filteredNews.length} actualités
+        <p class="fr-h6 mb-4!" role="status">
+          {m['news.count']({ count: filteredNews.length })}
         </p>
 
         <div class="fr-select-group">
-          <label class="fr-label" for="news-order">Trier par</label>
+          <label class="fr-label" for="news-order">{m['news.sort.label']()}</label>
           <select
             id="news-order"
             bind:value={sortingMethod}
@@ -219,20 +232,19 @@
         </div>
 
         <div class="gap-6 md:grid-cols-2 xl:grid-cols-3 grid">
-          {#each filteredNews as news (news.title)}
+          {#each filteredNews as news, i (news.title)}
             <div class="fr-card fr-enlarge-link fr-card--no-border cg-border rounded-xl bg-none!">
               <div class="fr-card__body">
                 <div class="fr-card__content px-5! pb-18! md:px-4! md:pt-4!">
-                  <h6 class="fr-card__title mb-0! text-lg!">
-                    <Link
-                      href={news.href}
-                      text={news.title}
-                      class="after:content-none!"
-                      onclick={(e) => (news.href === '#' ? e.preventDefault() : undefined)}
-                    >
+                  <h2 class="fr-card__title mb-0! text-lg!">
+                    {#if news.href === '#'}
                       <span class="text-[--grey-50-1000]!">{news.title}</span>
-                    </Link>
-                  </h6>
+                    {:else}
+                      <Link href={news.href} text={news.title} class="after:content-none!">
+                        <span class="text-[--grey-50-1000]!">{news.title}</span>
+                      </Link>
+                    {/if}
+                  </h2>
 
                   <div class="fr-card__desc text-grey text-[14px]">
                     {news.desc}
@@ -242,14 +254,14 @@
                     <ul class="fr-badges-group">
                       {#if news.pinned}
                         <li class="m-0!">
-                          <Badge id="card-badge-kind" variant="red" size="xs" noTooltip>
+                          <Badge id="card-badge-pin-{i}" variant="red" size="xs" noTooltip>
                             <Icon icon="i-ri-pushpin-fill" size="xxs" />
                           </Badge>
                         </li>
                       {/if}
                       <li>
                         <Badge
-                          id="card-badge-kind"
+                          id="card-badge-kind-{i}"
                           variant={SUBKINDS[news.kind].variant}
                           size="xs"
                           text={SUBKINDS[news.kind].title}
@@ -258,9 +270,9 @@
                       </li>
                       <li>
                         <Badge
-                          id="card-badge-kind"
+                          id="card-badge-date-{i}"
                           size="xs"
-                          text={!news.date ? "Toute l'année" : news.date.toLocaleDateString()}
+                          text={!news.date ? m['news.allYear']() : news.date.toLocaleDateString()}
                           noTooltip
                           class="me-0!"
                         />
@@ -268,30 +280,33 @@
                     </ul>
                   </div>
 
-                  <div class="fr-card__end pe-1!" aria-hidden="true">
-                    <p class="fr-card__detail flex justify-end">
-                      <Link
-                        href={news.href}
-                        text=""
-                        class={[
-                          'text-[14px]!',
-                          news.href !== '#' ? 'text-primary! border-b-1' : 'text-grey!'
-                        ]}
-                        tabindex={-1}
-                        onclick={(e) => (news.href === '#' ? e.preventDefault() : undefined)}
-                      >
-                        {news.linkLabel}
-                        {#if news.href.startsWith('/')}
-                          <Icon icon="i-ri-arrow-right-line" size="xs" />
-                        {/if}
-                      </Link>
+                  <div class="fr-card__end pe-1!">
+                    <!-- The card title already links to the article, so this is a visual repeat -->
+                    <p
+                      class={[
+                        'fr-card__detail flex justify-end text-[14px]! gap-1 ms-auto',
+                        news.href !== '#' ? 'text-primary! border-b-1' : 'text-grey!'
+                      ]}
+                    >
+                      {news.linkLabel}
+                      {#if news.href.startsWith('/')}
+                        <Icon icon="i-ri-arrow-right-line" size="xs" class="mt-1" />
+                      {:else if news.href && news.href !== '#'}
+                        <Icon icon="i-ri-external-link-line" size="xs" class="mt-1" />
+                      {/if}
                     </p>
                   </div>
                 </div>
               </div>
               <div class="fr-card__header">
                 <div class="fr-card__img">
-                  <img class="fr-responsive-img rounded-t-xl" src="/news/{news.imgSrc}" alt="" />
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    class="fr-responsive-img rounded-t-xl"
+                    src="/news/{news.imgSrc}"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
@@ -300,7 +315,7 @@
 
         {#if filteredNews.length === 0}
           <p class="fr-text--lead fr-mt-4w">
-            Aucune actualité ne correspond à vos critères de recherche.
+            {m['news.empty']()}
           </p>
         {/if}
       </div>

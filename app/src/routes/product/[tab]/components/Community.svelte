@@ -4,13 +4,13 @@
 
   const frTeam = (
     [
-      { name: 'Lucie Termignon', key: 'lucie', imgSrc: 'lucie-termignon.png' },
-      { name: 'Simonas Zilinskas', key: 'simonas', imgSrc: 'simonas-zilinskas.png' },
-      { name: 'Aurélien Barot', key: 'aurelien', imgSrc: 'aurelien-barot.png' },
-      { name: 'Nicolas Chesnais', key: 'nicolas', imgSrc: 'nicolas-chesnais.png' },
-      { name: 'Hadrien Pelissier', key: 'hadrien', imgSrc: 'hadrien-pelissier.png' },
-      { name: 'Elie Gavoty', key: 'elie', imgSrc: 'elie-gavoty.png' },
-      { name: 'Mathilde Bras', key: 'mathilde', imgSrc: 'mathilde-bras.png' }
+      { name: 'Lucie Termignon', key: 'lucie', imgSrc: 'lucie-termignon.webp' },
+      { name: 'Simonas Zilinskas', key: 'simonas', imgSrc: 'simonas-zilinskas.webp' },
+      { name: 'Aurélien Barot', key: 'aurelien', imgSrc: 'aurelien-barot.webp' },
+      { name: 'Nicolas Chesnais', key: 'nicolas', imgSrc: 'nicolas-chesnais.webp' },
+      { name: 'Hadrien Pelissier', key: 'hadrien', imgSrc: 'hadrien-pelissier.webp' },
+      { name: 'Elie Gavoty', key: 'elie', imgSrc: 'elie-gavoty.webp' },
+      { name: 'Mathilde Bras', key: 'mathilde', imgSrc: 'mathilde-bras.webp' }
     ] as const
   ).map((card) => ({
     ...card,
@@ -32,9 +32,18 @@
 
       <div class="my-6 gap-8 flex flex-col">
         <div class="cl-logos gap-2">
-          <img src="/orgs/etalab.svg" alt="Etalab" title="Etalab" width="235px" />
           <img
-            src="/orgs/peren.svg"
+            loading="lazy"
+            decoding="async"
+            src="/orgs/etalab.webp"
+            alt="Etalab"
+            title="Etalab"
+            width="235px"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/orgs/peren.webp"
             alt="PEReN, Pôle d'expertise de la régulation numérique"
             title="Pôle d'expertise de la régulation numérique (PEReN)"
             width="235px"
@@ -42,31 +51,60 @@
         </div>
         <div class="cl-logos gap-8">
           <img
-            src="/orgs/cnnum.png"
+            loading="lazy"
+            decoding="async"
+            src="/orgs/cnnum.webp"
             alt="Conseil national du numérique"
             title="Conseil national du numérique"
             width="112px"
           />
           <img
-            src="/orgs/caire.png"
+            loading="lazy"
+            decoding="async"
+            src="/orgs/caire.webp"
             alt="Citizen-oriented Artificial Intelligence training for a Responsible Education"
             title="Citizen-oriented Artificial Intelligence training for a Responsible Education"
             width="105px"
           />
-          <img src="/orgs/inria.png" alt="Inria" title="Inria" width="139px" />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/orgs/inria.webp"
+            alt="Inria"
+            title="Inria"
+            width="139px"
+          />
         </div>
         <div class="cl-logos gap-5">
-          <img src="/orgs/cafe-ia.png" alt="Cafés de l'IA" title="Cafés IA" width="104px" />
           <img
-            src="/orgs/latitudes.png"
+            loading="lazy"
+            decoding="async"
+            src="/orgs/cafe-ia.webp"
+            alt="Cafés de l'IA"
+            title="Cafés IA"
+            width="104px"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/orgs/latitudes.webp"
             alt="Latitudes"
             title="Latitudes"
             width="110px"
             class="dark:invert"
           />
-          <img src="/orgs/pix.svg" alt="Pix" title="Pix" width="60px" />
           <img
-            src="/orgs/fresque-de-lia.png"
+            loading="lazy"
+            decoding="async"
+            src="/orgs/pix.svg"
+            alt="Pix"
+            title="Pix"
+            width="60px"
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/orgs/fresque-de-lia.webp"
             alt="Fresques de l'IA"
             title="Fresques de l'IA"
             width="94px"
@@ -85,12 +123,16 @@
       <div class="my-6 gap-8 flex flex-col">
         <div class="cl-logos">
           <img
-            src="/orgs/da-light.png"
+            loading="lazy"
+            decoding="async"
+            src="/orgs/da-light.webp"
             alt="Logos des partenaires danois"
             class="max-h-[75px] dark:hidden"
           />
           <img
-            src="/orgs/da-dark.png"
+            loading="lazy"
+            decoding="async"
+            src="/orgs/da-dark.webp"
             alt="Logos des partenaires danois"
             class="hidden max-h-[75px] dark:block"
           />
@@ -112,6 +154,8 @@
           class="after:bg-primary after:inset-0 relative h-[100px] min-w-[100px] after:absolute after:rounded-full after:opacity-10 after:content-['']"
         >
           <img
+            loading="lazy"
+            decoding="async"
             src={'/product/community/' + person.imgSrc}
             aria-hidden="true"
             alt=""

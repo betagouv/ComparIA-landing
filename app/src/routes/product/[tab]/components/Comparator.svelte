@@ -35,7 +35,9 @@
 
     <div class="p-4 rounded-[28px] bg-[#686868]">
       <img
-        src="/product/chatbot-screenshot-fr.png"
+        loading="lazy"
+        decoding="async"
+        src="/product/chatbot-screenshot-fr.webp"
         alt={m['product.comparator.screenshotAlt']()}
         class="rounded-2xl w-full max-w-[622px]"
       />
@@ -59,7 +61,9 @@
   <div class="cg-border bg-light-grey gap-10 px-4 py-10 md:grid-cols-2 grid">
     <div class="flex">
       <img
-        src="/product/comparia-europe.png"
+        loading="lazy"
+        decoding="async"
+        src="/product/comparia-europe.webp"
         aria-hidden="true"
         alt=""
         width="326px"

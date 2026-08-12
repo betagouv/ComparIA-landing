@@ -1,6 +1,5 @@
+import { m } from '$lib/i18n/messages'
 import sanitizeHtml from 'sanitize-html'
-
-export const noop = () => {}
 
 export function sanitize(html: string, allowLinks = true): string {
   const options: sanitizeHtml.IOptions = {
@@ -23,7 +22,11 @@ export function propsToAttrs(props: Record<string, unknown>): string {
 }
 
 export function externalLinkProps(props: Record<string, unknown> | string): string {
-  const _props = { target: '_blank', rel: 'noopener external' }
+  const _props = {
+    target: '_blank',
+    rel: 'noopener external',
+    title: m['a11y.externalLink']({ text: '' }).trim()
+  }
   return propsToAttrs(
     typeof props === 'string' ? { ..._props, href: props } : { ..._props, ...props }
   )

@@ -7,6 +7,25 @@
   const steps = (
     [
       {
+        key: 'scale',
+        items: [
+          { index: '4' },
+          { index: '3' },
+          {
+            index: '2',
+            title: m[`product.history.steps.scale.items.2.title`]({
+              linkProps: externalLinkProps('https://arxiv.org/abs/2602.06669')
+            })
+          },
+          {
+            index: '1',
+            title: m[`product.history.steps.scale.items.1.title`]({
+              linkProps: externalLinkProps('https://pix.fr')
+            })
+          }
+        ]
+      },
+      {
         key: 'i18n',
         items: [
           { index: '6', vote: true },

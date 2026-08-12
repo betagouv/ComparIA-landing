@@ -14,10 +14,12 @@
     { block: block },
     props.class
   ])
-  // FIXME check if aria-label else set aria-hidden="true"
+
+  const hasAriaLabel = $derived('aria-label' in props || 'aria-labelledby' in props)
+  const ariaHidden = $derived(hasAriaLabel ? undefined : true)
 </script>
 
-<span {...props} class={classes}></span>
+<span aria-hidden={ariaHidden} {...props} class={classes}></span>
 
 <style>
   /* set icon-size on element itself for div to set its size in block mode */

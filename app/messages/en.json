@@ -1,13 +1,19 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "a11y": {
-    "externalLink": "{text} (new window)"
+    "externalLink": "{text} (new window)",
+    "skiplinks": {
+      "content": "Skip to content",
+      "footer": "Skip to footer",
+      "label": "Quick access"
+    }
   },
   "actions": {
     "contactUs": "Contact us",
     "closeModal": "Close the popup",
     "home": "Homepage",
-    "selectLanguage": "Select a language"
+    "selectLanguage": "Select a language",
+    "backToTop": "Back to top"
   },
   "datasets": {
     "access": {
@@ -58,14 +64,18 @@
     "datasets": {
       "questions": {
         "1": {
+          "desc": "<p>The questions you ask, the answers from both models and the vote you cast are all recorded. That is the whole point of the service: to produce freely available preference data.</p><p>Before publication, a model reviews the conversations to spot those holding personal or sensitive data. <strong>Those conversations are kept out of the public dataset</strong>, but they are held in a dataset reserved for research. So the text is not anonymised: a conversation is either published as it stands, or not published.</p><p>That filter is a safeguard, not a guarantee. <strong>compar:IA cannot guess what you type into the prompt</strong>: do not enter anything that could identify you or a third party, and do not paste contact details or confidential documents.</p>",
+          "title": "What happens to my conversations?"
+        },
+        "2": {
           "desc": "<p> Preference data is used to improve models during future training. </p> <p> By blindly comparing the responses of two models, compar:IA users express their preferences, indicating which responses are most relevant. This preference data can be used to improve model alignment—that is, to train them to generate responses that are more in line with user expectations and preferences. </p> <p> This is an iterative process, where the model gradually learns to generate better responses based on feedback from humans on the quality of the responses. By being exposed to preference data, models adjust their response style. </p>",
           "title": "Does preference data have an immediate effect on model performance?"
         },
-        "2": {
+        "3": {
           "desc": "<p> The uniqueness of the data collected on the compar:IA platform is that it is in lower ressourced languages and corresponds to real-life user tasks. This data reflects human preferences in specific linguistic and cultural contexts. This data allows us to adjust the models to make them more relevant, accurate, and adapted to user needs, while attempting to address any biases or gaps. </p>",
           "title": "Why are the votes on compar:IA useful?"
         },
-        "3": {
+        "4": {
           "desc": "<p> compar:IA positions itself as a low-ressourced language assessment and alignment tool for language models, focused on response quality and preference data collection, thus distinguishing itself from the global ranking approach of <a href='https://lmarena.ai/' target='_blank'> chatbot arena </a> developed by <a href='http://lmsys.org' target='_blank'> lmsys.org </a> and the ethical alignment of AI models of <a href='https://hannahkirk.github.io/prism-alignment/' target='_blank'> Prism Alignment Project </a> . </p>",
           "title": "What makes compar:IA different from other similar initiatives?"
         }
@@ -75,16 +85,24 @@
     "ecology": {
       "questions": {
         "1": {
-          "desc": "<p> compar:AI uses the methodology developed by <a target='_blank' href='https://ecologits.ai/latest/'> <strong> Ecologits </strong> (GenAI Impact) </a> to provide an estimation for energy consumed that allows users to compare the environmental impact of different AI models for the same query. This transparency is essential to encourage the development and adoption of more eco-responsible AI models. </p> <p> Ecologits applies the principles of Life Cycle Assessment (LCA) in accordance with ISO 14044, focusing for the moment on the impact of <strong> inference </strong> (i.e., the use of models to answer queries) and the <strong> manufacturing of graphics cards </strong> (resource extraction, manufacturing, and transportation). </p> <p> The model's power consumption is estimated by taking into account various parameters such as the size of the AI model used, the location of the servers where the models are deployed, and the number of output tokens. The calculation of the global warming potential indicator expressed in CO2 equivalent is derived from the model's power consumption measurement. </p> <p> It is important to note that methodologies for assessing the environmental impact of AI are still under development. </p>",
-          "title": "How are environmental metrics calculated?"
+          "title": "How are environmental metrics calculated?",
+          "desc": "<p>compar:IA uses the <a target='_blank' href='https://ecologits.ai/latest/'><strong>EcoLogits</strong> (GenAI Impact)</a> methodology, which applies life cycle assessment (LCA) principles under the ISO 14044 standard. It currently covers two items: <strong>inference</strong>, that is using the model to answer, and <strong>the manufacture of the graphics cards</strong> (raw material extraction, production, transport).</p><p>The energy calculation starts from the model's <strong>active parameters</strong> and the number of <strong>tokens produced</strong>. A regression, fitted on the public measurements of the <em>ML.ENERGY Leaderboard</em>, gives the energy the graphics card spends per token. The share of the server hosting the model is added, and the total is multiplied by the data centre's <strong>PUE</strong>, which accounts for cooling and losses.</p><p>The reference hardware is that of data centres: an 80 GB NVIDIA H100 card, an 8-card server drawing 1.2 kW, a three-year lifespan and batches of 64 requests handled in parallel. The number of cards depends on the memory the model needs.</p><p>The CO₂ equivalent then follows from that electricity use, multiplied by the emission factor of the electricity mix of the country where the model runs.</p><p>For proprietary models, whose size is not published, EcoLogits works from a range: the figures shown are estimates, and are flagged as such.</p><p>It is worth noting that methods for assessing the environmental impact of AI are still being built.</p>"
         },
         "2": {
-          "desc": "<p> Data center locations play a very significant role in AI's carbon footprint. If a model is trained or used in a country heavily dependent on fossil fuels, its environmental impact will be greater than if it is hosted in a country that uses mostly renewable energy. </p> <p> The AI environmental impact analysis method developed by <a target='_blank' href='https://ecologits.ai/latest/'> Ecologits (from GenAI Impact) </a> incorporates data on the energy mix of the different countries where the servers are located. This allows for a more accurate and nuanced estimate of the actual carbon footprint of inference on different generative AI models. </p>",
-          "title": "Do environmental metrics take into account the energy mix of different countries?"
+          "title": "What does a model's energy class mean?",
+          "desc": "<p>Every model gets a class from <strong>A</strong> to <strong>F</strong>, on the same principle as the energy labels on household appliances. It rests on a single figure: the energy needed to produce one million tokens.</p><ul><li><strong>A</strong>: under 100 Wh</li><li><strong>B</strong>: 100 to 300 Wh</li><li><strong>C</strong>: 300 to 1,000 Wh</li><li><strong>D</strong>: 1,000 to 3,000 Wh</li><li><strong>E</strong>: 3,000 to 10,000 Wh</li><li><strong>F</strong>: over 10,000 Wh</li></ul><p>The class depends mostly on the size of the model and on its architecture. A <em>dense</em> model uses all of its parameters for every answer. A <em>mixture of experts</em> model activates only part of them, so at equal total size it consumes less.</p><p>The class is there to help you choose. For many everyday tasks, a model rated A or B answers just as well as one rated E, for a fraction of the energy.</p>"
         },
         "3": {
-          "desc": "<p> Many environmental impact metrics focus primarily on the impact of <strong> inference </strong> , that is, the use of AI models to answer queries. This approach may give the illusion that inference is less energy-intensive than model training. However, <strong> the reality is more complex. </strong> Consider the car analogy: </p> <ul> <li> Building a car (training) is a one-time, resource-intensive process. </li> <li> Each car journey (inference) uses less energy, but these journeys are repeated daily, and their number is potentially immense. </li> </ul> <p> Similarly <strong> the cumulative impact of inference, across millions of users querying daily, is often signficantly greater than the impact of initial training <strong> This is why it is crucial that AI carbon footprint assessment tools consider the entire lifecycle </strong> models, from training to inference </strong>  </p>",
-          "title": "Do environmental impact estimations take into account the resources used to train the models?"
+          "title": "How many graphics cards does it take to run a model?",
+          "desc": "<p>For each model, compar:IA shows the hardware it would take to run it: a smartphone, a laptop, a workstation with one graphics card, or a server with several cards.</p><p>The estimate starts from the memory the model needs to load its parameters, then divides it by 80 GB, the memory of an NVIDIA H100 card, the data centre reference. A model that needs 320 GB therefore fits on four cards.</p><p>This is an order of magnitude, not a production setup: the calculation counts neither the memory taken by the context nor the copies of the model deployed to absorb traffic. Above all it gives a concrete sense of what \"large model\" means, and of what remains usable on an ordinary machine.</p>"
+        },
+        "4": {
+          "title": "Do environmental metrics take into account the energy mix of different countries?",
+          "desc": "<p> Data center locations play a very significant role in AI's carbon footprint. If a model is trained or used in a country heavily dependent on fossil fuels, its environmental impact will be greater than if it is hosted in a country that uses mostly renewable energy. </p> <p> The AI environmental impact analysis method developed by <a target='_blank' href='https://ecologits.ai/latest/'> Ecologits (from GenAI Impact) </a> incorporates data on the energy mix of the different countries where the servers are located. This allows for a more accurate and nuanced estimate of the actual carbon footprint of inference on different generative AI models. </p>"
+        },
+        "5": {
+          "title": "Do environmental impact estimations take into account the resources used to train the models?",
+          "desc": "<p> Many environmental impact metrics focus primarily on the impact of <strong> inference </strong> , that is, the use of AI models to answer queries. This approach may give the illusion that inference is less energy-intensive than model training. However, <strong> the reality is more complex. </strong> Consider the car analogy: </p> <ul> <li> Building a car (training) is a one-time, resource-intensive process. </li> <li> Each car journey (inference) uses less energy, but these journeys are repeated daily, and their number is potentially immense. </li> </ul> <p> Similarly <strong> the cumulative impact of inference, across millions of users querying daily, is often signficantly greater than the impact of initial training <strong> This is why it is crucial that AI carbon footprint assessment tools consider the entire lifecycle </strong> models, from training to inference </strong>  </p>"
         }
       },
       "title": "Environmental data"
@@ -105,22 +123,26 @@
     "models": {
       "questions": {
         "1": {
+          "desc": "<p>The ranking rests on user votes and on nothing else. In each duel, two models answer blind and you pick the one you prefer.</p><p>Those duels feed a <strong>Bradley-Terry</strong> statistical model, which gives each model the level that best explains all the duels observed, expressed as an Elo score as in chess. Every score comes with a <strong>confidence interval</strong>: a model that has fought few duels holds a far less certain rank than one judged thousands of times.</p><p>By default the ranking is shown with <strong>style control</strong>, which cancels out the effect of presentation habits, answer length or formatting, so that only substance is compared. You can turn that control off and see the raw ranking.</p><p>It measures human preference on real uses, in European languages. It is not a knowledge test: a model leading here may be beaten on a technical exam.</p>",
+          "title": "How is the compar:IA ranking calculated?"
+        },
+        "2": {
           "desc": "<p> We choose models based on their popularity, diversity, and relevance to users. We pay particular attention to making <em> open weights </em> and different size models available. </p>",
           "title": "How do you choose the models present in the arena ?"
         },
-        "2": {
+        "3": {
           "desc": "<p> Inference, meaning the ability to query the models, is payed for by the project. For most models, we use the Open Router and Hugging Face Inference Providers on a per-token usage basis. </p>",
           "title": "How do you manage to keep this service free?"
         },
-        "3": {
+        "4": {
           "desc": "<p> Quantized models are optimized to consume fewer resources by simplifying certain calculations while aiming for the best response quality. </p> <p> Quantization is an optimization technique that involves reducing the precision of the numbers used to represent the parameters of an AI model. This allows <strong> to reduce the size of the model </strong> and <strong> to speed up calculations </strong> , which is particularly advantageous for inference on resource-constrained machines. </p>",
           "title": "What are “quantized models” ?"
         },
-        "4": {
+        "5": {
           "desc": "<p> <strong> A model's ability to speak multiple languages is related to the linguistic diversity of its training data, not to the country it was developed in </strong> . <strong> LLMs use huge corpora of data with many languages </strong> , but the distribution of languages in the training data is not uniform. An overrepresentation of English can lead to limitations in other languages. These limitations are visible, for example, in <strong> anglicisms or the inability to generate content in certain languages classified as \"endangered\" by UNESCO </strong> . </p> <p> <strong> The accuracy and richness of a model's vocabulary depend on the data used for its training </strong> . </p>",
           "title": "Is there a link between the nationality of the company or lab that created the model and its ability to speak several languages?"
         },
-        "5": {
+        "6": {
           "desc": "<p> Few stakeholders are “transparent” about the data sources used in training corpora. This information is often confidential for legal and commercial reasons. </p>",
           "title": "Can we see the training data of the models?"
         }
@@ -131,28 +153,32 @@
     "usage": {
       "questions": {
         "1": {
-          "desc": "<p> Current conversational language models are <strong> unable to cite their sources </strong> they used to generate an answer. They work by predicting the most likely next token based on the statistical distribution of the training data. While they can synthesize information from various sources, they do not keep track of where that information comes from. </p> <p> However, there are techniques like <strong> Retrieval Augmented Generation (RAG) </strong> that aim to overcome this limitation. RAG allows models to access external knowledge bases and <strong> provide contextualized information by citing the sources </strong> . This approach is useful for improving the transparency and reliability of model answers. </p>",
-          "title": "Can models cite their sources?"
+          "desc": "<p>Yes, if you turn on <strong>web search</strong> before sending your question in the arena. Both models then receive the same extracts from pages found online, along with their addresses, and answer from them. The sources used appear under your message.</p><p>Without web search, models answer only from what they learned during training: they check nothing online, so recent or very specific facts may be missing.</p><p>Web search adds text to the request sent to the models. It therefore raises the number of tokens processed, and with it the energy shown in the summary.</p>",
+          "title": "Can models search the web?"
         },
         "2": {
-          "desc": "<p> Have you asked the question: “Explain to me the latest trendy cheesecake recipe and cite your sources” and been disappointed with the answers? That's normal... </p> <p> <strong> “Raw” conversational AI models cannot answer questions about the most recent news. </strong> They are trained on static datasets and cannot interact with the web or open links. They do not have the ability to update themselves in real time with events unfolding in the world. The information the model has access to is limited to the date of its last training. </p> <p> Therefore, if you ask a question about a recent news event, the model will rely on outdated information, risking generating inaccurate answers. </p> <p> In the case of Perplexity, Copilot, or ChatGPT, the so-called “raw” conversational AI models are combined with other system blocks that allow them to connect to the internet to access information in real time. These are called “conversational agents.” </p>",
-          "title": "If I ask a question about the latest news, can the model answer?"
+          "desc": "<p>Not blindly. A language model produces the most <em>plausible</em> text, not the most <em>accurate</em>. It can state something false with the same confidence as something true, and invent a date, a quotation or a reference. This is called a <strong>hallucination</strong>, and no model is free of it.</p><p>Web search cuts the risk without removing it. The model then works from real pages, but it can misread them, draw a conclusion they do not support, or land on a source that is itself wrong. The sources are shown precisely so that you can check.</p><p>This is also what the comparator makes visible: when two models answer the same question and contradict each other, at least one of them is wrong. That disagreement is a useful reminder that a confident answer is not a checked answer.</p>",
+          "title": "Can I trust the answers?"
         },
         "3": {
-          "desc": "<p> If you include a URL in a query, the conversational model will not be able to access it directly. Language models process the query text but do not have the ability to interact with the web or open links. They are trained on a fixed text dataset, and their answers are based on this training data. When a question is asked, the models use this training to generate an answer but cannot access new information online if they are not enabled to do so by a surrounding system. </p> <p> As an analogy, imagine a student taking an exam without internet access. They can use their acquired knowledge to answer questions, but cannot visit websites for additional information. </p>",
-          "title": "If I include an URL in a query, can the model access it?"
+          "desc": "<p><strong>With web search turned on, yes.</strong> The models then receive extracts from pages along with their addresses, and can point back to them. The sources used also appear under your message, so you can check them yourself.</p><p><strong>Without web search, no.</strong> A language model on its own <strong>cannot cite the sources</strong> behind its answer. It predicts the most likely next word from the statistical distribution of its training data. It can pull together information from thousands of texts, but it keeps no record of where any of it came from. If it does hand you a reference, that reference may be invented.</p><p>This is the principle behind <strong>Retrieval Augmented Generation (RAG)</strong>, of which compar:IA's web search is one form: give the model outside documents at answer time, so it can lean on them and cite them.</p>",
+          "title": "Can models cite their sources?"
         },
         "4": {
-          "desc": "<p> Models sometimes lose track of a conversation due to their <strong> limited context window and the \"needle in the haystack\" problem. </strong> This \"window\" represents the amount of previous information the model can retain, acting like a short-term memory. The smaller the window, the more likely the model is to forget key parts of the conversation, leading to inconsistent responses. Long or complex conversations can quickly saturate the context window, increasing the risk of inconsistency. </p> <p> As an analogy, imagine a person who only remembers the last five sentences of a conversation. If the conversation is short, the person can keep up. But if the conversation becomes long, the person will forget crucial information, making their responses inconsistent. Similarly, an AI model with a small context window can \"lose track\" of a conversation when too much information is exchanged, missing key elements and producing responses that no longer make sense. </p>",
-          "title": "Why do some models quickly lose the thread of the conversation?"
+          "desc": "<p> Have you asked the question: “Explain to me the latest trendy cheesecake recipe and cite your sources” and been disappointed with the answers? That's normal... </p> <p> <strong> “Raw” conversational AI models cannot answer questions about the most recent news. </strong> They are trained on static datasets and cannot interact with the web or open links. They do not have the ability to update themselves in real time with events unfolding in the world. The information the model has access to is limited to the date of its last training. </p> <p> Therefore, if you ask a question about a recent news event, the model will rely on outdated information, risking generating inaccurate answers. </p> <p> In the case of Perplexity, Copilot, or ChatGPT, the so-called “raw” conversational AI models are combined with other system blocks that allow them to connect to the internet to access information in real time. These are called “conversational agents.” </p><p>On compar:IA, turn on web search before sending your question: the models then receive extracts from recent pages and can answer about current events. Without it, they stay limited to their training data.</p>",
+          "title": "If I ask a question about the latest news, can the model answer?"
         },
         "5": {
-          "desc": "<p> The wording of \"prompts,\" influences the answers significantly. To get the best results from a language model, it is essential to master the art of <em> prompting </em> , that is, the wording of requests or instructions. <strong> Clarity is key </strong> : </p> <ul> <li> Use simple and direct language, avoiding questions that are too long or complex. Break requests down into several simpler questions for more precise answers. </li> <li> <strong> Specify specific format constraints if necessary </strong> : If you need a response in a certain format (list, table, summary, etc.), specify it in the prompt. You can also specify the steps to follow and the desired quality criteria. </li> <li> <strong> Specify the role of the model </strong> For example, start with “Act like an expert in…” or “Imagine you are a teacher…” to guide the tone and perspective of the answer. </li> <li> <strong> Contextualize your questions </strong> If necessary, provide relevant examples to guide the model. </li> <li> <strong> Encourage reasoning </strong> Use chain-of-thought prompting ( <em> Chain-of-Thought Prompting </em> ) to ask the model to explain its reasoning, which makes the answers more robust. </li> </ul> <p> Conversational models are sensitive to variations in wording: simple language, short questions, and rephrasing when necessary can help guide the model toward relevant answers. Test and refine your prompts to find the most effective wording! </p>",
-          "title": "What are the best practices for prompting?"
+          "desc": "<p> If you include a URL in a query, the conversational model will not be able to access it directly. Language models process the query text but do not have the ability to interact with the web or open links. They are trained on a fixed text dataset, and their answers are based on this training data. When a question is asked, the models use this training to generate an answer but cannot access new information online if they are not enabled to do so by a surrounding system. </p> <p> As an analogy, imagine a student taking an exam without internet access. They can use their acquired knowledge to answer questions, but cannot visit websites for additional information. </p><p>Web search changes this in part: once turned on, it feeds the models the content of pages found online. It still does not open the exact address you paste, it runs a search from your message.</p>",
+          "title": "If I include an URL in a query, can the model access it?"
         },
         "6": {
           "desc": "<p> Raw conversational AI models answer directly by predicting tokens (words) based on their probability, while a search engine offers links and resources for the user to explore on their own. </p>",
           "title": "What's the difference between asking a question to a conversation AI model and searching on Google?"
+        },
+        "7": {
+          "desc": "<p>The chatbot arena was designed and developed as part of a government startup led by the French Ministry of Culture, integrated into the <a href=\"https://beta.gouv.fr\" target=\"_blank\" rel=\"noopener external\">Beta.gouv.fr</a> program by the Interministerial Digital Directorate (DINUM). This initiative supports French public administrations in building useful, simple, and user-friendly digital services.</p><p>It is now funded by the Ministry of Culture, DINUM and the <a href=\"https://www.alt-edic.eu\" target=\"_blank\" rel=\"noopener external\">Alliance for Language Technologies</a> (ALT-EDIC).</p>",
+          "title": "Who initiated the project?"
         }
       },
       "title": "Use"
@@ -171,6 +197,7 @@
       "legal": "Legal notice",
       "privacy": "Privacy policy",
       "rgesn": "Eco-design",
+      "sitemap": "Sitemap",
       "sources": "Source code",
       "tos": "Terms of use"
     },
@@ -187,7 +214,6 @@
     "writeUs": "If you encounter a problem or have feedback on the chatbot arena, feel free to write to us <a {formLinkProps}>using this form</a> - we read every message.<br />Thank you!"
   },
   "header": {
-    "banner": "New models just joined the arena!",
     "homeTitle": "Home - compar:IA",
     "logoAlt": "French Republic",
     "menu": "Menu",
@@ -236,14 +262,16 @@
         "help": "Data is shared for research purposes"
       }
     },
+    "newsletter": {
+      "desc": "Get the latest project news: partnerships, new models added, dataset releases and new features!",
+      "iframeTitle": "compar:IA newsletter",
+      "title": "Subscribe to our newsletter"
+    },
     "origin": {
-      "project": {
-        "desc": "The chatbot arena was designed and developed as part of a government startup led by the French Ministry of Culture, integrated into the <a {linkProps}>Beta.gouv.fr</a> program by the Interministerial Digital Directorate (DINUM). This initiative supports French public administrations in building useful, simple, and user-friendly digital services.",
-        "title": "Who initiated the project?"
-      },
       "team": {
         "desc": "The chatbot arena is led within the French Ministry of Culture by a multidisciplinary team - AI experts, developers, deployment specialists, and designers - with a mission to make conversational AI more transparent and accessible to everyone.",
-        "title": "Who are we?"
+        "title": "Who are we?",
+        "funding": "The project is funded by the French Ministry of Culture, the <a {betaProps}>Interministerial Digital Directorate</a> (DINUM) and the <a {altEdicProps}>Alliance for Language Technologies</a> (ALT-EDIC), the European alliance supporting language technologies for every language of the Union."
       }
     },
     "usage": {
@@ -467,6 +495,31 @@
             }
           },
           "tag": "Investigation"
+        },
+        "scale": {
+          "items": {
+            "1": {
+              "date": "February 2026",
+              "desc": "The comparator joins the Pix learning path, which plans to introduce 1.5 million pupils to AI.",
+              "title": "Partnership with <a {linkProps}>Pix</a>"
+            },
+            "2": {
+              "date": "February 2026",
+              "desc": "A paper describing the platform, how preferences are collected and the datasets produced.",
+              "title": "The <a {linkProps}>compar:IA preprint</a> is out"
+            },
+            "3": {
+              "date": "September 2026",
+              "desc": "Message history arrives, and the new model cards now show an energy score and an openness score.",
+              "title": "compar:IA 2.0 launches"
+            },
+            "4": {
+              "date": "October 2026",
+              "desc": "Arenas dedicated to a trade or a field, to compare models on specific uses. Date still provisional.",
+              "title": "First sector arenas launch"
+            }
+          },
+          "tag": "Scaling up"
         }
       },
       "tabLabel": "Key Dates",
@@ -566,11 +619,198 @@
       "ranking": "Leaderboard",
       "rgesn": "Ecodesign statement",
       "settings": "Settings",
-      "share": "My results"
+      "share": "My results",
+      "bnf": "compar:IA day at the BnF",
+      "sitemap": "Sitemap"
     }
   },
   "words": {
     "close": "Close",
     "tooltip": "Tooltip"
+  },
+  "duel": {
+    "hero": {
+      "title": "Want to <span {props}>open your audience’s eyes</span> to the environmental impact of generative AI?",
+      "desc": "Run an <strong>AI Duel</strong> in your school, association or company by becoming a facilitator",
+      "cta": "Get the facilitator kit",
+      "alt": "A compar:IA talk in front of a packed room"
+    },
+    "format": {
+      "title": "<span {props}>AI Duels</span> are a <span {props}>workshop</span> format, open to everyone, to see how generative AI works behind the scenes and think about its <span {props}>environmental impact</span>.",
+      "duration": "Runs 45min to 1h30",
+      "place": "On site or online",
+      "access": "Access to compar:IA and ready-made material",
+      "turnkey": "Turnkey workshop, easy to run and interactive"
+    },
+    "publics": {
+      "title": "Who is it for?",
+      "desc": "The workshop is open to all, whatever your starting level.",
+      "schools": {
+        "title": "Secondary schools",
+        "desc": "To see for yourself how AI works behind the scenes."
+      },
+      "universities": {
+        "title": "Universities",
+        "desc": "To enrich the debate on innovation and sustainable development."
+      },
+      "associations": {
+        "title": "Associations, digital inclusion",
+        "desc": "To debate a public issue from a hands-on example."
+      },
+      "companies": {
+        "title": "Companies",
+        "desc": "To think about a more responsible use of digital tools."
+      }
+    },
+    "steps": {
+      "title": "How a workshop runs",
+      "desc": "Roughly 60 minutes",
+      "intro": {
+        "title": "Introduction",
+        "duration": "(10min)",
+        "desc": "A short introduction to generative AI and to compar:IA, so everyone starts from the same place, even with no prior knowledge."
+      },
+      "duel": {
+        "title": "The duel",
+        "duration": "(10-15min)",
+        "desc": "Participants ask the same question to two hidden AI models: a “large” one and a “small” one."
+      },
+      "vote": {
+        "title": "Compare and vote",
+        "duration": "(10min)",
+        "desc": "A moment to discuss how well each answer meets what people actually need."
+      },
+      "reveal": {
+        "title": "Models revealed",
+        "duration": "(10min)",
+        "desc": "The teaching moment: the models and their specs are revealed, and the “best answer” turns out not to be the frugal one."
+      },
+      "debate": {
+        "title": "Closing debate",
+        "duration": "(10-15min)",
+        "desc": "A group discussion on the trade-off between using AI and its environmental cost."
+      },
+      "conclusion": {
+        "title": "Wrap-up",
+        "duration": "(5min)",
+        "desc": "A few simple habits to cut the footprint of your own AI use."
+      }
+    },
+    "guide": {
+      "title": "The facilitator guide",
+      "walkthrough": "A detailed guide walking through the whole session",
+      "slides": "Slides ready to project",
+      "faq": "FAQ and glossary to answer questions easily",
+      "extension": "A Chrome extension keeping all of it within reach",
+      "alt": "Screenshot of the Chrome extension for the AI duels"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "contact": "Contact us to find out more",
+      "size": {
+        "title": "How many people can join an AI Duel session?",
+        "desc": "We have run sessions with only 5 participants, and others in front of 300 people. The bigger the group, of course, the less each person gets to speak. That said, the workshop is very flexible: it comes down to how well the facilitator handles the room. A small group makes for a more personal experience; a large one brings real energy."
+      },
+      "expertise": {
+        "title": "Do I need to be an expert to facilitate an AI Duel?",
+        "desc": "Not at all. The facilitator guide is built so that anyone interested can run a duel. It covers the subject, what is at stake, and the tools you need to run the session. Having played with language models helps, but it is in no way required."
+      },
+      "duration": {
+        "title": "How long does a Duel session last?",
+        "desc": "The shortest sessions we have run lasted 20 to 30 minutes, which does cut into the discussion. Ideally a good duel takes about 45 minutes. With 1h30 it is better still: you can run several duels and go deeper."
+      }
+    }
+  },
+  "news": {
+    "title": "News - France",
+    "count": "{count} news items",
+    "empty": "No news matches your filters.",
+    "allYear": "All year round",
+    "discover": "Find out more",
+    "filters": {
+      "show": "Show filters",
+      "clear": "Clear all filters"
+    },
+    "sort": {
+      "label": "Sort by",
+      "dateDesc": "Date (newest first)",
+      "kindAsc": "Type (A to Z)"
+    },
+    "kinds": {
+      "resource": "Resources",
+      "talk": "Talks",
+      "media": "Media"
+    },
+    "subKinds": {
+      "comparia": "Run by compar:IA",
+      "blog": "Blog post",
+      "kit": "Communication kit",
+      "podcast": "Podcast",
+      "webinar": "Webinar",
+      "event": "Event",
+      "workshop": "Workshop",
+      "panel": "Panel",
+      "analyze": "Analysis",
+      "press": "Press",
+      "video": "Video"
+    },
+    "links": {
+      "podcast": "Listen to the podcast",
+      "webinar": "Watch the webinar",
+      "press": "Read the article",
+      "video": "Watch the video"
+    },
+    "bnf": {
+      "title": "compar:<span {props}>IA</span> day",
+      "desc": "Watch the talks from our day on the ethical, cultural and environmental stakes of conversational AI.",
+      "cta": "Watch the talks",
+      "logoAlt": "AI Action Summit",
+      "coverAlt": "Anastasia Stasenko speaking in a BnF lecture hall, showing a slide analysing the compar:IA dataset",
+      "talks": {
+        "title": "Talks",
+        "opening": "Opening of the day",
+        "alignment": "Aligning models with French-speaking uses",
+        "democracy": "How do we make AI compatible with democracy?",
+        "footprint": "Measuring the environmental impact of generative AI",
+        "education": "Teaching and training in the age of generative AI",
+        "future": "Towards a sustainable future for French-speaking AI"
+      },
+      "workshops": {
+        "title": "Workshops",
+        "badge": "Workshop",
+        "battle": "The AI battle",
+        "blackbox": "The AI black box",
+        "modulix": "The Modulix learning modules",
+        "cafeia": "Café IA workshop: a constructive dialogue on AI",
+        "consultation": "Findings of the citizen consultation “What are your ideas for putting AI to work for the common good?”"
+      },
+      "speakers": {
+        "title": "Speakers",
+        "bancal": "Deputy director of Pix",
+        "bras": "Co-head of the Atelier numérique",
+        "levisalles": "Co-founder of Latitudes",
+        "cattan": "Secretary general of the Conseil national du numérique",
+        "cellard": "Researcher at Datactivist",
+        "delassus": "Head of digital at the Ministry of Culture",
+        "laymand": "Head of research at make.org",
+        "luccioni": "AI & Climate Lead at Hugging Face",
+        "mas": "Chief AI Officer at Make.org",
+        "piwowarski": "Research director at CNRS",
+        "rince": "President and co-founder of GenAI Impact",
+        "stasenko": "Co-founder of Pleias",
+        "termignon": "Product lead of compar:IA",
+        "tort": "Designer of teaching challenges at Pix"
+      },
+      "about": {
+        "title": "About the compar:IA day",
+        "event": "The compar:IA day took place on 7 February 2025 at the BnF François-Mitterrand. Over 300 people attended in person and around a hundred more followed the live stream.",
+        "goal": "The aim was to discuss the ethical, cultural and environmental stakes of conversational AI.",
+        "thanks": "Many thanks to everyone who took part and to the partners of the event!"
+      }
+    }
+  },
+  "sitemap": {
+    "desc": "Every page of the compar:IA website.",
+    "title": "Sitemap"
   }
 }

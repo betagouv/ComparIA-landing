@@ -1,17 +1,16 @@
 <script lang="ts">
   import { SEOHead } from '$components'
   import { Accordion, AccordionGroup, Button, Icon, Link } from '$components/dsfr'
-  import { PUBLIC_GIT_COMMIT } from '$env/static/public'
+  import { env } from '$env/dynamic/public'
   import { m } from '$lib/i18n/messages'
   import { getLocale, locales } from '$lib/i18n/runtime'
   import { ARENA_URL, CONTACT_URL } from '$lib/main'
   import { externalLinkProps, sanitize } from '$lib/utils'
-  import type { HTMLImgAttributes } from 'svelte/elements'
   import { HowItWorks, Newsletter } from './components'
 
   const locale = getLocale()
 
-  if (PUBLIC_GIT_COMMIT) console.log(`Git commit: ${PUBLIC_GIT_COMMIT}`)
+  if (env.PUBLIC_GIT_COMMIT) console.log(`Git commit: ${env.PUBLIC_GIT_COMMIT}`)
 
   function handleRedirect() {
     window.location.href = ARENA_URL
@@ -23,14 +22,14 @@
       [
         {
           i18nKey: 'compare',
-          src: `/home/comparer-${localeOrDefault}.png`,
-          srcDark: `/home/comparer-dark-${localeOrDefault}.png`
+          src: `/home/comparer-${localeOrDefault}.webp`,
+          srcDark: `/home/comparer-dark-${localeOrDefault}.webp`
         },
-        { i18nKey: 'test', src: '/home/tester.png', srcDark: '/home/tester-dark.jpg' },
+        { i18nKey: 'test', src: '/home/tester.webp', srcDark: '/home/tester-dark.webp' },
         {
           i18nKey: 'measure',
-          src: `/home/mesurer-${localeOrDefault}.png`,
-          srcDark: `/home/mesurer-dark-${localeOrDefault}.png`
+          src: `/home/mesurer-${localeOrDefault}.webp`,
+          srcDark: `/home/mesurer-dark-${localeOrDefault}.webp`
         }
       ] as const
     ).map(({ i18nKey, ...card }) => ({
@@ -92,24 +91,9 @@
     desc: m[`home.usage.${i18nKey}.desc`]()
   }))
 
-  const logos = [
-    {
-      class: 'max-h-[95px]',
-      src: '/orgs/minicult.svg',
-      alt: 'Ministère de la Culture',
-      title: 'Ministère de la Culture'
-    },
-    {
-      class: 'max-h-[95px] dark:invert',
-      src: '/orgs/ateliernumerique.png',
-      alt: 'Atelier numérique',
-      title: 'Atelier numérique'
-    }
-  ] satisfies HTMLImgAttributes[]
-
   const reducedFAQ = (
     [
-      { id: 'usage', index: '2' },
+      { id: 'usage', index: '1' },
       { id: 'models', index: '1' },
       { id: 'datasets', index: '2' },
       { id: 'ecology', index: '1' },
@@ -156,24 +140,28 @@
 
   <section class="fr-container--fluid md:py-15 py-10">
     <div class="fr-container">
-      <h3 class="mb-3! text-center">{m['home.use.title']()}</h3>
+      <h2 class="fr-h3 mb-3! text-center">{m['home.use.title']()}</h2>
       <p class="mb-8! text-grey text-center">{m['home.use.desc']()}</p>
 
       <div class="gap-7 md:grid-cols-3 grid">
         {#each utilyCards as card, i (i)}
           <div class="cg-border">
             <img
+              loading="lazy"
+              decoding="async"
               src={card.src}
               alt={card.alt}
               class="fr-responsive-img bg-light-grey sm:max-h-2/3 md:max-h-1/3 lg:max-h-1/2 xl:max-h-3/5 rounded-t-xl h-full! max-h-3/5 object-contain dark:hidden"
             />
             <img
+              loading="lazy"
+              decoding="async"
               src={card.srcDark}
               alt={card.alt}
               class="fr-responsive-img bg-light-grey sm:max-h-2/3 md:max-h-1/3 lg:max-h-1/2 xl:max-h-3/5 rounded-t-xl hidden h-full! max-h-3/5 object-contain dark:block"
             />
             <div class="px-5 pb-7 pt-4 md:px-8 md:pb-10 md:pt-5">
-              <h6 class="mb-1! md:mb-2!">{card.title}</h6>
+              <h3 class="fr-h6 mb-1! md:mb-2!">{card.title}</h3>
               <p class="mb-0! text-grey">{card.desc}</p>
             </div>
           </div>
@@ -208,7 +196,9 @@
         class="py-15 gap-8 rounded-xl bg-white px-9 xl:flex-row flex w-full flex-col justify-center"
       >
         <img
-          src="/home/comparia-stars.png"
+          loading="lazy"
+          decoding="async"
+          src="/home/comparia-stars.webp"
           aria-hidden="true"
           alt=""
           class="xl:m-0 m-auto max-w-[180px] object-contain"
@@ -240,15 +230,24 @@
   <section class="fr-container--fluid bg-very-light-grey py-10 lg:py-14">
     <div class="fr-container">
       <div class="cg-border xl:p-13! bg-white px-4 py-10">
-        <h4 class="mb-2! text-center">{m['home.vote.title']()}</h4>
+        <h2 class="fr-h4 mb-2! text-center">{m['home.vote.title']()}</h2>
         <p class="text-grey text-center">{m['home.vote.desc']()}</p>
 
         <div class="md:mt-13 mt-10 lg:flex-row flex flex-col text-center">
           {#each whyVoteCards as card, index (index)}
             <div class="basis-1/3">
-              <div class="xl:h-4/7 lg:h-1/2">
-                <img src={card.src} alt={card.title} width="72" height="72" class="mb-4 m-auto" />
-                <h6 class="mb-1! mx-auto! max-w-[230px]">{card.title}</h6>
+              <div>
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src={card.src}
+                  alt=""
+                  width="72"
+                  height="72"
+                  class="mb-4 m-auto"
+                />
+                <!-- Reserve two lines so the three columns line up whatever the language -->
+                <h3 class="fr-h6 mb-1! mx-auto! lg:min-h-[2lh] max-w-[230px]">{card.title}</h3>
               </div>
               <p class="text-sm! text-grey m-auto! max-w-[280px]">{card.desc}</p>
             </div>
@@ -273,14 +272,14 @@
 
   <section class="fr-container--fluid bg-light-grey py-10 lg:py-20">
     <div class="fr-container">
-      <h3 class="mb-2! text-center">{m['home.usage.title']()}</h3>
+      <h2 class="fr-h3 mb-2! text-center">{m['home.usage.title']()}</h2>
       <p class="fr-mb-4w text-grey text-center">{m['home.vote.desc']()}</p>
 
       <div class="gap-8 md:grid-cols-3 grid">
         {#each usageCards as card, i (i)}
           <div class="cg-border bg-white p-5 lg:px-8 lg:pb-11 lg:pt-6">
             <Icon icon={card.icon} size="lg" block class="text-primary mb-4" />
-            <h6 class="mb-2!">{card.title}</h6>
+            <h3 class="fr-h6 mb-2!">{card.title}</h3>
             <p class="mb-0! text-grey">{card.desc}</p>
           </div>
         {/each}
@@ -289,51 +288,47 @@
   </section>
 
   <section class="fr-container--fluid bg-very-light-grey lg:pb-38 py-12 lg:pt-20">
-    <div class="fr-container gap-10 lg:grid-cols-2 lg:gap-6 grid">
+    <div class={['fr-container gap-10 lg:gap-6 grid', locale === 'fr' && 'lg:grid-cols-2']}>
       <div class="cg-border bg-white px-5 py-10 md:px-8">
-        <h5>{m['home.origin.team.title']()}</h5>
+        <h2 class="fr-h5">{m['home.origin.team.title']()}</h2>
         <p>{m['home.origin.team.desc']()}</p>
-
-        <div class="mt-12 gap-8 flex flex-wrap">
-          {#each logos as logoProps, i (i)}
-            <img {...logoProps} />
-          {/each}
-        </div>
-      </div>
-
-      <div class="cg-border bg-white px-5 py-10 md:px-8">
-        <h5>{m['home.origin.project.title']()}</h5>
         <p>
           {@html sanitize(
-            m['home.origin.project.desc']({ linkProps: externalLinkProps('https://beta.gouv.fr') })
+            m['home.origin.team.funding']({
+              betaProps: externalLinkProps('https://beta.gouv.fr'),
+              altEdicProps: externalLinkProps('https://www.alt-edic.eu')
+            })
           )}
         </p>
 
-        <div class="mt-12 gap-8 flex flex-wrap">
+        <div class="mt-12 gap-6 flex flex-wrap items-center">
+          <p class="fr-logo fr-logo--sm mb-0!" title="Ministère de la Culture">
+            Ministère<br />de la Culture
+          </p>
+          <!-- DSFR draws the official block from text, so DINUM needs no image file -->
+          <p class="fr-logo fr-logo--sm mb-0!" title="Direction interministérielle du numérique">
+            Direction<br />interministérielle<br />du numérique
+          </p>
           <img
-            src="/orgs/betagouv.svg"
-            alt="beta.gouv.fr"
-            title="beta.gouv.fr"
-            class="max-w-[178px] dark:invert"
-            width="191px"
-            height="65px"
-          />
-          <img
-            src="/orgs/dinum.png"
-            class="max-w-[254px] dark:invert"
-            alt="DINUM"
-            title="DINUM"
-            width="278px"
-            height="59px"
+            loading="lazy"
+            decoding="async"
+            src="/orgs/alt-edic.webp"
+            alt="ALT-EDIC"
+            title="Alliance for Language Technologies (ALT-EDIC)"
+            class="max-w-[170px] dark:bg-white dark:p-1"
           />
         </div>
       </div>
+
+      {#if locale === 'fr'}
+        <Newsletter />
+      {/if}
     </div>
   </section>
 
   <section class="fr-container--fluid pb-18 lg:pb-25 pt-10 lg:pt-20">
     <div class="fr-container">
-      <h3 class="mb-8! lg:mb-10! text-center">{m['home.faq.title']()}</h3>
+      <h2 class="fr-h3 mb-8! lg:mb-10! text-center">{m['home.faq.title']()}</h2>
 
       <AccordionGroup>
         {#each reducedFAQ as q (q.id)}
@@ -349,9 +344,9 @@
     </div>
   </section>
 
-  {#if locale === 'fr'}
-    <Newsletter />
-  {/if}
+  <div class="mb-8 text-center">
+    <Link href="#" text={m['actions.backToTop']()} icon="arrow-up-line" class="pb-1!" />
+  </div>
 </main>
 
 <style lang="postcss">
@@ -364,8 +359,11 @@
     @media (min-width: 62em) {
       & {
         height: 16px;
-        width: 125px;
+        width: 72px;
+        /* Crop the tail rather than scale, so the head keeps its size */
         background-image: url('/home/arrow-h.svg');
+        background-position: right center;
+        background-repeat: no-repeat;
         left: 0;
         margin-top: 110px;
       }

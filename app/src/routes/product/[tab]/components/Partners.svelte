@@ -13,14 +13,25 @@
 
     <div class="cl-logos">
       <img
-        src="/orgs/cnnum.png"
+        loading="lazy"
+        decoding="async"
+        src="/orgs/cnnum.webp"
         alt="Conseil national du numérique"
         title="Conseil national du numérique"
         width="112px"
       />
-      <img src="/orgs/etalab.svg" alt="Etalab" title="Etalab" width="240px" />
       <img
-        src="/orgs/peren.svg"
+        loading="lazy"
+        decoding="async"
+        src="/orgs/etalab.webp"
+        alt="Etalab"
+        title="Etalab"
+        width="240px"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="/orgs/peren.webp"
         alt="PEReN, Pôle d'expertise de la régulation numérique"
         title="Pôle d'expertise de la régulation numérique (PEReN)"
         width="240px"
@@ -35,17 +46,28 @@
     </h2>
 
     <div class="cl-logos">
-      <img src="/orgs/cafe-ia.png" alt="Cafés de l'IA" title="Cafés IA" width="104px" />
       <img
-        src="/orgs/latitudes.png"
+        loading="lazy"
+        decoding="async"
+        src="/orgs/cafe-ia.webp"
+        alt="Cafés de l'IA"
+        title="Cafés IA"
+        width="104px"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="/orgs/latitudes.webp"
         alt="Latitudes"
         title="Latitudes"
         width="110px"
         class="dark:invert"
       />
-      <img src="/orgs/pix.svg" alt="Pix" title="Pix" width="60px" />
+      <img loading="lazy" decoding="async" src="/orgs/pix.svg" alt="Pix" title="Pix" width="60px" />
       <img
-        src="/orgs/fresque-de-lia.png"
+        loading="lazy"
+        decoding="async"
+        src="/orgs/fresque-de-lia.webp"
         alt="Fresques de l'IA"
         title="Fresques de l'IA"
         width="94px"
@@ -71,7 +93,14 @@
     </h2>
 
     <div class="cl-logos">
-      <img src="/orgs/inria.png" alt="Inria" title="Inria" width="139px" />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="/orgs/inria.webp"
+        alt="Inria"
+        title="Inria"
+        width="139px"
+      />
     </div>
 
     <p>{m['product.partners.academy.desc']()}</p>
@@ -92,8 +121,22 @@
     </h2>
 
     <div class="cl-logos">
-      <img src="/orgs/impactco2.png" alt="Impact CO2" title="Impact CO2" width="123px" />
-      <img src="/orgs/genai.png" alt="Gen AI Impact" title="Gen AI Impact" width="109px" />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="/orgs/impactco2.webp"
+        alt="Impact CO2"
+        title="Impact CO2"
+        width="123px"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="/orgs/genai.webp"
+        alt="Gen AI Impact"
+        title="Gen AI Impact"
+        width="109px"
+      />
     </div>
 
     <p>{m['product.partners.services.desc']()}</p>
