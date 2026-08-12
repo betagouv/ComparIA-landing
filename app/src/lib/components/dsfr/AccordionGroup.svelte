@@ -5,7 +5,7 @@
   let { items, children, ...props }: { items?: T[] } & SvelteHTMLElements['div'] = $props()
 </script>
 
-<div data-fr-group="true" class="fr-accordions-group" {...props}>
+<div data-fr-group="true" class="fr-accordions-group bg-white" {...props}>
   {#if items}
     {#each items as item, i (i)}
       <Accordion id={item.id ?? i.toString()} label={item.label} content={item.content} />
