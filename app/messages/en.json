@@ -197,6 +197,7 @@
       "legal": "Legal notice",
       "privacy": "Privacy policy",
       "rgesn": "Eco-design",
+      "sitemap": "Sitemap",
       "sources": "Source code",
       "tos": "Terms of use"
     },
@@ -619,7 +620,8 @@
       "rgesn": "Ecodesign statement",
       "settings": "Settings",
       "share": "My results",
-      "bnf": "compar:IA day at the BnF"
+      "bnf": "compar:IA day at the BnF",
+      "sitemap": "Sitemap"
     }
   },
   "words": {
@@ -806,5 +808,9 @@
         "thanks": "Many thanks to everyone who took part and to the partners of the event!"
       }
     }
+  },
+  "sitemap": {
+    "desc": "Every page of the compar:IA website.",
+    "title": "Sitemap"
   }
 }

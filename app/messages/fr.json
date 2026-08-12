@@ -290,6 +290,7 @@
       "legal": "Mentions légales",
       "privacy": "Politique de confidentialité",
       "rgesn": "Écoconception",
+      "sitemap": "Plan du site",
       "sources": "Code source",
       "tos": "Modalités d'utilisation"
     },
@@ -800,8 +801,13 @@
       "ranking": "Classement",
       "rgesn": "Déclaration d’écoconception",
       "settings": "Paramètres",
-      "share": "Mon bilan"
+      "share": "Mon bilan",
+      "sitemap": "Plan du site"
     }
+  },
+  "sitemap": {
+    "desc": "Toutes les pages du site compar:IA.",
+    "title": "Plan du site"
   },
   "words": {
     "close": "Fermer",

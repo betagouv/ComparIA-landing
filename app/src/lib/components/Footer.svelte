@@ -7,6 +7,7 @@
 
   const links = (
     [
+      { href: resolve('/plan-du-site'), labelKey: 'sitemap' },
       { href: `${ARENA_URL}/legal`, labelKey: 'legal' },
       { href: `${ARENA_URL}/terms`, labelKey: 'tos' },
       { href: `${ARENA_URL}/privacy`, labelKey: 'privacy' },
