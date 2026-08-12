@@ -23,14 +23,14 @@
       [
         {
           i18nKey: 'compare',
-          src: `/home/comparer-${localeOrDefault}.png`,
-          srcDark: `/home/comparer-dark-${localeOrDefault}.png`
+          src: `/home/comparer-${localeOrDefault}.webp`,
+          srcDark: `/home/comparer-dark-${localeOrDefault}.webp`
         },
-        { i18nKey: 'test', src: '/home/tester.png', srcDark: '/home/tester-dark.jpg' },
+        { i18nKey: 'test', src: '/home/tester.webp', srcDark: '/home/tester-dark.webp' },
         {
           i18nKey: 'measure',
-          src: `/home/mesurer-${localeOrDefault}.png`,
-          srcDark: `/home/mesurer-dark-${localeOrDefault}.png`
+          src: `/home/mesurer-${localeOrDefault}.webp`,
+          srcDark: `/home/mesurer-dark-${localeOrDefault}.webp`
         }
       ] as const
     ).map(({ i18nKey, ...card }) => ({
@@ -101,7 +101,7 @@
     },
     {
       class: 'max-h-[95px] dark:invert',
-      src: '/orgs/ateliernumerique.png',
+      src: '/orgs/ateliernumerique.webp',
       alt: 'Atelier numérique',
       title: 'Atelier numérique'
     }
@@ -163,11 +163,15 @@
         {#each utilyCards as card, i (i)}
           <div class="cg-border">
             <img
+              loading="lazy"
+              decoding="async"
               src={card.src}
               alt={card.alt}
               class="fr-responsive-img bg-light-grey sm:max-h-2/3 md:max-h-1/3 lg:max-h-1/2 xl:max-h-3/5 rounded-t-xl h-full! max-h-3/5 object-contain dark:hidden"
             />
             <img
+              loading="lazy"
+              decoding="async"
               src={card.srcDark}
               alt={card.alt}
               class="fr-responsive-img bg-light-grey sm:max-h-2/3 md:max-h-1/3 lg:max-h-1/2 xl:max-h-3/5 rounded-t-xl hidden h-full! max-h-3/5 object-contain dark:block"
@@ -208,7 +212,9 @@
         class="py-15 gap-8 rounded-xl bg-white px-9 xl:flex-row flex w-full flex-col justify-center"
       >
         <img
-          src="/home/comparia-stars.png"
+          loading="lazy"
+          decoding="async"
+          src="/home/comparia-stars.webp"
           aria-hidden="true"
           alt=""
           class="xl:m-0 m-auto max-w-[180px] object-contain"
@@ -247,7 +253,15 @@
           {#each whyVoteCards as card, index (index)}
             <div class="basis-1/3">
               <div class="xl:h-4/7 lg:h-1/2">
-                <img src={card.src} alt={card.title} width="72" height="72" class="mb-4 m-auto" />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src={card.src}
+                  alt={card.title}
+                  width="72"
+                  height="72"
+                  class="mb-4 m-auto"
+                />
                 <h6 class="mb-1! mx-auto! max-w-[230px]">{card.title}</h6>
               </div>
               <p class="text-sm! text-grey m-auto! max-w-[280px]">{card.desc}</p>
@@ -296,7 +310,7 @@
 
         <div class="mt-12 gap-8 flex flex-wrap">
           {#each logos as logoProps, i (i)}
-            <img {...logoProps} />
+            <img loading="lazy" decoding="async" {...logoProps} />
           {/each}
         </div>
       </div>
@@ -311,6 +325,8 @@
 
         <div class="mt-12 gap-8 flex flex-wrap">
           <img
+            loading="lazy"
+            decoding="async"
             src="/orgs/betagouv.svg"
             alt="beta.gouv.fr"
             title="beta.gouv.fr"
@@ -319,7 +335,9 @@
             height="65px"
           />
           <img
-            src="/orgs/dinum.png"
+            loading="lazy"
+            decoding="async"
+            src="/orgs/dinum.webp"
             class="max-w-[254px] dark:invert"
             alt="DINUM"
             title="DINUM"

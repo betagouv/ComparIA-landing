@@ -25,7 +25,7 @@
             class="fr-header__service mx-1! sm:mx-3! sm:w-auto md:px-3! flex w-1/2 grow items-center before:content-none!"
           >
             <img
-              src="/orgs/comparia.png"
+              src="/orgs/comparia.webp"
               aria-hidden="true"
               alt=""
               width="46"

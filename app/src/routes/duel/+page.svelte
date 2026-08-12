@@ -55,7 +55,7 @@
 
         <div class="my-auto">
           <img
-            src="/duel/workshop.jpg"
+            src="/duel/workshop.webp"
             class="fr-responsive-img rounded-xl shadow-md"
             alt={m['duel.hero.alt']()}
           />
@@ -151,7 +151,9 @@
 
         <div class="my-auto">
           <img
-            src="/duel/extension.png"
+            loading="lazy"
+            decoding="async"
+            src="/duel/extension.webp"
             class="fr-responsive-img rounded-xl shadow-md"
             alt={m['duel.guide.alt']()}
           />

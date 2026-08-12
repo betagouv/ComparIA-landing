@@ -304,7 +304,13 @@
               </div>
               <div class="fr-card__header">
                 <div class="fr-card__img">
-                  <img class="fr-responsive-img rounded-t-xl" src="/news/{news.imgSrc}" alt="" />
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    class="fr-responsive-img rounded-t-xl"
+                    src="/news/{news.imgSrc}"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>

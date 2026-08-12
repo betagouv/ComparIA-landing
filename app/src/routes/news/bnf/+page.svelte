@@ -61,31 +61,36 @@
       {
         i18nKey: 'bancal',
         name: 'Marie Bancal',
-        img: '/news/bnf/marie-bancal.jpg',
+        img: '/news/bnf/marie-bancal.webp',
         logos: [{ src: '/orgs/pix.svg', invert: false, alt: 'Pix', width: 100 }]
       },
       {
         i18nKey: 'bras',
         name: 'Mathilde Bras',
-        img: '/news/bnf/mathilde-bras.jpg',
+        img: '/news/bnf/mathilde-bras.webp',
         logos: [
-          { src: '/orgs/ateliernumerique.png', invert: true, alt: 'Atelier numérique', width: 100 },
+          {
+            src: '/orgs/ateliernumerique.webp',
+            invert: true,
+            alt: 'Atelier numérique',
+            width: 100
+          },
           { src: '/orgs/minicult.svg', invert: false, alt: 'Ministère de la Culture', width: 110 }
         ]
       },
       {
         i18nKey: 'levisalles',
         name: 'Margaux Levisalles',
-        img: '/news/bnf/margaux-levisalles.jpg',
-        logos: [{ src: '/orgs/latitudes.png', invert: true, alt: 'Latitudes', width: 150 }]
+        img: '/news/bnf/margaux-levisalles.webp',
+        logos: [{ src: '/orgs/latitudes.webp', invert: true, alt: 'Latitudes', width: 150 }]
       },
       {
         i18nKey: 'cattan',
         name: 'Jean Cattan',
-        img: '/news/bnf/jean-cattan.jpg',
+        img: '/news/bnf/jean-cattan.webp',
         logos: [
           {
-            src: '/orgs/cnnum.png',
+            src: '/orgs/cnnum.webp',
             invert: true,
             alt: 'Conseil national du numérique',
             width: 100
@@ -95,13 +100,13 @@
       {
         i18nKey: 'cellard',
         name: 'Loup Cellard',
-        img: '/news/bnf/loup-cellard.jpg',
-        logos: [{ src: '/orgs/datactivist.png', invert: true, alt: 'Datactivist', width: 150 }]
+        img: '/news/bnf/loup-cellard.webp',
+        logos: [{ src: '/orgs/datactivist.webp', invert: true, alt: 'Datactivist', width: 150 }]
       },
       {
         i18nKey: 'delassus',
         name: 'Romain Delassus',
-        img: '/news/bnf/romain-delassus.jpg',
+        img: '/news/bnf/romain-delassus.webp',
         logos: [
           { src: '/orgs/minicult.svg', invert: false, alt: 'Ministère de la Culture', width: 110 }
         ]
@@ -109,13 +114,13 @@
       {
         i18nKey: 'laymand',
         name: 'Victor Laymand',
-        img: '/news/bnf/victor-laymand.jpg',
+        img: '/news/bnf/victor-laymand.webp',
         logos: [{ src: '/orgs/make-org.svg', invert: false, alt: 'Make.org', width: 100 }]
       },
       {
         i18nKey: 'luccioni',
         name: 'Sasha Luccioni',
-        img: '/news/bnf/sasha-luccioni.jpg',
+        img: '/news/bnf/sasha-luccioni.webp',
         logos: [
           { src: '/orgs/huggingface-full.svg', invert: false, alt: 'Hugging Face', width: 160 }
         ]
@@ -123,31 +128,31 @@
       {
         i18nKey: 'mas',
         name: 'David Mas',
-        img: '/news/bnf/david-mas.jpg',
+        img: '/news/bnf/david-mas.webp',
         logos: [{ src: '/orgs/make-org.svg', invert: false, alt: 'Make.org', width: 100 }]
       },
       {
         i18nKey: 'piwowarski',
         name: 'Benjamin Piwowarski',
-        img: '/news/bnf/benjamin-piwowarski.jpg',
+        img: '/news/bnf/benjamin-piwowarski.webp',
         logos: [{ src: '/orgs/cnrs.svg', invert: false, alt: 'CNRS', width: 110 }]
       },
       {
         i18nKey: 'rince',
         name: 'Samuel Rincé',
-        img: '/news/bnf/samuel-rince.jpg',
-        logos: [{ src: '/orgs/genai.png', invert: true, alt: 'GenAI Impact', width: 130 }]
+        img: '/news/bnf/samuel-rince.webp',
+        logos: [{ src: '/orgs/genai.webp', invert: true, alt: 'GenAI Impact', width: 130 }]
       },
       {
         i18nKey: 'stasenko',
         name: 'Anastasia Stasenko',
-        img: '/news/bnf/anastasia-stasenko.jpg',
-        logos: [{ src: '/orgs/pleias.png', invert: false, alt: 'Pleias', width: 130 }]
+        img: '/news/bnf/anastasia-stasenko.webp',
+        logos: [{ src: '/orgs/pleias.webp', invert: false, alt: 'Pleias', width: 130 }]
       },
       {
         i18nKey: 'termignon',
         name: 'Lucie Termignon',
-        img: '/news/bnf/lucie-termignon.jpg',
+        img: '/news/bnf/lucie-termignon.webp',
         logos: [
           { src: '/orgs/comparia.svg', invert: false, alt: 'compar:IA', width: 80 },
           { src: '/orgs/minicult.svg', invert: false, alt: 'Ministère de la Culture', width: 110 }
@@ -156,7 +161,7 @@
       {
         i18nKey: 'tort',
         name: 'Françoise Tort',
-        img: '/news/bnf/francoise-tort.jpg',
+        img: '/news/bnf/francoise-tort.webp',
         logos: [{ src: '/orgs/pix.svg', invert: false, alt: 'Pix', width: 100 }]
       }
     ] as const
@@ -171,7 +176,7 @@
       <div class="mx-auto max-w-[470px]">
         <img
           class="mb-4"
-          src="/iasummit.png"
+          src="/iasummit.webp"
           alt={m['news.bnf.logoAlt']()}
           title={m['news.bnf.logoAlt']()}
         />
@@ -189,7 +194,7 @@
       </div>
       <div>
         <img
-          src="/news/bnf/cover.jpg"
+          src="/news/bnf/cover.webp"
           alt={m['news.bnf.coverAlt']()}
           title={m['news.bnf.coverAlt']()}
           class="fr-responsive-img rounded-xl"
@@ -206,6 +211,7 @@
         {#each talks as talk, i (i)}
           <div class="cg-border bg-white p-6">
             <iframe
+              loading="lazy"
               width="100%"
               src={talk.youtubeSrc}
               title="YouTube video player"
@@ -255,13 +261,15 @@
     <div class="fr-container gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grid">
       {#each speakers as speaker (speaker.name)}
         <div class="cg-border bg-light-grey p-7 flex flex-col">
-          <img class="rounded-lg w-full" src={speaker.img} alt="" />
+          <img loading="lazy" decoding="async" class="rounded-lg w-full" src={speaker.img} alt="" />
           <h6 class="my-2!">{speaker.name}</h6>
           <p class="text-sm! text-grey">{speaker.desc}</p>
 
           <div class="gap-2 mt-auto flex flex-wrap">
             {#each speaker.logos as logo, i (`${speaker.name}-${i}`)}
               <img
+                loading="lazy"
+                decoding="async"
                 src={logo.src}
                 width={logo.width ?? 100}
                 alt={logo.alt}
@@ -286,21 +294,43 @@
     <div
       class="fr-container mb-12! gap-6 flex max-w-full flex-wrap justify-center *:max-h-[100px] *:object-contain"
     >
-      <img src="/orgs/minicult.svg" alt="Ministère de la Culture" title="Ministère de la Culture" />
       <img
-        src="/orgs/ateliernumerique.png"
+        loading="lazy"
+        decoding="async"
+        src="/orgs/minicult.svg"
+        alt="Ministère de la Culture"
+        title="Ministère de la Culture"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="/orgs/ateliernumerique.webp"
         alt="Atelier numérique"
         title="Atelier numérique"
         class="dark:invert"
       />
       <img
-        src="/iasummit.png"
+        src="/iasummit.webp"
         alt={m['news.bnf.logoAlt']()}
         title={m['news.bnf.logoAlt']()}
         class="dark:invert"
       />
-      <img src="/orgs/betagouv.svg" alt="beta.gouv.fr" title="beta.gouv.fr" class="dark:invert" />
-      <img src="/orgs/bnf.svg" class="max-w-[100px] dark:invert" alt="BNF" title="BNF" />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="/orgs/betagouv.svg"
+        alt="beta.gouv.fr"
+        title="beta.gouv.fr"
+        class="dark:invert"
+      />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="/orgs/bnf.svg"
+        class="max-w-[100px] dark:invert"
+        alt="BNF"
+        title="BNF"
+      />
     </div>
   </section>
 </main>

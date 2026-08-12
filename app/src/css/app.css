@@ -1,6 +1,5 @@
 @import '@gouvfr/dsfr/dist/dsfr.min.css';
 @import '@gouvfr/dsfr/dist/utility/icons/icons.css';
-@import './icons.css';
 
 :root {
   /* Accessibility override (WCAG AA): replace DSFR violet #6a6af4 with #6464f3
