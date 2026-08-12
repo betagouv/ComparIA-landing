@@ -303,11 +303,11 @@
         </p>
 
         <div class="mt-12 gap-6 flex flex-wrap items-center">
-          <p class="fr-logo mb-0!" title="Ministère de la Culture">
+          <p class="fr-logo fr-logo--sm mb-0!" title="Ministère de la Culture">
             Ministère<br />de la Culture
           </p>
           <!-- DSFR draws the official block from text, so DINUM needs no image file -->
-          <p class="fr-logo mb-0!" title="Direction interministérielle du numérique">
+          <p class="fr-logo fr-logo--sm mb-0!" title="Direction interministérielle du numérique">
             Direction<br />interministérielle<br />du numérique
           </p>
           <img
@@ -316,7 +316,7 @@
             src="/orgs/alt-edic.webp"
             alt="ALT-EDIC"
             title="Alliance for Language Technologies (ALT-EDIC)"
-            class="max-w-[130px] dark:bg-white dark:p-1"
+            class="max-w-[170px] dark:bg-white dark:p-1"
           />
         </div>
       </div>
