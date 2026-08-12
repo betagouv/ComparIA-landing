@@ -472,6 +472,31 @@
             }
           },
           "tag": "Investigation"
+        },
+        "scale": {
+          "items": {
+            "1": {
+              "date": "February 2026",
+              "desc": "The comparator joins the Pix learning path, which plans to introduce 1.5 million pupils to AI.",
+              "title": "Partnership with <a {linkProps}>Pix</a>"
+            },
+            "2": {
+              "date": "February 2026",
+              "desc": "A paper describing the platform, how preferences are collected and the datasets produced.",
+              "title": "The <a {linkProps}>compar:IA preprint</a> is out"
+            },
+            "3": {
+              "date": "September 2026",
+              "desc": "Message history arrives, and the new model cards now show an energy score and an openness score.",
+              "title": "compar:IA 2.0 launches"
+            },
+            "4": {
+              "date": "October 2026",
+              "desc": "Arenas dedicated to a trade or a field, to compare models on specific uses. Date still provisional.",
+              "title": "First sector arenas launch"
+            }
+          },
+          "tag": "Scaling up"
         }
       },
       "tabLabel": "Key Dates",

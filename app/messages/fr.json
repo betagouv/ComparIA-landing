@@ -653,6 +653,31 @@
             }
           },
           "tag": "Investigation"
+        },
+        "scale": {
+          "items": {
+            "1": {
+              "date": "Février 2026",
+              "desc": "Le comparateur entre dans le parcours de Pix, qui prévoit de sensibiliser 1,5 million d’élèves à l’IA.",
+              "title": "Partenariat avec <a {linkProps}>Pix</a>"
+            },
+            "2": {
+              "date": "Février 2026",
+              "desc": "Un article décrivant la plateforme, la méthode de collecte et les jeux de données produits.",
+              "title": "Publication du <a {linkProps}>preprint compar:IA</a>"
+            },
+            "3": {
+              "date": "Septembre 2026",
+              "desc": "L’historique des messages arrive, et les nouvelles fiches modèles affichent désormais un score d’énergie et un score d’ouverture.",
+              "title": "Lancement de compar:IA 2.0"
+            },
+            "4": {
+              "date": "Octobre 2026",
+              "desc": "Des arènes dédiées à un métier ou à un domaine, pour comparer les modèles sur des usages précis. Date prévisionnelle.",
+              "title": "Lancement des premières arènes sectorielles"
+            }
+          },
+          "tag": "Passage à l’échelle"
         }
       },
       "tabLabel": "Dates clés",
