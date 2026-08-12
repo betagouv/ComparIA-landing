@@ -2,23 +2,14 @@
   import { resolve } from '$app/paths'
   import { page } from '$app/state'
   import { m } from '$lib/i18n/messages'
-  import { getLocale } from '$lib/i18n/runtime'
 
-  const locale = getLocale()
   // Navigation links for both desktop and mobile menus
-  const navLinks = (
-    [
-      { href: '/', label: m['seo.titles.home']() },
-      { href: '/product', label: m['seo.titles.product']() },
-      { href: '/datasets', label: m['seo.titles.datasets']() },
-      { href: '/news', label: m['seo.titles.news']() }
-    ] as const
-  ).filter((link) => {
-    if (link.href.includes('/news') && !['fr', 'en'].includes(locale)) {
-      return false
-    }
-    return true
-  })
+  const navLinks = [
+    { href: resolve('/'), label: m['seo.titles.home']() },
+    { href: resolve('/product'), label: m['seo.titles.product']() },
+    { href: resolve('/datasets'), label: m['seo.titles.datasets']() },
+    { href: resolve('/news'), label: m['seo.titles.news']() }
+  ] as const
 
   function isCurrentPage(path: string, href: string) {
     if (path.includes('product')) return href.includes('product')
@@ -32,7 +23,7 @@
     {#each navLinks as link (link.href)}
       <li class="fr-nav__item" data-fr-js-navigation-item="true">
         <a
-          href={resolve(link.href)}
+          href={link.href}
           target="_self"
           aria-controls="modal-header__menu"
           class="fr-nav__link"
