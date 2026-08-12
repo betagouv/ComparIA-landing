@@ -6,7 +6,6 @@
   import { getLocale, locales } from '$lib/i18n/runtime'
   import { ARENA_URL, CONTACT_URL } from '$lib/main'
   import { externalLinkProps, sanitize } from '$lib/utils'
-  import type { HTMLImgAttributes } from 'svelte/elements'
   import { HowItWorks, Newsletter } from './components'
 
   const locale = getLocale()
@@ -92,27 +91,6 @@
     desc: m[`home.usage.${i18nKey}.desc`]()
   }))
 
-  const logos = [
-    {
-      class: 'max-h-[95px]',
-      src: '/orgs/minicult.svg',
-      alt: 'Ministère de la Culture',
-      title: 'Ministère de la Culture'
-    },
-    {
-      class: 'max-h-[95px] dark:invert',
-      src: '/orgs/ateliernumerique.webp',
-      alt: 'Atelier numérique',
-      title: 'Atelier numérique'
-    },
-    {
-      // The logo is blue on solid white, so it needs a light backing in dark mode
-      class: 'max-w-[190px] self-center dark:bg-white dark:p-1',
-      src: '/orgs/alt-edic.webp',
-      alt: 'ALT-EDIC',
-      title: 'Alliance for Language Technologies (ALT-EDIC)'
-    }
-  ] satisfies HTMLImgAttributes[]
 
   const reducedFAQ = (
     [
@@ -324,14 +302,27 @@
           )}
         </p>
 
-        <div class="mt-12 gap-8 flex flex-wrap items-center">
-          {#each logos as logoProps, i (i)}
-            <img loading="lazy" decoding="async" {...logoProps} />
-          {/each}
+        <div class="mt-12 gap-6 flex flex-wrap items-center">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/orgs/minicult.svg"
+            alt="Ministère de la Culture"
+            title="Ministère de la Culture"
+            class="max-h-[95px]"
+          />
           <!-- DSFR draws the official block from text, so DINUM needs no image file -->
-          <p class="fr-logo fr-logo--sm mb-0!" title="Direction interministérielle du numérique">
-            Direction interministérielle<br />du numérique
+          <p class="fr-logo mb-0!" title="Direction interministérielle du numérique">
+            Direction<br />interministérielle<br />du numérique
           </p>
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/orgs/alt-edic.webp"
+            alt="ALT-EDIC"
+            title="Alliance for Language Technologies (ALT-EDIC)"
+            class="max-w-[130px] dark:bg-white dark:p-1"
+          />
         </div>
       </div>
 
