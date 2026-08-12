@@ -285,7 +285,6 @@
     "writeUs": "Si vous rencontrez un problème ou si vous avez un commentaire sur le comparateur, n'hésitez pas à nous écrire <a {formLinkProps}>via ce formulaire</a>, nous lisons tous vos messages.<br />Merci !"
   },
   "header": {
-    "banner": "🏆 Le classement des modèles est maintenant disponible ! Découvrir le classement.",
     "homeTitle": "Accueil - compar:IA",
     "logoAlt": "République Française",
     "menu": "Menu",

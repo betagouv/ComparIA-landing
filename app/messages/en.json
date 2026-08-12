@@ -192,7 +192,6 @@
     "writeUs": "If you encounter a problem or have feedback on the chatbot arena, feel free to write to us <a {formLinkProps}>using this form</a> - we read every message.<br />Thank you!"
   },
   "header": {
-    "banner": "🏆 The model ranking is now available! See the ranking.",
     "homeTitle": "Home - compar:IA",
     "logoAlt": "French Republic",
     "menu": "Menu",

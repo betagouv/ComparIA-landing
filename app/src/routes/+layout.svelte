@@ -1,18 +1,14 @@
 <script lang="ts">
   import { browser } from '$app/environment'
-  import { page } from '$app/state'
   import { Footer, Header } from '$components'
-  import { Icon, Link } from '$components/dsfr'
-  import { m } from '$lib/i18n/messages'
+  import { Icon } from '$components/dsfr'
   import { getLocale } from '$lib/i18n/runtime'
-  import { ARENA_URL } from '$lib/main'
   import { onMount } from 'svelte'
   import 'uno.css'
   import '../css/app.css'
 
   let { children } = $props()
 
-  const isHome = $derived(page.url.pathname === '/')
   const isFr = $derived(getLocale() === 'fr')
 
   if (browser) {
@@ -33,10 +29,6 @@
 </script>
 
 <Header />
-
-{#if isHome}
-  <Link button href="{ARENA_URL}/ranking" text={m['header.banner']()} cornered class="w-auto!" />
-{/if}
 
 {@render children()}
 

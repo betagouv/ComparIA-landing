@@ -106,12 +106,6 @@
       title: 'Atelier numérique'
     },
     {
-      class: 'max-w-[190px] self-center dark:invert',
-      src: '/orgs/dinum.webp',
-      alt: 'DINUM',
-      title: 'Direction interministérielle du numérique (DINUM)'
-    },
-    {
       // The logo is blue on solid white, so it needs a light backing in dark mode
       class: 'max-w-[190px] self-center dark:bg-white dark:p-1',
       src: '/orgs/alt-edic.webp',
