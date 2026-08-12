@@ -1,6 +1,7 @@
 <script lang="ts">
   import Badge from '$components/dsfr/Badge.svelte'
   import { m } from '$lib/i18n/messages'
+  import { ARENA_URL } from '$lib/main'
   import { externalLinkProps, propsToAttrs, sanitize } from '$lib/utils'
 
   const steps = (
@@ -27,7 +28,7 @@
             index: '3',
             noDate: true,
             title: m[`product.history.steps.i18n.items.3.title`]({
-              linkProps: propsToAttrs({ href: '/arene/ranking' })
+              linkProps: propsToAttrs({ href: `${ARENA_URL}/ranking` })
             }),
             desc: m[`product.history.steps.i18n.items.3.desc`]({
               linkProps: externalLinkProps('https://www.peren.gouv.fr/')

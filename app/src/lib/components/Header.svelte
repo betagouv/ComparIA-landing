@@ -64,7 +64,7 @@
           {#if !hideDiscussBtn}
             <Link
               button
-              href="/arene"
+              href={ARENA_URL}
               text={m['header.startDiscussion']()}
               class="whitespace-nowrap"
             />

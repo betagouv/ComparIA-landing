@@ -14,7 +14,6 @@ export const CONTACT_URL = 'contact@comparia.beta.gouv.fr'
 export function onLocaleChange(locale: AnyLocale) {
   const localeData = ALL_LOCALES.find((loc) => loc.code === locale)
   if (localeData?.host) {
-    // window.location.href =
     window.open(localeData?.host, '_blank')!.focus()
   } else {
     setLocale(locale as Locale)

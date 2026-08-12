@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Icon, Link } from '$components/dsfr'
   import { m } from '$lib/i18n/messages'
-  import { CONTACT_URL } from '$lib/main'
+  import { ARENA_URL, CONTACT_URL } from '$lib/main'
   import { sanitize } from '$lib/utils'
 
   const challengesCards = (
@@ -27,7 +27,7 @@
 
       <Link
         button
-        href="/arene"
+        href={ARENA_URL}
         text={m['product.comparator.cta']()}
         class="sm:w-auto! lg:mt-13 w-full!"
       />
