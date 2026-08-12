@@ -383,8 +383,11 @@
     @media (min-width: 62em) {
       & {
         height: 16px;
-        width: 125px;
+        width: 72px;
+        /* Crop the tail rather than scale, so the head keeps its size */
         background-image: url('/home/arrow-h.svg');
+        background-position: right center;
+        background-repeat: no-repeat;
         left: 0;
         margin-top: 110px;
       }

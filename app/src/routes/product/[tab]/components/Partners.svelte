@@ -23,7 +23,7 @@
       <img
         loading="lazy"
         decoding="async"
-        src="/orgs/etalab.svg"
+        src="/orgs/etalab.webp"
         alt="Etalab"
         title="Etalab"
         width="240px"
@@ -31,7 +31,7 @@
       <img
         loading="lazy"
         decoding="async"
-        src="/orgs/peren.svg"
+        src="/orgs/peren.webp"
         alt="PEReN, Pôle d'expertise de la régulation numérique"
         title="Pôle d'expertise de la régulation numérique (PEReN)"
         width="240px"
