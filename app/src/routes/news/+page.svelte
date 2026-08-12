@@ -284,13 +284,15 @@
                     <!-- The card title already links to the article, so this is a visual repeat -->
                     <p
                       class={[
-                        'fr-card__detail flex justify-end text-[14px]!',
+                        'fr-card__detail flex justify-end text-[14px]! gap-1 ms-auto',
                         news.href !== '#' ? 'text-primary! border-b-1' : 'text-grey!'
                       ]}
                     >
                       {news.linkLabel}
                       {#if news.href.startsWith('/')}
-                        <Icon icon="i-ri-arrow-right-line" size="xs" />
+                        <Icon icon="i-ri-arrow-right-line" size="xs" class="mt-1" />
+                      {:else if news.href && news.href !== '#'}
+                        <Icon icon="i-ri-external-link-line" size="xs" class="mt-1" />
                       {/if}
                     </p>
                   </div>
