@@ -303,14 +303,9 @@
         </p>
 
         <div class="mt-12 gap-6 flex flex-wrap items-center">
-          <img
-            loading="lazy"
-            decoding="async"
-            src="/orgs/minicult.svg"
-            alt="Ministère de la Culture"
-            title="Ministère de la Culture"
-            class="max-h-[95px]"
-          />
+          <p class="fr-logo mb-0!" title="Ministère de la Culture">
+            Ministère<br />de la Culture
+          </p>
           <!-- DSFR draws the official block from text, so DINUM needs no image file -->
           <p class="fr-logo mb-0!" title="Direction interministérielle du numérique">
             Direction<br />interministérielle<br />du numérique
