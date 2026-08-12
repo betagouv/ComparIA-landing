@@ -324,10 +324,14 @@
           )}
         </p>
 
-        <div class="mt-12 gap-8 flex flex-wrap">
+        <div class="mt-12 gap-8 flex flex-wrap items-center">
           {#each logos as logoProps, i (i)}
             <img loading="lazy" decoding="async" {...logoProps} />
           {/each}
+          <!-- DSFR draws the official block from text, so DINUM needs no image file -->
+          <p class="fr-logo fr-logo--sm mb-0!" title="Direction interministérielle du numérique">
+            Direction interministérielle<br />du numérique
+          </p>
         </div>
       </div>
 
