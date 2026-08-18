@@ -1,0 +1,117 @@
+suite: workload
+templates:
+  - deployment.yaml
+  - service.yaml
+  - serviceaccount.yaml
+tests:
+  - it: renders the Deployment with the configured image and probes
+    template: deployment.yaml
+    asserts:
+      - isKind:
+          of: Deployment
+      - equal:
+          path: metadata.name
+          value: RELEASE-NAME-comparia-landing
+      - equal:
+          path: spec.template.spec.containers[0].image
+          value: ghcr.io/betagouv/comparia-landing:latest
+      - equal:
+          path: spec.template.spec.containers[0].ports[0].containerPort
+          value: 80
+      - equal:
+          path: spec.template.spec.containers[0].readinessProbe.httpGet.path
+          value: /
+      - equal:
+          path: spec.template.spec.containers[0].livenessProbe.tcpSocket.port
+          value: http
+      - equal:
+          path: spec.template.spec.serviceAccountName
+          value: RELEASE-NAME-comparia-landing
+
+  - it: defaults PUBLIC_ARENA_URL to /arena and leaves Matomo/git commit unset
+    template: deployment.yaml
+    asserts:
+      - contains:
+          path: spec.template.spec.containers[0].env
+          content:
+            name: PUBLIC_ARENA_URL
+            value: /arena
+      - notContains:
+          path: spec.template.spec.containers[0].env
+          content:
+            name: MATOMO_URL
+      - notContains:
+          path: spec.template.spec.containers[0].env
+          content:
+            name: MATOMO_ID
+      - notContains:
+          path: spec.template.spec.containers[0].env
+          content:
+            name: PUBLIC_GIT_COMMIT
+
+  - it: sets PUBLIC_ARENA_URL, Matomo and git commit env vars when configured
+    template: deployment.yaml
+    set:
+      config.arenaUrl: https://arena.example.com
+      config.matomoUrl: https://matomo.example.com
+      config.matomoId: "1"
+      config.gitCommit: abc1234
+    asserts:
+      - contains:
+          path: spec.template.spec.containers[0].env
+          content:
+            name: PUBLIC_ARENA_URL
+            value: https://arena.example.com
+      - contains:
+          path: spec.template.spec.containers[0].env
+          content:
+            name: MATOMO_URL
+            value: https://matomo.example.com
+      - contains:
+          path: spec.template.spec.containers[0].env
+          content:
+            name: MATOMO_ID
+            value: "1"
+      - contains:
+          path: spec.template.spec.containers[0].env
+          content:
+            name: PUBLIC_GIT_COMMIT
+            value: abc1234
+
+  - it: uses distinct chart and app image tags
+    template: deployment.yaml
+    set:
+      image.tag: "1.2.3"
+    asserts:
+      - equal:
+          path: spec.template.spec.containers[0].image
+          value: ghcr.io/betagouv/comparia-landing:1.2.3
+
+  - it: renders the Service
+    template: service.yaml
+    asserts:
+      - isKind:
+          of: Service
+      - equal:
+          path: spec.ports[0].port
+          value: 80
+      - equal:
+          path: spec.selector["app.kubernetes.io/instance"]
+          value: RELEASE-NAME
+
+  - it: creates a ServiceAccount by default
+    template: serviceaccount.yaml
+    asserts:
+      - isKind:
+          of: ServiceAccount
+      - equal:
+          path: metadata.name
+          value: RELEASE-NAME-comparia-landing
+
+  - it: does not create a ServiceAccount when disabled
+    template: serviceaccount.yaml
+    set:
+      serviceAccount.create: false
+    asserts:
+      - hasDocuments:
+          count: 0

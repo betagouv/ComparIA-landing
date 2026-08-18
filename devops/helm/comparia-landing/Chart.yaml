@@ -1,0 +1,9 @@
+apiVersion: v2
+name: comparia-landing
+description: Self-hosted ComparIA landing page on Kubernetes
+type: application
+version: 0.1.0
+appVersion: "latest"
+home: https://github.com/betagouv/ComparIA-landing
+sources:
+  - https://github.com/betagouv/ComparIA-landing
