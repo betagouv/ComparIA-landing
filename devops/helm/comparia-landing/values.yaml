@@ -1,0 +1,49 @@
+## Default values for the comparia-landing chart.
+## See README.md for a full description of every value.
+
+## -- Overrides for the generated resource names.
+nameOverride: ""
+fullnameOverride: ""
+
+image:
+  repository: ghcr.io/betagouv/comparia-landing
+  ## -- Defaults to .Chart.AppVersion when unset. Independent of the chart's own version.
+  tag: ""
+  pullPolicy: IfNotPresent
+  ## -- Names to add to imagePullSecrets on the Pod.
+  pullSecrets: []
+
+serviceAccount:
+  ## -- Whether a ServiceAccount is created for the release.
+  create: true
+  ## -- Name of the ServiceAccount to use. Defaults to the release's fullname when create is true.
+  name: ""
+  annotations: {}
+
+replicaCount: 1
+
+service:
+  port: 80
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 128Mi
+  limits:
+    cpu: 250m
+    memory: 256Mi
+
+## -- App config, passed to the container as plain env vars.
+config:
+  ## -- Where the arena app (the comparia chart) is served: a relative path when both sit
+  ## behind the same reverse proxy/Ingress, or a full URL if the arena app is on its own origin.
+  arenaUrl: /arena
+  ## -- Left empty, the Matomo tracker is left out of the page.
+  matomoUrl: ""
+  matomoId: ""
+  ## -- Shown in the app footer. Left empty, no commit is displayed.
+  gitCommit: ""
+
+## -- Extra env vars for the container, for anything not covered by config.* above. Same shape
+## as a container's `env:` list (name/value or name/valueFrom).
+extraEnv: []
