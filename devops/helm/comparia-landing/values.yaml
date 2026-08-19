@@ -47,3 +47,15 @@ config:
 ## -- Extra env vars for the container, for anything not covered by config.* above. Same shape
 ## as a container's `env:` list (name/value or name/valueFrom).
 extraEnv: []
+
+ingress:
+  ## -- Whether to create an Ingress routing "/" on ingress.host to this release. Off by
+  ## default: this chart is meant to sit behind a shared domain alongside the arena app
+  ## (the comparia chart), and only one of the two releases deployed together should own
+  ## the Ingress for a given host -- turn this on for whichever one owns "/".
+  enabled: false
+  className: ""
+  host: ""
+  annotations: {}
+  ## -- Same shape as Ingress spec.tls.
+  tls: []

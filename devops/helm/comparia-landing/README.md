@@ -1,11 +1,12 @@
 # comparia-landing Helm chart
 
 Deploys the ComparIA landing page (this repo's `app/`) as a Deployment +
-Service on a Kubernetes cluster. It carries no Ingress of its own: routing
-this app to `/` while the arena app (the `comparia` chart, in
-[betagouv/ComparIA](https://github.com/betagouv/ComparIA)) sits at a
-subpath (`/arena` by default) is owned by whatever deploys both charts
-together for a given instance, not by either chart individually.
+Service on a Kubernetes cluster, with an optional Ingress. The typical
+topology is a shared domain where this app owns `/` and the arena app (the
+`comparia` chart, in [betagouv/ComparIA](https://github.com/betagouv/ComparIA))
+sits at a subpath (`/arena` by default) with its own Ingress rule on the
+same host — set `ingress.enabled` here and `ingress.path: /arena` on the
+comparia chart.
 
 ## Install
 
@@ -37,6 +38,11 @@ both apps sit behind the same reverse proxy/Ingress on the same origin.
 | `config.matomoId`          | `""`                                 | `MATOMO_ID`                                            |
 | `config.gitCommit`         | `""`                                 | `PUBLIC_GIT_COMMIT`, shown in the app footer            |
 | `extraEnv`                 | `[]`                                 | Extra env vars, for anything not covered by `config.*` above, same shape as a container's `env:` list |
+| `ingress.enabled`          | `false`                              | Create an Ingress routing "/" on `ingress.host` to this release |
+| `ingress.className`        | `""`                                 | `spec.ingressClassName`                                |
+| `ingress.host`             | `""`                                 | Required when `ingress.enabled` is true                |
+| `ingress.annotations`      | `{}`                                 |                                                         |
+| `ingress.tls`               | `[]`                                 | Same shape as Ingress `spec.tls`                        |
 
 ## Development
 
