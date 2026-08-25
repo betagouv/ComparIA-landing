@@ -169,7 +169,7 @@
           "title": "Pourquoi les données de préférence collectées sur compar:IA ont-elles de la valeur ?"
         },
         "4": {
-          "desc": "<p>compar:IA se positionne comme un outil d'évaluation et d'alignement spécifique au français, axé sur la qualité des réponses et la collecte de données de préférence, se distinguant ainsi de l'approche de classement global de <a href='https://lmarena.ai/' target='_blank'>chatbot arena</a> développé par <a href='http://lmsys.org' target='_blank'>lmsys.org</a> et de l'alignement éthique des modèles d’IA de <a href='https://hannahkirk.github.io/prism-alignment/' target='_blank'>Prism Alignment Project</a>.</p>",
+          "desc": "<p>compar:IA se positionne comme un outil d'évaluation et d'alignement spécifique au français, axé sur la qualité des réponses et la collecte de données de préférence, se distinguant ainsi de l'approche de classement global de <a href='https://arena.ai/' target='_blank'>LMArena</a> et de l'alignement éthique des modèles d’IA de <a href='https://hannahkirk.github.io/prism-alignment/' target='_blank'>Prism Alignment Project</a>.</p>",
           "title": "Quelle est la spécificité de compar:IA par rapport à d’autres initiatives similaires ?"
         }
       },
@@ -750,7 +750,7 @@
           "title": "Diversifier les données pour réduire les biais"
         },
         "english": {
-          "a": "Les données de préférence sont couteuses à produire car <strong>elles nécessitent du travail humain qualifié pour chaque exemple</strong>. Des plateformes telles que https://chat.lmsys.org/ permettent de constituer ces jeux de données de préférence mais peu d’utilisateurs s’en servent dans leur langue d’origine.",
+          "a": "Les données de préférence sont couteuses à produire car <strong>elles nécessitent du travail humain qualifié pour chaque exemple</strong>. Des plateformes telles que https://arena.ai/ permettent de constituer ces jeux de données de préférence mais peu d’utilisateurs s’en servent dans leur langue d’origine.",
           "b": "Les jeux de données de préférence sont rares, voire inexistants dans les langues européennes. La part des questions posées en français dans le jeu de données de LMSYS est par exemple inférieure à 1%.",
           "c": "comparIA est un exemple de dispositif permettant de collecter des conversations dans de multiples langues, incluant des références culturelles spécifiques à chaque région ou pays : tâches courantes, traditions culinaires locales, systèmes éducatifs, références historiques ou littéraires, etc.",
           "title": "Peu de données de préférence en langues européennes"

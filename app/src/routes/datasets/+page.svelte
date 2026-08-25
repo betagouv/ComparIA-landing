@@ -10,7 +10,7 @@
 
   const datasetCard = {
     src: `/datasets/conversations-${locale === 'fr' ? 'fr' : 'en'}.webp`,
-    link: 'https://huggingface.co/datasets/comparIA/comparia-fr-arena',
+    link: 'https://huggingface.co/datasets/ministere-culture/comparia-fr-arena',
     title: m['datasets.access.repos.arena.title'](),
     desc: m['datasets.access.repos.arena.desc']()
   }
@@ -25,7 +25,7 @@
       {
         i18nKey: 'analyze',
         src: '/datasets/bunka-analyse.webp',
-        link: 'https://monitor.bunka.ai/compar-ia-dashboard'
+        link: 'https://bunka.ai/fr/articles/french-ai-usage-study'
       }
     ] as const
   ).map(({ i18nKey, ...card }) => ({

@@ -76,7 +76,7 @@
           "title": "Why are the votes on compar:IA useful?"
         },
         "4": {
-          "desc": "<p> compar:IA positions itself as a low-ressourced language assessment and alignment tool for language models, focused on response quality and preference data collection, thus distinguishing itself from the global ranking approach of <a href='https://lmarena.ai/' target='_blank'> chatbot arena </a> developed by <a href='http://lmsys.org' target='_blank'> lmsys.org </a> and the ethical alignment of AI models of <a href='https://hannahkirk.github.io/prism-alignment/' target='_blank'> Prism Alignment Project </a> . </p>",
+          "desc": "<p> compar:IA positions itself as a low-ressourced language assessment and alignment tool for language models, focused on response quality and preference data collection, thus distinguishing itself from the global ranking approach of <a href='https://arena.ai/' target='_blank'> LMArena </a> and the ethical alignment of AI models of <a href='https://hannahkirk.github.io/prism-alignment/' target='_blank'> Prism Alignment Project </a> . </p>",
           "title": "What makes compar:IA different from other similar initiatives?"
         }
       },
@@ -569,7 +569,7 @@
           "title": "Diversify data sources to reduce bias"
         },
         "english": {
-          "a": "Preference data is expensive to produce because <strong>each example requires skilled human evaluation</strong>. Platforms like chat.lmsys.org help crowdsource these datasets—but few users contribute in their native language, leaving low-resource languages underrepresented.",
+          "a": "Preference data is expensive to produce because <strong>each example requires skilled human evaluation</strong>. Platforms like arena.ai help crowdsource these datasets—but few users contribute in their native language, leaving low-resource languages underrepresented.",
           "b": "Preference datasets for European languages are scarce - or nonexistent. In LMSYS’s dataset, for instance, French queries represent less than 1% of the total.",
           "c": "compar:IA is a chatbot arena designed to gather multilingual conversations - capturing region-specific cultural references like daily tasks, local culinary traditions, education systems, or historical and literary touchstones.",
           "title": "European languages suffer from a shortage of preference data"
