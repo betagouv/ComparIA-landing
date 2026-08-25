@@ -76,7 +76,7 @@
             index: '2',
             vote: true,
             desc: m[`product.history.steps.acceleration.items.2.desc`]({
-              linkProps: externalLinkProps('https://monitor.bunka.ai/compar:ia')
+              linkProps: externalLinkProps('https://bunka.ai/fr/articles/french-ai-usage-study')
             })
           },
           { index: '1', vote: true }
