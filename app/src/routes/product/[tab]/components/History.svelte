@@ -68,7 +68,7 @@
           {
             index: '3',
             desc: m[`product.history.steps.acceleration.items.3.desc`]({
-              hgLinkProps: externalLinkProps('https://huggingface.co/comparIA'),
+              hgLinkProps: externalLinkProps('https://huggingface.co/ministere-culture'),
               dataLinkProps: externalLinkProps('https://www.data.gouv.fr/datasets/compar-ia/')
             })
           },
