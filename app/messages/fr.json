@@ -374,6 +374,7 @@
         "title": "Former et sensibiliser"
       },
       "explore": {
+        "cta": "Voir la liste des modèles",
         "desc": "Consultez au même endroit toutes les caractéristiques et conditions d’utilisation des modèles",
         "title": "Explorer les modèles"
       },
@@ -405,6 +406,7 @@
     "vote": {
       "datasetAccess": "Accéder aux jeux de données",
       "desc": "L’outil s’adresse également aux experts IA et aux formateurs pour des usages plus spécifiques",
+      "rankingAccess": "Voir le classement des modèles",
       "steps": {
         "datasets": {
           "desc": "Toutes les questions posées et les votes sont compilés dans des jeux de données et publiés librement après anonymisation.",
@@ -515,6 +517,10 @@
       "countries": {
         "da": "Danemark",
         "fr": "France"
+      },
+      "europe": {
+        "desc": "Le comparateur est cofinancé par l’<strong>ALT-EDIC</strong> (Alliance for Language Technologies), l’alliance européenne qui soutient les technologies du langage pour toutes les langues de l’Union.",
+        "title": "À l’échelle européenne"
       },
       "tabLabel": "Communauté",
       "teams": {
@@ -719,6 +725,7 @@
         "title": "Partenaires de diffusion"
       },
       "institution": {
+        "desc": "L’<strong>ALT-EDIC</strong>, l’alliance européenne pour les technologies du langage, cofinance le comparateur.",
         "title": "Partenaires institutionnels"
       },
       "services": {

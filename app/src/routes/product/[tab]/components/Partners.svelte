@@ -2,6 +2,7 @@
   import { Icon, Link } from '$components/dsfr'
   import { m } from '$lib/i18n/messages'
   import { CONTACT_URL } from '$lib/main'
+  import { sanitize } from '$lib/utils'
 </script>
 
 <div class="gap-8 lg:grid-cols-2 grid">
@@ -36,7 +37,18 @@
         title="Pôle d'expertise de la régulation numérique (PEReN)"
         width="240px"
       />
+      <img
+        loading="lazy"
+        decoding="async"
+        src="/orgs/alt-edic.webp"
+        alt="ALT-EDIC"
+        title="Alliance for Language Technologies (ALT-EDIC)"
+        width="170px"
+        class="dark:bg-white dark:p-1"
+      />
     </div>
+
+    <p>{@html sanitize(m['product.partners.institution.desc']())}</p>
   </section>
 
   <section class="cg-border cl-card">

@@ -82,7 +82,7 @@
   const usageCards = (
     [
       { i18nKey: 'use', icon: 'i-ri-database-line' },
-      { i18nKey: 'explore', icon: 'i-ri-search-line' },
+      { i18nKey: 'explore', icon: 'i-ri-search-line', cta: `${ARENA_URL}/models` },
       { i18nKey: 'educate', icon: 'i-ri-presentation-line' }
     ] as const
   ).map(({ i18nKey, ...card }) => ({
@@ -257,13 +257,20 @@
           {/each}
         </div>
 
-        <div class="lg:mt-19 mt-12 flex justify-center">
+        <div class="lg:mt-19 mt-12 gap-4 sm:flex-row flex flex-col justify-center">
           <Link
             button
             hideExternalIcon
             size="lg"
             href="https://huggingface.co/collections/comparIA/jeux-de-donnees-compar-ia-67644adf20912236342c3f3b"
             text={m['home.vote.datasetAccess']()}
+          />
+          <Link
+            button
+            variant="secondary"
+            size="lg"
+            href={`${ARENA_URL}/ranking`}
+            text={m['home.vote.rankingAccess']()}
           />
         </div>
       </div>
@@ -280,7 +287,10 @@
           <div class="cg-border bg-white p-5 lg:px-8 lg:pb-11 lg:pt-6">
             <Icon icon={card.icon} size="lg" block class="text-primary mb-4" />
             <h3 class="fr-h6 mb-2!">{card.title}</h3>
-            <p class="mb-0! text-grey">{card.desc}</p>
+            <p class={['text-grey', 'cta' in card ? 'mb-4!' : 'mb-0!']}>{card.desc}</p>
+            {#if 'cta' in card}
+              <Link href={card.cta} text={m['home.usage.explore.cta']()} />
+            {/if}
           </div>
         {/each}
       </div>
