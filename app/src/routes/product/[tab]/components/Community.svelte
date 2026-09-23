@@ -43,7 +43,7 @@
           src="/orgs/alt-edic.webp"
           alt="ALT-EDIC"
           title="Alliance for Language Technologies (ALT-EDIC)"
-          width="170px"
+          width="220px"
           class="dark:bg-white dark:p-1"
         />
       </div>
