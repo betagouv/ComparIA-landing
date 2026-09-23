@@ -235,7 +235,13 @@
           {#each filteredNews as news, i (news.title)}
             <div class="fr-card fr-enlarge-link fr-card--no-border cg-border rounded-xl bg-none!">
               <div class="fr-card__body">
-                <div class="fr-card__content px-5! pb-18! md:px-4! md:pt-4!">
+                <div
+                  class={[
+                    'fr-card__content px-5! md:px-4! md:pt-4!',
+                    // The bottom padding only makes room for the link at the card's foot
+                    news.href !== '#' ? 'pb-18!' : 'pb-8!'
+                  ]}
+                >
                   <h2 class="fr-card__title mb-0! text-lg!">
                     {#if news.href === '#'}
                       <span class="text-[--grey-50-1000]!">{news.title}</span>
@@ -280,22 +286,21 @@
                     </ul>
                   </div>
 
-                  <div class="fr-card__end pe-1!">
-                    <!-- The card title already links to the article, so this is a visual repeat -->
-                    <p
-                      class={[
-                        'fr-card__detail flex justify-end text-[14px]! gap-1 ms-auto',
-                        news.href !== '#' ? 'text-primary! border-b-1' : 'text-grey!'
-                      ]}
-                    >
-                      {news.linkLabel}
-                      {#if news.href.startsWith('/')}
-                        <Icon icon="i-ri-arrow-right-line" size="xs" class="mt-1" />
-                      {:else if news.href && news.href !== '#'}
-                        <Icon icon="i-ri-external-link-line" size="xs" class="mt-1" />
-                      {/if}
-                    </p>
-                  </div>
+                  {#if news.href !== '#'}
+                    <div class="fr-card__end pe-1!">
+                      <!-- The card title already links to the article, so this is a visual repeat -->
+                      <p
+                        class="fr-card__detail text-primary! border-b-1 flex justify-end text-[14px]! gap-1 ms-auto"
+                      >
+                        {news.linkLabel}
+                        {#if news.href.startsWith('/')}
+                          <Icon icon="i-ri-arrow-right-line" size="xs" class="mt-1" />
+                        {:else}
+                          <Icon icon="i-ri-external-link-line" size="xs" class="mt-1" />
+                        {/if}
+                      </p>
+                    </div>
+                  {/if}
                 </div>
               </div>
               <div class="fr-card__header">
