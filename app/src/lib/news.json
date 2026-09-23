@@ -2,6 +2,63 @@
   {
     "kind": "resource",
     "subKind": "comparia",
+    "title": "compar:IA intégré aux parcours Pix IA",
+    "desc": "Pix intègre compar:IA à ses modules sur l’intelligence artificielle : des centaines de milliers d’élèves vont comparer et mettre à l’épreuve les IA conversationnelles.",
+    "imgSrc": "pix-ia.webp",
+    "date": 1788213600.0
+  },
+  {
+    "kind": "talk",
+    "subKind": "panel",
+    "title": "Table ronde - Salon Souveraineté Numérique",
+    "desc": "Margaux Flamant a représenté compar:IA aux côtés de Julia Aymé (Cafeyn) et Blanche Loviton (DGE) : la souveraineté ne se résume pas à produire nos propres modèles.",
+    "imgSrc": "salon-souverainete.webp",
+    "date": 1782770400.0
+  },
+  {
+    "kind": "resource",
+    "subKind": "comparia",
+    "title": "comparia-fr-arena : trois jeux de données réunis en un seul",
+    "desc": "Les conversations, les votes et les réactions sont désormais regroupés dans un seul jeu de données ouvert, plus simple à exploiter et plus cohérent.",
+    "imgSrc": "dataset-comparia-fr-arena.webp",
+    "href": "https://huggingface.co/datasets/ministere-culture/comparia-fr-arena",
+    "date": 1782684000.0
+  },
+  {
+    "kind": "talk",
+    "subKind": "workshop",
+    "title": "Atelier compar:IA Santé",
+    "desc": "Une vingtaine d’acteurs de la santé et du numérique réunis pour définir les critères d’évaluation des IA conversationnelles à destination des soignants.",
+    "imgSrc": "atelier-sante.webp",
+    "date": 1781647200.0
+  },
+  {
+    "kind": "resource",
+    "subKind": "blog",
+    "title": "compar:IA 2.0 : de nouvelles informations sur les cartes de modèles",
+    "desc": "Modalités d’entrée, classe de consommation énergétique, prix des tokens et score d’ouverture sont maintenant affichés sur chaque carte de modèle.",
+    "imgSrc": "comparia-2-0.webp",
+    "date": 1778536800.0
+  },
+  {
+    "kind": "media",
+    "subKind": "press",
+    "title": "Guide ICI x CNIL sur l’usage des IA",
+    "desc": "« Le mieux finalement, c’est de les tester avant de faire son choix » : Romain Darous, ingénieur IA à la CNIL, recommande compar:IA pour comparer les modèles.",
+    "imgSrc": "guide-ici-cnil.webp",
+    "date": 1774306800.0
+  },
+  {
+    "kind": "media",
+    "subKind": "analyze",
+    "title": "Classement des modèles : la méthode retenue avec le PEReN",
+    "desc": "Le PEReN a comparé le modèle de Bradley-Terry et un score Elo pour classer les modèles selon les préférences des utilisateurs et leur consommation énergétique.",
+    "imgSrc": "peren-classement.webp",
+    "date": 1770678000.0
+  },
+  {
+    "kind": "resource",
+    "subKind": "comparia",
     "title": "Atelier Duel de l’IA",
     "desc": "Sensibilisez votre public à l’impact environnemental de l’IA générative en organisant un Duel de l’IA dans votre établissement, association ou entreprise !",
     "imgSrc": "duel.webp",

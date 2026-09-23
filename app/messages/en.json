@@ -281,6 +281,7 @@
         "title": "Train and raise awareness"
       },
       "explore": {
+        "cta": "See the model list",
         "desc": "Find all model specifications and terms of use in one place",
         "title": "Explore the models"
       },
@@ -312,6 +313,7 @@
     "vote": {
       "datasetAccess": "Access the datasets",
       "desc": "The tool is also useful to AI experts, developers and for educational purposes.",
+      "rankingAccess": "See the model leaderboard",
       "steps": {
         "datasets": {
           "desc": "All questions and votes are compiled into datasets and published openly after anonymization.",
@@ -334,6 +336,10 @@
       "countries": {
         "da": "Denmark",
         "fr": "France"
+      },
+      "europe": {
+        "desc": "The arena is co-funded by <strong>ALT-EDIC</strong> (Alliance for Language Technologies), the European alliance supporting language technologies for every language of the Union.",
+        "title": "At European level"
       },
       "tabLabel": "Community",
       "teams": {
@@ -538,6 +544,7 @@
         "title": "Communication partners"
       },
       "institution": {
+        "desc": "<strong>ALT-EDIC</strong>, the European alliance for language technologies, co-funds the arena.",
         "title": "Institutional partners"
       },
       "services": {

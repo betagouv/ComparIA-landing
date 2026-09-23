@@ -13,7 +13,7 @@
       { href: `${ARENA_URL}/privacy`, labelKey: 'privacy' },
       { href: `${ARENA_URL}/accessibility`, labelKey: 'accessibility' },
       { href: `${ARENA_URL}/eco-design`, labelKey: 'rgesn' },
-      { href: 'https://github.com/betagouv/languia', labelKey: 'sources' }
+      { href: 'https://github.com/betagouv/ComparIA', labelKey: 'sources' }
     ] as const
   ).map(({ href, labelKey }) => {
     return {

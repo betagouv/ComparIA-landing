@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Icon } from '$components/dsfr'
   import { m } from '$lib/i18n/messages'
+  import { sanitize } from '$lib/utils'
 
   const frTeam = (
     [
@@ -24,6 +25,30 @@
     {m['product.community.title']()}
   </h2>
   <div class="gap-4 lg:grid-cols-2 grid">
+    <section
+      class="cg-border cl-card lg:col-span-2 gap-6 md:flex-row flex flex-col md:items-center"
+    >
+      <div>
+        <h3 class="fr-h5 mb-3!">
+          <Icon icon="i-ri-earth-line" class="text-primary" />
+          {m['product.community.europe.title']()}
+        </h3>
+        <p class="mb-0!">{@html sanitize(m['product.community.europe.desc']())}</p>
+      </div>
+
+      <div class="cl-logos md:justify-end shrink-0">
+        <img
+          loading="lazy"
+          decoding="async"
+          src="/orgs/alt-edic.webp"
+          alt="ALT-EDIC"
+          title="Alliance for Language Technologies (ALT-EDIC)"
+          width="220px"
+          class="dark:bg-white dark:p-1"
+        />
+      </div>
+    </section>
+
     <section class="cg-border cl-card">
       <h3 class="fr-h5 mb-7!">
         <Icon icon="i-ri-flag-2-line" class="text-[#000091]" />
