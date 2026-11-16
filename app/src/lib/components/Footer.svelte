@@ -8,11 +8,11 @@
   const links = (
     [
       { href: resolve('/plan-du-site'), labelKey: 'sitemap' },
-      { href: `${ARENA_URL}/legal`, labelKey: 'legal' },
+      { href: `${ARENA_URL}/legal_notice`, labelKey: 'legal' },
       { href: `${ARENA_URL}/terms`, labelKey: 'tos' },
-      { href: `${ARENA_URL}/privacy`, labelKey: 'privacy' },
+      { href: `${ARENA_URL}/privacy_policy`, labelKey: 'privacy' },
       { href: `${ARENA_URL}/accessibility`, labelKey: 'accessibility' },
-      { href: `${ARENA_URL}/eco-design`, labelKey: 'rgesn' },
+      { href: `${ARENA_URL}/ecodesign`, labelKey: 'rgesn' },
       { href: 'https://github.com/betagouv/ComparIA', labelKey: 'sources' }
     ] as const
   ).map(({ href, labelKey }) => {
